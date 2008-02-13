@@ -1,0 +1,134 @@
+
+==Outstanding Bugs==
+
+Shift-tab in NSTextView doesn't rotate backwards properly.
+Strange disappearance of vertical scroll bar for table.
+Poor handling of splitview resizing when resizing window.
+0.6.0
+Selects first sentence when saving a previously untitled document.
+
+==Vanquished Bugs==
+
+Can't leave empty text field.
+'No Selection' bug for sentence field.
+crash when 'new sentence' button clicked 
+    (went away when I got rid of bindings)
+Occasional freeze after cmnd-a + delete in roman text view. 
+    (was race condition -- solved through icky use of NSTimer)
+Mostly fixed UI bug involving NSSplitView. Still not quite right when window resized.
+Cannot "Make New Passage" if PhnomPenh95Krung font is not installed. 
+Tab in text views seems to be broken again.
+Cleaned up UI for dragging.
+Displays Khmer script with correct font in sentences table.
+Selects correct sentence after deleting sentence.
+Fixed "File -> Revert" menu item.
+Selects correct default definitions after downloading updated definitions.
+Fixed bug that affected "New Sentence."
+Fixed bug where documents didn't automatically pick up changed ZVX substitution preferences.
+0.06.2
+Fixed crash when closing document while transcription in progress.
+0.06.3
+Fixed UI bug in which fragments of text from previously viewed verses could remain displayed in notes and checking fields.
+0.06.5
+Inserted missing RTKTigerDocument lossless fileformat code.
+Fixed broken automatic verse insertion.
+Fixed slowness when typing -- at cost of not liveupdating table view -- should be reimplementing later.
+
+
+==Outstanding Feature Requests==
+
+
+TECkit plugin system. 
+Switch file format to xml plist.
+
+undo/redo stuff
+{
+    Undo/Redo stacks saved to file on close -- loaded from file on open.
+    Stack pair for each revision. 
+    Stack pair for sentences (includes undo/redo for new/delete revision).
+}
+
+Drag to desktop/directory creates .rtktiger file with specified sentence(s).
+Need to be able to see multiple revisions at once for comparison. (No idea how this should be implemented.)
+Reordering of windows during drag and drop. (focus-follows-mouse style)
+Help -- and other documentation.
+Collaborative editing similar to SubEthaEdit.
+On start, load all previously open files -- option in system preferences.
+Make resize handle double clickable.
+Autosave -- open original and autosaved after crash.  
+        -- won't ask -- will just open both when you open original
+
+Export function strips undo/redo history. 
+{
+    format list:
+        - native format
+        - sfm format
+}
+
+
+
+==Implemented Feature Requests==
+
+
+Drag and drop for selected text.
+Reference should be editable.
+New sentence should appear at bottom or below currently selected sentence. 
+Make 'sentences' and 'revisions' bigger or bold. (also added display of reference and revision)
+New column with '4 of 7' for example. (tells what current revision and how many revisions)
+Either disable column drag, or label and/or move text boxes. (disabled column drag -- might change again)
+Tab in text fields rotates between four text fields.
+Open and Save would be nice... :)
+Automatic transcription.
+Preferences option to convert 'z', 'v', and 'x' to accented 'a', 'u', and 'e'.
+Set default preferences to something sensible.
+Import/Export plain text formats. (MSWord tables compatible.)
+Web Update for definition files.
+Outputs .txt files as utf8 complete with 0xefbbbf utf8 marker.
+Dirty windows force display of save/cancel/don't_save panel.
+Drag to reorder sentences -- reference stays with sentence.
+Drag sentences between documents.
+Add lock (with padlock image?) for revisions.
+Added better defaults, preferences, and file specific handling for document window size and column widths.
+Added Verse and Revision menus.
+Delete multiple sentences at once.
+Got rid of redundant reference field.
+Sentence table view follows selected sentence.
+Regenerates script column when opening file, changing script preferences, or after downloading definitions.
+Doubleclick on table-cell of sentence begins editing of field below.
+Ensures there is exactly one blank sentence at end of document.
+Revised "exactly one extra sentence" to "at least one extra sentence" at end of document.
+Added better automatic font setting for script with unicode.
+Added popup menus in revision column.
+Added cut, copy, and paste of sentences.
+0.6.0
+New sentence autofills with reference for new sentence. (Only works if you use . to separate last number.)
+Default latin font set to "Helvetica 10 pt"
+Moved buttons to top of window.
+Now using "mini" buttons.
+Working on toolbars.
+0.06.3
+Reduced perceived transcription time for newly opened documents.
+Added type column.
+Extended reference autocomplete to include manually created sentences.
+0.06.4
+Search field (similar to that of Mail.app) -- mostly works.
+Remove excess revision and lock controls.
+Add lock checkbox column.
+Add lock/(unlocked) to revision popup menu cell.
+Text output inserts verse number in (#) format.
+Lossless forwards and backwards file format compatibility.
+0.06.6
+Uses the standard fonts panel to select per field font and size.
+Changed Roman and Script fields to Main and Output.
+Added "Save As... sfm" -- Definitely not complete, but something to try out.
+0.06.7
+Search is now case insensitive.
+Improvements to "Save As... sfm"
+Added "Open... sfm"
+Fast syncing of table view with text views.
+Can turn off transcription.
+Lock Verse checkbox.
+Type field conversion to USFM format.
+0.2006.02.23
+
+

@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 39;
+	objects = {
+		014CEA440018CDF011CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Development;
+		};
+		014CEA450018CDF011CA2923 = {
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				ZERO_LINK = NO;
+			};
+			isa = PBXBuildStyle;
+			name = Deployment;
+		};
+//010
+//011
+//012
+//013
+//014
+//030
+//031
+//032
+//033
+//034
+		034768DFFF38A50411DB9C8B = {
+			children = (
+				8DC2EF5B0486A6940098B216,
+				C258BAE60771A19500E90F11,
+			);
+			isa = PBXGroup;
+			name = Products;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//030
+//031
+//032
+//033
+//034
+//080
+//081
+//082
+//083
+//084
+		0867D690FE84028FC02AAC07 = {
+			buildSettings = {
+			};
+			buildStyles = (
+				014CEA440018CDF011CA2923,
+				014CEA450018CDF011CA2923,
+			);
+			hasScannedForEncodings = 1;
+			isa = PBXProject;
+			mainGroup = 0867D691FE84028FC02AAC07;
+			productRefGroup = 034768DFFF38A50411DB9C8B;
+			projectDirPath = "";
+			targets = (
+				8DC2EF4F0486A6940098B216,
+				C258BAE50771A19500E90F11,
+			);
+		};
+		0867D691FE84028FC02AAC07 = {
+			children = (
+				C258BBCA0771D8B400E90F11,
+				C258BBB50771C8F000E90F11,
+				C258BBBA0771CD5600E90F11,
+				C258BBC00771CF3C00E90F11,
+				08FB77AEFE84172EC02AAC07,
+				C258BB000771A26200E90F11,
+				32C88DFF0371C24200C91783,
+				089C1665FE841158C02AAC07,
+				0867D69AFE84028FC02AAC07,
+				034768DFFF38A50411DB9C8B,
+				C258BAE80771A19500E90F11,
+			);
+			isa = PBXGroup;
+			name = Chomp;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 = {
+			children = (
+				1058C7B0FEA5585E11CA2CBB,
+				1058C7B2FEA5585E11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "External Frameworks and Libraries";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		0867D69BFE84028FC02AAC07 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = /System/Library/Frameworks/Foundation.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		0867D6A5FE840307C02AAC07 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AppKit.framework;
+			path = /System/Library/Frameworks/AppKit.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		089C1665FE841158C02AAC07 = {
+			children = (
+				8DC2EF5A0486A6940098B216,
+				089C1666FE841158C02AAC07,
+			);
+			isa = PBXGroup;
+			name = Resources;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C1666FE841158C02AAC07 = {
+			children = (
+				089C1667FE841158C02AAC07,
+			);
+			isa = PBXVariantGroup;
+			name = InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		089C1667FE841158C02AAC07 = {
+			fileEncoding = 10;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.strings;
+			name = English;
+			path = English.lproj/InfoPlist.strings;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 = {
+			children = (
+				C258BAE90771A1D500E90F11,
+				C25225CF0770EAF200529452,
+				C25225D00770EAF200529452,
+				C258BB3A0771A75700E90F11,
+				C258BB3B0771A75700E90F11,
+				C25225C50770E54600529452,
+				C25225C60770E54600529452,
+				C258BB810771B38700E90F11,
+				C258BB820771B38700E90F11,
+				C25225B90770E2DE00529452,
+				C25225BA0770E2DE00529452,
+				C258BADE0771A0A500E90F11,
+				C258BADF0771A0A500E90F11,
+				C258BBA90771B72500E90F11,
+				C258BBAA0771B72500E90F11,
+				C258BB240771A52300E90F11,
+				C258BB250771A52300E90F11,
+			);
+			isa = PBXGroup;
+			name = Classes;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//080
+//081
+//082
+//083
+//084
+//100
+//101
+//102
+//103
+//104
+		1058C7B0FEA5585E11CA2CBB = {
+			children = (
+				1058C7B1FEA5585E11CA2CBB,
+			);
+			isa = PBXGroup;
+			name = "Linked Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		1058C7B1FEA5585E11CA2CBB = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = /System/Library/Frameworks/Cocoa.framework;
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		1058C7B2FEA5585E11CA2CBB = {
+			children = (
+				0867D69BFE84028FC02AAC07,
+				0867D6A5FE840307C02AAC07,
+			);
+			isa = PBXGroup;
+			name = "Other Frameworks";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//100
+//101
+//102
+//103
+//104
+//320
+//321
+//322
+//323
+//324
+		32C88DFF0371C24200C91783 = {
+			children = (
+				32DBCF5E0370ADEE00C91783,
+			);
+			isa = PBXGroup;
+			name = "Other Sources";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		32DBCF5E0370ADEE00C91783 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = Chomp_Prefix.pch;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+//320
+//321
+//322
+//323
+//324
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+		8DC2EF4F0486A6940098B216 = {
+			buildPhases = (
+				8DC2EF500486A6940098B216,
+				8DC2EF520486A6940098B216,
+				8DC2EF540486A6940098B216,
+				8DC2EF560486A6940098B216,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Chomp_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_STYLE = DYNAMIC;
+				PRODUCT_NAME = Chomp;
+				WRAPPER_EXTENSION = framework;
+			};
+			dependencies = (
+			);
+			isa = PBXNativeTarget;
+			name = Chomp;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = Chomp;
+			productReference = 8DC2EF5B0486A6940098B216;
+			productType = "com.apple.product-type.framework";
+		};
+		8DC2EF500486A6940098B216 = {
+			buildActionMask = 2147483647;
+			files = (
+				C258BB770771AB6A00E90F11,
+				C25225BB0770E2DE00529452,
+				C25225C70770E54600529452,
+				C25225D10770EAF200529452,
+				C258BAE00771A0A500E90F11,
+				C258BAEA0771A1D500E90F11,
+				C258BB830771B38700E90F11,
+				C258BBAB0771B72500E90F11,
+			);
+			isa = PBXHeadersBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF520486A6940098B216 = {
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216,
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF530486A6940098B216 = {
+			fileRef = 089C1666FE841158C02AAC07;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8DC2EF540486A6940098B216 = {
+			buildActionMask = 2147483647;
+			files = (
+				C25225BC0770E2DE00529452,
+				C25225C80770E54600529452,
+				C25225D20770EAF200529452,
+				C258BAE10771A0A500E90F11,
+				C258BB510771A90300E90F11,
+				C258BB520771A90400E90F11,
+				C258BB840771B38700E90F11,
+				C258BBAC0771B72500E90F11,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF560486A6940098B216 = {
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF570486A6940098B216 = {
+			fileRef = 1058C7B1FEA5585E11CA2CBB;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8DC2EF5A0486A6940098B216 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist;
+			path = Info.plist;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		8DC2EF5B0486A6940098B216 = {
+			explicitFileType = wrapper.framework;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = Chomp.framework;
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+//8D0
+//8D1
+//8D2
+//8D3
+//8D4
+//C20
+//C21
+//C22
+//C23
+//C24
+		C25225B90770E2DE00529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CHOMPTrampoline.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225BA0770E2DE00529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CHOMPTrampoline.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225BB0770E2DE00529452 = {
+			fileRef = C25225B90770E2DE00529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C25225BC0770E2DE00529452 = {
+			fileRef = C25225BA0770E2DE00529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C25225C50770E54600529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CHOMPEnumeratorTrampoline.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225C60770E54600529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CHOMPEnumeratorTrampoline.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225C70770E54600529452 = {
+			fileRef = C25225C50770E54600529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C25225C80770E54600529452 = {
+			fileRef = C25225C60770E54600529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C25225CF0770EAF200529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CHOMPSingleObjectEnumerator.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225D00770EAF200529452 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CHOMPSingleObjectEnumerator.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C25225D10770EAF200529452 = {
+			fileRef = C25225CF0770EAF200529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C25225D20770EAF200529452 = {
+			fileRef = C25225D00770EAF200529452;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BADE0771A0A500E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = "NSCollections+CHOMPIteration.h";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BADF0771A0A500E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = "NSCollections+CHOMPIteration.m";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BAE00771A0A500E90F11 = {
+			fileRef = C258BADE0771A0A500E90F11;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					Public,
+				);
+			};
+		};
+		C258BAE10771A0A500E90F11 = {
+			fileRef = C258BADF0771A0A500E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BAE20771A19500E90F11 = {
+			buildActionMask = 2147483647;
+			files = (
+			);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C258BAE30771A19500E90F11 = {
+			buildActionMask = 2147483647;
+			files = (
+				C258BB020771A27600E90F11,
+			);
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C258BAE40771A19500E90F11 = {
+			buildActionMask = 2147483647;
+			files = (
+				C258BB0C0771A3B600E90F11,
+			);
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C258BAE50771A19500E90F11 = {
+			buildPhases = (
+				C258BAE20771A19500E90F11,
+				C258BAE30771A19500E90F11,
+				C258BAE40771A19500E90F11,
+				C258BB710771AAF500E90F11,
+			);
+			buildRules = (
+			);
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Chomp Test-Info.plist";
+				INSTALL_PATH = "$(USER_APPS_DIR)";
+				OPTIMIZATION_CFLAGS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-framework Foundation -framework AppKit";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Chomp Test";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = "-Wmost -Wno-four-char-constants -Wno-unknown-pragmas";
+			};
+			dependencies = (
+				C258BB090771A39C00E90F11,
+			);
+			isa = PBXNativeTarget;
+			name = "Chomp Test";
+			productName = "Chomp Test";
+			productReference = C258BAE60771A19500E90F11;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>Chomp Test</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.Chomp_Test</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+			productType = "com.apple.product-type.application";
+		};
+		C258BAE60771A19500E90F11 = {
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			isa = PBXFileReference;
+			path = "Chomp Test.app";
+			refType = 3;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C258BAE80771A19500E90F11 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			name = "Chomp Test-Info.plist";
+			path = "/Users/mikeash/Development/Projects/Chomp/Chomp Test-Info.plist";
+			refType = 0;
+			sourceTree = "<absolute>";
+		};
+		C258BAE90771A1D500E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = Chomp.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BAEA0771A1D500E90F11 = {
+			fileRef = C258BAE90771A1D500E90F11;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					Public,
+				);
+			};
+		};
+		C258BB000771A26200E90F11 = {
+			children = (
+				C258BB010771A27600E90F11,
+			);
+			isa = PBXGroup;
+			name = "Test App";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB010771A27600E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = TestApp.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB020771A27600E90F11 = {
+			fileRef = C258BB010771A27600E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB080771A39C00E90F11 = {
+			containerPortal = 0867D690FE84028FC02AAC07;
+			isa = PBXContainerItemProxy;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
+			remoteInfo = Chomp;
+		};
+		C258BB090771A39C00E90F11 = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216;
+			targetProxy = C258BB080771A39C00E90F11;
+		};
+		C258BB0C0771A3B600E90F11 = {
+			fileRef = 8DC2EF5B0486A6940098B216;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB240771A52300E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = "NSObject+CHOMPIteration.h";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB250771A52300E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = "NSObject+CHOMPIteration.m";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB3A0771A75700E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CHOMPEnumeratorCollectTrampoline.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB3B0771A75700E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CHOMPEnumeratorCollectTrampoline.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB510771A90300E90F11 = {
+			fileRef = C258BB3B0771A75700E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB520771A90400E90F11 = {
+			fileRef = C258BB250771A52300E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB710771AAF500E90F11 = {
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C258BB720771AB0400E90F11,
+			);
+			isa = PBXCopyFilesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C258BB720771AB0400E90F11 = {
+			fileRef = 8DC2EF5B0486A6940098B216;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB770771AB6A00E90F11 = {
+			fileRef = C258BB240771A52300E90F11;
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					Public,
+				);
+			};
+		};
+		C258BB810771B38700E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = CHOMPSimpleTrampoline.h;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB820771B38700E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = CHOMPSimpleTrampoline.m;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BB830771B38700E90F11 = {
+			fileRef = C258BB810771B38700E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BB840771B38700E90F11 = {
+			fileRef = C258BB820771B38700E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BBA90771B72500E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			path = "NSObject+CHOMPHOM.h";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BBAA0771B72500E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.objc;
+			path = "NSObject+CHOMPHOM.m";
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BBAB0771B72500E90F11 = {
+			fileRef = C258BBA90771B72500E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BBAC0771B72500E90F11 = {
+			fileRef = C258BBAA0771B72500E90F11;
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		C258BBB50771C8F000E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = LICENSE;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BBBA0771CD5600E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = README;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BBC00771CF3C00E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text.html;
+			path = Documentation.html;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+		C258BBCA0771D8B400E90F11 = {
+			fileEncoding = 4;
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			path = HACKING;
+			refType = 4;
+			sourceTree = "<group>";
+		};
+	};
+	rootObject = 0867D690FE84028FC02AAC07;
+}

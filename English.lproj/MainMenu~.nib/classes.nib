@@ -1,0 +1,91 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                deleteRevision = id; 
+                deleteVerse = id; 
+                lockRevision = id; 
+                lockVerse = id; 
+                newRevision = id; 
+                newVerse = id; 
+                nextRevision = id; 
+                nextVerse = id; 
+                openBugsAndFeatures = id; 
+                previousRevision = id; 
+                previousVerse = id; 
+                setDraggedVersesOwner = id; 
+                showCommitteeMeetingPanel = id; 
+            }; 
+            CLASS = RTKCleverRabbitController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                committeeMeetingPanel = NSPanel; 
+                committeeMeetingTextView = NSTextView; 
+                deleteRevisionMenuItem = NSMenuItem; 
+                deleteVerseMenuItem = NSMenuItem; 
+                draggedVersesOwner = id; 
+                lockRevisionMenuItem = NSMenuItem; 
+                lockVerseMenuItem = NSMenuItem; 
+                newRevisionMenuItem = NSMenuItem; 
+                newVerseMenuItem = NSMenuItem; 
+                nextRevisionMenuItem = NSMenuItem; 
+                nextVerseMenuItem = NSMenuItem; 
+                previousRevisionMenuItem = NSMenuItem; 
+                previousVerseMenuItem = NSMenuItem; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                changeFont = id; 
+                convertorSwitched = id; 
+                encodingSystemChanged = id; 
+                inputSystemChanged = id; 
+                plainTextDelimiterChanged = id; 
+                plainTextReturnChanged = id; 
+                scriptSystemChanged = id; 
+                setExternalConvertor = id; 
+                substituteZVXChanged = id; 
+                transliterationOnChanged = id; 
+                webUpdateDefinitionsClicked = id; 
+            }; 
+            CLASS = RTKPreferencesController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                backTranslationFontButton = NSButton; 
+                backTranslationFontTextField = NSTextField; 
+                checkingFontButton = NSButton; 
+                checkingFontTextField = NSTextField; 
+                committeeFontButton = NSButton; 
+                committeeFontTextField = NSTextField; 
+                convertorMatrix = NSMatrix; 
+                definitionVersionTextField = NSTextField; 
+                delimiterTextField = NSTextField; 
+                encodingPopUpButton = NSPopUpButton; 
+                externalConvertorTextField = NSTextField; 
+                inputPopUpButton = NSPopUpButton; 
+                notesFontButton = NSButton; 
+                notesFontTextField = NSTextField; 
+                preferencesWindow = NSWindow; 
+                returnCharacterTextField = NSTextField; 
+                romanFontButton = NSButton; 
+                romanFontTextField = NSTextField; 
+                scriptFontButton = NSButton; 
+                scriptFontTextField = NSTextField; 
+                scriptPopUpButton = NSPopUpButton; 
+                transliterationOnButton = NSButton; 
+                webUpdateDefinitionsButton = NSButton; 
+                webUpdateDefinitionsProgressIndicator = NSProgressIndicator; 
+                zvxButton = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

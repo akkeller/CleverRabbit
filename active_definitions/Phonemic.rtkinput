@@ -1,0 +1,3629 @@
+{
+    RTKClass = RTKInputFilterSetDefinition; 
+    RTKFilterSetKey = (
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 41; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 61; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 42; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 62; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 43; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 63; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 44; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 64; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 45; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 65; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 46; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 66; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 47; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 67; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 48; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 68; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 49; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 69; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6a; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6b; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6c; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6d; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6e; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 4f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 6f; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 50; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 70; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 51; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 71; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 52; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 72; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 53; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 73; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 54; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 74; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 55; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 75; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 56; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 76; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = f9; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 76; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 57; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 77; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 58; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 78; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = e8; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 78; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 59; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 79; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 7a; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = e0; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKCharacter = 7a; RTKClass = RTKFontCharacter; }); 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 32; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = repeater; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = leftFrenchQuote; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = rightFrenchQuote; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = remark; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 26; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 26; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = logicalAND; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = logicalOR; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 26; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ampersand; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = verticalLine; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = backSlash; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = asterisk; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 25; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = percent; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = comma; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 27; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = apostrophe; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = questionMark; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 21; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = exclamationPoint; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = returnChar; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = returnChar; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = returnChar; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 28; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = leftParen; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 29; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = rightParen; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = semicolon; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = colon; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 22; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = doubleQuote; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = lessThan; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = greaterThan; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = leftBrace; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = rightBrace; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = leftBracket; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = rightBracket; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = space; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 9; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = tab; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = romanPeriod; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = period; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = underscore; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 40; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = atSign; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 23; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = pound; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 24; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = dollar; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = times; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = plus; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 3d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = equal; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = hyphen; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = tilde; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 30; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicZero; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 31; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicOne; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 32; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicTwo; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 33; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicThree; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 34; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicFour; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 35; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicFive; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 36; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicSix; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 37; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicSeven; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 38; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicEight; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 5c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 39; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = arabicNine; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 30; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = zero; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 31; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = one; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 32; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = two; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 33; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = three; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 34; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = four; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 35; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = five; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 36; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = six; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 37; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = seven; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 38; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = eight; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 39; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = nine; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 1c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = leftArrow; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 1d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = rightArrow; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 1e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = upArrow; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 1f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = downArrow; }); 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 67; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_n"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_g"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 63; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ch"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_kh"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_nh"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 70; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ph"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 62; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qb"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 64; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qd"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 79; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qy"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 67; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qg"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 77; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qw"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ql"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 74; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_th"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 62; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_b"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 63; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_c"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 64; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_d"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 67; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_g"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_h"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_j"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6b; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_k"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_l"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_n"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 70; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_p"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 71; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 72; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_r"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 77; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_w"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 79; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 74; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_t"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 73; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_s"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zzh"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_aa"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 66; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_af"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ah"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ah"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ao"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zz"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 68; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zh"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zm"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ee"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ev"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = backSlash; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 78; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = backSlash; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 78; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = vowel; 
+                                    RTKidNumber = "phoneme_SlashXSlashX"; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 78; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 78; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_xx"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 69; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 69; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ii"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_oo"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_oo"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_uu"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6d; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_um"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_vv"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 69; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ie"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ue"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ve"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 79; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ey"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 77; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zw"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 77; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_aw"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 77; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_aw"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 61; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 7a; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_z"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 65; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_e"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 78; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_x"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 69; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_i"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 6f; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_o"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 75; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_u"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_v"; }); 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_z"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_z"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_o"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_o"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_u"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_u"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_i"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_i"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_e"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_e"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_x"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_x"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_v"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_v"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ay"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ay"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ay"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_aa"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_am"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_am"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_w"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = consonant; 
+                                    RTKidNumber = "phoneme_finalWq"; 
+                                }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_w"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = consonant; 
+                                    RTKidNumber = "phoneme_finalWq"; 
+                                }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = consonant; 
+                                    RTKidNumber = "phoneme_finalYq"; 
+                                }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_y"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = consonant; 
+                                    RTKidNumber = "phoneme_finalYq"; 
+                                }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_p"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_k"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_k"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_r"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = (
+                                {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }, 
+                                {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_s"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_w"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qb"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_g"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_zm"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_am"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_n"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_qb"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_l"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_r"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_r"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_r"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_h"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_h"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_n"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_h"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_n"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = presyllable; RTKidNumber = firstSeries; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_q"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = syllableBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFilter; 
+            RTKPatternArray = (
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = doubleQuote; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = rightDoubleQuote; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = doubleQuote; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = rightDoubleQuote; 
+                                }
+                            ); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = doubleQuote; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = (
+                                {
+                                    RTKClass = RTKIDMarker; 
+                                    RTKType = punctuation; 
+                                    RTKidNumber = leftDoubleQuote; 
+                                }
+                            ); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_m"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_am"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = ""; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_a"; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = consonant; RTKidNumber = "phoneme_ng"; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ang"; }); 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKClass = RTKIDMarker; RTKType = break; RTKidNumber = wordBreak; }; 
+                            RTKDeleteFlag = NO; 
+                        }
+                    ); 
+                }
+            ); 
+        }
+    ); 
+}

@@ -1,0 +1,2272 @@
+{
+    RTKClass = RTKFontEncodingDefinition; 
+    RTKFontCharacterDefinitionList = (
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = kzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1780; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = gzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1780; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_gzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179d; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qgzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1780; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qgzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1780; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = khzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1781; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = koo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1782; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngKoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = goo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qgoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qgoo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                    RTKRegionList = ({RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = upperSubscript; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_goo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = khoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1783; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = ngoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1784; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = preSyllableFinalNgoo; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1784; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = ngzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1784; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngNgoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1784; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = czz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1785; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = jzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1785; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_jzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1786; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = chzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1786; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = coo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1787; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = joo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1787; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_joo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1788; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = choo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1788; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = nhzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1789; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = nhoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1789; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalNhoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1789; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = dzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178a; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qdzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 178a; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qdzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178b; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = thzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1790; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = doo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qdoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 178c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qdoo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = thoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1792; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = nzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178e; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = tzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 178f; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = thzz2; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1790; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = too; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1791; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = thoo2; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1792; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = noo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1793; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = preSyllableFinalNoo; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1793; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngNoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1793; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = bzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1794; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalBzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1794; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qbzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1794; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qbzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179e; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = phzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1795; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = pzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1794; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = poo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1796; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = boo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1794; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qboo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1794; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qboo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179e; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = phoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1797; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = moo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1798; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = mzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1798; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngMoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1798; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = yzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qyzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                    RTKRegionList = ({RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = lowerSuperscript; }); 
+                }, 
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17bb; RTKClass = RTKFontCharacter; }
+                    ); 
+                    RTKRegionList = ({RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = upperSubscript; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qyzz"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }
+                    ); 
+                    RTKRegionList = ({RTKClass = RTKIDMarker; RTKType = ""; RTKidNumber = upperSubscript; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = yoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1799; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalYooCvvngKoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qyoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 60; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_qyoo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngYoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qzzCvvngYoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qooCvvngYoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1799; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = roo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179a; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = silentRoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179a; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17cd; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngRoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179a; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179a; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = loo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179b; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qzzCvvngLoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179b; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qooCvvngLoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179b; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngLoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179b; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = wzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = woo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = cvvngWoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalWooCvvngKoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1782; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qzzCvvngWoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qooCvvngWoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17d2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalWoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = szz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 179f; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = soo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 179f; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = hzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17a0; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = hoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a0; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = finalH; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c7; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = lzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17a1; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qzz; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = qoo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17a2; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_a"; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b6; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_af"; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17ce; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17b6; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = preSyllableSRAQa; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_aa"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b6; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ao"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c4; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_am"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17b6; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c6; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = preSyllableSRAQam; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c6; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_zm"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c6; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ang"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17b6; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 1784; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ay"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c3; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_zh"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17c4; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c7; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_zzh"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17c4; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c7; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_z"; 
+            RTKGlyphList = (
+                {
+                    RTKAfterPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_zw"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17bc; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 179c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_aw"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c5; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_e"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b9; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_sraq_e"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b9; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ee"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17be; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_x"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b7; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_sraq_x"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b7; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_xx"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c2; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftHandSRAQxx; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c1; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ii"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17b8; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ie"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c0; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_o"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17bb; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "new_sraq_o"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17bb; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_oo"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17bc; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_um"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17bb; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 17c6; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ue"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17bd; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_vv"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17ba; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = "sraq_ve"; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17bf; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = asterisk; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 2a; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = remark; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftBlockRemark; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 2a; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightBlockRemark; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 2a; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 2f; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = logicalAND; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 26; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 26; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = logicalOR; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 7c; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 7c; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = ampersand; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 26; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = verticalLine; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 7c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = backSlash; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 5c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = forwardSlash; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 2f; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = space; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 20; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = period; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 17d4; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = tab; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 9; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = questionMark; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 3f; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = exclamationPoint; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 21; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = returnChar; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftParen; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 28; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightParen; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 29; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = comma; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = (
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }, 
+                        {RTKCharacter = 20; RTKClass = RTKFontCharacter; }
+                    ); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = apostrophe; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 27; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = semicolon; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 3b; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = colon; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = f5; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = doubleQuote; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 22; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightDoubleQuote; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 22; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftDoubleQuote; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = cb; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = lessThan; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 3c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = greaterThan; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 3e; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftBrace; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 7b; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightBrace; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 7d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftBracket; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 5b; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightBracket; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 5d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftFrenchQuote; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = ab; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightFrenchQuote; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = bb; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = repeater; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17d7; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = zero; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e0; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = one; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e1; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = two; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e2; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = three; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e3; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = four; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e4; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = five; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e5; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = six; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e6; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = seven; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e7; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = eight; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e8; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = nine; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17e9; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicZero; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 30; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicOne; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 31; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicTwo; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 32; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicThree; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 33; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicFour; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 34; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicFive; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 35; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicSix; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 36; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicSeven; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 37; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicEight; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 38; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = arabicNine; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 39; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = leftArrow; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1c; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = rightArrow; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1d; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = upArrow; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1e; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = downArrow; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 1f; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = ratsTeeth; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17c9; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = trxxSaap; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17ca; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = voicer; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 60; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = silencer; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17cd; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = shortener; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17cb; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }, 
+        {
+            RTKClass = RTKFontCharacterDefinition; 
+            RTKFontCharacterKey = breathyMarker; 
+            RTKGlyphList = (
+                {
+                    RTKClass = RTKFontGlyphDefinition; 
+                    RTKGlyphName = ""; 
+                    RTKPositionPartialGlyphList = ({RTKCharacter = 17ce; RTKClass = RTKFontCharacter; }); 
+                }
+            ); 
+        }
+    ); 
+}

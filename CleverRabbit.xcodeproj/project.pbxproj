@@ -46,6 +46,7 @@
 		CB2602B10D63C6C6007FA175 /* RTKVowelDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2B07D17A0C00A5339A /* RTKVowelDefinition.m */; };
 		CB2602B20D63C6C7007FA175 /* RTKWordUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2D07D17A0C00A5339A /* RTKWordUnit.m */; };
 		CB2602B30D63C6C8007FA175 /* RTKWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2F07D17A0C00A5339A /* RTKWrapper.m */; };
+		CB2603420D6400ED007FA175 /* RTKStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB86ACA40879F4F3001D55F3 /* RTKStringCategory.m */; };
 		CB2DCD3507D17A0C00A5339A /* RTKAlias.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2DCCEB07D17A0C00A5339A /* RTKAlias.h */; };
 		CB2DCD3607D17A0C00A5339A /* RTKAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */; };
 		CB2DCD3707D17A0C00A5339A /* RTKBinaryTreeHeader.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2DCCED07D17A0C00A5339A /* RTKBinaryTreeHeader.h */; };
@@ -700,6 +701,7 @@
 				CB2602B10D63C6C6007FA175 /* RTKVowelDefinition.m in Sources */,
 				CB2602B20D63C6C7007FA175 /* RTKWordUnit.m in Sources */,
 				CB2602B30D63C6C8007FA175 /* RTKWrapper.m in Sources */,
+				CB2603420D6400ED007FA175 /* RTKStringCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

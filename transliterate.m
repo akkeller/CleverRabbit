@@ -12,6 +12,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "RTKConvertor.h"
+#import "RTKStringCategory.h"
 
 // This is likely temporary, a nasty relic of the project
 // that the transcription code was borrowed from
@@ -70,10 +71,13 @@ int processArguments(int argc, char *argv[])
             NSLog(@"%@", [output description]);
         
         NSString *outputString = [output objectForKey:@"RTKFont"];
-        NSData *outputData = [NSData dataWithBytes:[outputString cString] 
-                                            length:[outputString length]];
+        
+        // TODO: figure out why I need 0xefbbbf at the start of each line, rather than just top of file
+        NSData *outputData = [outputString utf8Data]; 
+        // [NSData dataWithBytes:[outputString cString] length:[outputString length]];
+        
         [standardOutput writeData:outputData];
-        [standardOutput writeData:[NSData dataWithBytes:"\n" length:1]]; 
+        [standardOutput writeData:[NSData dataWithBytes:"\n" length:1]];
     }
     
     return 0;	

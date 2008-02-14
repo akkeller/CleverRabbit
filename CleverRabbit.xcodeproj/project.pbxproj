@@ -18,6 +18,34 @@
 		CB2349A807DCCCAC005D0DE4 /* RTKCleverRabbitController.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2349A607DCCCAC005D0DE4 /* RTKCleverRabbitController.h */; };
 		CB25DB4E07B43C0B006DADA3 /* RTKVerse.h in Resources */ = {isa = PBXBuildFile; fileRef = CB25DB4C07B43C0B006DADA3 /* RTKVerse.h */; };
 		CB25DB4F07B43C0B006DADA3 /* RTKVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */; };
+		CB2602920D63C6B6007FA175 /* RTKAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */; };
+		CB2602990D63C6B7007FA175 /* RTKBinaryTreeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCEE07D17A0C00A5339A /* RTKBinaryTreeHeader.m */; };
+		CB26029A0D63C6B8007FA175 /* RTKBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCF007D17A0C00A5339A /* RTKBinaryTreeNode.m */; };
+		CB26029B0D63C6B8007FA175 /* RTKConsonantDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCF407D17A0C00A5339A /* RTKConsonantDefinition.m */; };
+		CB26029C0D63C6B9007FA175 /* RTKContextualParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCF607D17A0C00A5339A /* RTKContextualParsing.m */; };
+		CB26029D0D63C6BA007FA175 /* RTKConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCF807D17A0C00A5339A /* RTKConvertor.m */; };
+		CB26029E0D63C6BA007FA175 /* RTKFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCFA07D17A0C00A5339A /* RTKFilter.m */; };
+		CB26029F0D63C6BB007FA175 /* RTKFontCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCFE07D17A0C00A5339A /* RTKFontCharacter.m */; };
+		CB2602A00D63C6BB007FA175 /* RTKFontCharacterDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0007D17A0C00A5339A /* RTKFontCharacterDefinition.m */; };
+		CB2602A10D63C6BC007FA175 /* RTKFontEncodingDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0207D17A0C00A5339A /* RTKFontEncodingDefinition.m */; };
+		CB2602A20D63C6BD007FA175 /* RTKFontGlyphDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0407D17A0C00A5339A /* RTKFontGlyphDefinition.m */; };
+		CB2602A30D63C6BD007FA175 /* RTKGlyphAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0707D17A0C00A5339A /* RTKGlyphAlias.m */; };
+		CB2602A40D63C6BE007FA175 /* RTKIDDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0907D17A0C00A5339A /* RTKIDDatabase.m */; };
+		CB2602A50D63C6BE007FA175 /* RTKIDMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0B07D17A0C00A5339A /* RTKIDMarker.m */; };
+		CB2602A60D63C6BF007FA175 /* RTKInputFilterSetDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD0F07D17A0C00A5339A /* RTKInputFilterSetDefinition.m */; };
+		CB2602A70D63C6C0007FA175 /* RTKLinkedListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD1307D17A0C00A5339A /* RTKLinkedListHeader.m */; };
+		CB2602A80D63C6C0007FA175 /* RTKLinkedListNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD1507D17A0C00A5339A /* RTKLinkedListNode.m */; };
+		CB2602A90D63C6C1007FA175 /* RTKParsePattern.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD1707D17A0C00A5339A /* RTKParsePattern.m */; };
+		CB2602AA0D63C6C2007FA175 /* RTKPunctuationGroupUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD1907D17A0C00A5339A /* RTKPunctuationGroupUnit.m */; };
+		CB2602AB0D63C6C2007FA175 /* RTKPunctuationUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD1B07D17A0C00A5339A /* RTKPunctuationUnit.m */; };
+		CB2602AC0D63C6C3007FA175 /* RTKScriptCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2107D17A0C00A5339A /* RTKScriptCluster.m */; };
+		CB2602AD0D63C6C3007FA175 /* RTKScriptDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2307D17A0C00A5339A /* RTKScriptDefinition.m */; };
+		CB2602AE0D63C6C4007FA175 /* RTKScriptPunctuationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2507D17A0C00A5339A /* RTKScriptPunctuationGroup.m */; };
+		CB2602AF0D63C6C4007FA175 /* RTKSyllableUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2907D17A0C00A5339A /* RTKSyllableUnit.m */; };
+		CB2602B00D63C6C5007FA175 /* RTKScriptWord.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2707D17A0C00A5339A /* RTKScriptWord.m */; };
+		CB2602B10D63C6C6007FA175 /* RTKVowelDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2B07D17A0C00A5339A /* RTKVowelDefinition.m */; };
+		CB2602B20D63C6C7007FA175 /* RTKWordUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2D07D17A0C00A5339A /* RTKWordUnit.m */; };
+		CB2602B30D63C6C8007FA175 /* RTKWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2F07D17A0C00A5339A /* RTKWrapper.m */; };
 		CB2DCD3507D17A0C00A5339A /* RTKAlias.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2DCCEB07D17A0C00A5339A /* RTKAlias.h */; };
 		CB2DCD3607D17A0C00A5339A /* RTKAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */; };
 		CB2DCD3707D17A0C00A5339A /* RTKBinaryTreeHeader.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2DCCED07D17A0C00A5339A /* RTKBinaryTreeHeader.h */; };
@@ -96,6 +124,7 @@
 		CB8F620C07BDCC1600698E17 /* cr_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CB8F620B07BDCC1600698E17 /* cr_icon.icns */; };
 		CBA9338207C805A100156906 /* RTKRevision.h in Resources */ = {isa = PBXBuildFile; fileRef = CBA9338007C805A000156906 /* RTKRevision.h */; };
 		CBA9338307C805A100156906 /* RTKRevision.m in Sources */ = {isa = PBXBuildFile; fileRef = CBA9338107C805A100156906 /* RTKRevision.m */; };
+		CBAE16B20D62BF1700FCBBA0 /* transliterate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE16B10D62BF1700FCBBA0 /* transliterate.m */; };
 		CBB9D1C907C457DF00E4C5B9 /* RTKBook.h in Resources */ = {isa = PBXBuildFile; fileRef = CBB9D1C707C457DF00E4C5B9 /* RTKBook.h */; };
 		CBB9D1CA07C457DF00E4C5B9 /* RTKBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CBB9D1C807C457DF00E4C5B9 /* RTKBook.m */; };
 		CBBF69CB07D2B1140053A086 /* RTKPreferencesController.h in Resources */ = {isa = PBXBuildFile; fileRef = CBBF69C907D2B1140053A086 /* RTKPreferencesController.h */; };
@@ -218,6 +247,8 @@
 		CB8F620B07BDCC1600698E17 /* cr_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = cr_icon.icns; sourceTree = "<group>"; };
 		CBA9338007C805A000156906 /* RTKRevision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKRevision.h; sourceTree = "<group>"; };
 		CBA9338107C805A100156906 /* RTKRevision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKRevision.m; sourceTree = "<group>"; };
+		CBAE16AA0D62BE9F00FCBBA0 /* transliterate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = transliterate; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBAE16B10D62BF1700FCBBA0 /* transliterate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transliterate.m; sourceTree = "<group>"; };
 		CBB9D1C707C457DF00E4C5B9 /* RTKBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKBook.h; sourceTree = "<group>"; };
 		CBB9D1C807C457DF00E4C5B9 /* RTKBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKBook.m; sourceTree = "<group>"; };
 		CBBF69C907D2B1140053A086 /* RTKPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKPreferencesController.h; sourceTree = "<group>"; };
@@ -236,6 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBAE16A80D62BE9F00FCBBA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				8D15AC370486D014006FF6A4 /* CleverRabbit.app */,
+				CBAE16AA0D62BE9F00FCBBA0 /* transliterate */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,8 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				CBE483840988A7FC00BF6F50 /* Headers */,
-				CB581EB807E7780B00857854 /* RTKMutableArrayCategory.m */,
 				CB581CD407E40DC400857854 /* RTKArrayCategory.m */,
+				CB581EB807E7780B00857854 /* RTKMutableArrayCategory.m */,
 				CB86ACA40879F4F3001D55F3 /* RTKStringCategory.m */,
 				CBA9338107C805A100156906 /* RTKRevision.m */,
 				CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */,
@@ -305,6 +344,7 @@
 			children = (
 				32DBCF750370BD2300C91783 /* CleverRabbit_Prefix.pch */,
 				2A37F4B0FDCFA73011CA2CEA /* main.m */,
+				CBAE16B10D62BF1700FCBBA0 /* transliterate.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -337,65 +377,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CB2DCCC007D1781F00A5339A /* Script Conversion */ = {
+		CB2602910D63C675007FA175 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
 				CB2DCCEB07D17A0C00A5339A /* RTKAlias.h */,
-				CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */,
 				CB2DCCED07D17A0C00A5339A /* RTKBinaryTreeHeader.h */,
-				CB2DCCEE07D17A0C00A5339A /* RTKBinaryTreeHeader.m */,
 				CB2DCCEF07D17A0C00A5339A /* RTKBinaryTreeNode.h */,
-				CB2DCCF007D17A0C00A5339A /* RTKBinaryTreeNode.m */,
 				CB2DCCF307D17A0C00A5339A /* RTKConsonantDefinition.h */,
-				CB2DCCF407D17A0C00A5339A /* RTKConsonantDefinition.m */,
 				CB2DCCF507D17A0C00A5339A /* RTKContextualParsing.h */,
-				CB2DCCF607D17A0C00A5339A /* RTKContextualParsing.m */,
 				CB2DCCF707D17A0C00A5339A /* RTKConvertor.h */,
-				CB2DCCF807D17A0C00A5339A /* RTKConvertor.m */,
 				CBCE04A207D19E59008F8303 /* RTKGlobals.h */,
 				CB2DCCF907D17A0C00A5339A /* RTKFilter.h */,
-				CB2DCCFA07D17A0C00A5339A /* RTKFilter.m */,
 				CB2DCCFD07D17A0C00A5339A /* RTKFontCharacter.h */,
-				CB2DCCFE07D17A0C00A5339A /* RTKFontCharacter.m */,
 				CB2DCCFF07D17A0C00A5339A /* RTKFontCharacterDefinition.h */,
-				CB2DCD0007D17A0C00A5339A /* RTKFontCharacterDefinition.m */,
 				CB2DCD0107D17A0C00A5339A /* RTKFontEncodingDefinition.h */,
-				CB2DCD0207D17A0C00A5339A /* RTKFontEncodingDefinition.m */,
 				CB2DCD0307D17A0C00A5339A /* RTKFontGlyphDefinition.h */,
-				CB2DCD0407D17A0C00A5339A /* RTKFontGlyphDefinition.m */,
 				CB2DCD0607D17A0C00A5339A /* RTKGlyphAlias.h */,
-				CB2DCD0707D17A0C00A5339A /* RTKGlyphAlias.m */,
 				CB2DCD0807D17A0C00A5339A /* RTKIDDatabase.h */,
-				CB2DCD0907D17A0C00A5339A /* RTKIDDatabase.m */,
 				CB2DCD0A07D17A0C00A5339A /* RTKIDMarker.h */,
-				CB2DCD0B07D17A0C00A5339A /* RTKIDMarker.m */,
 				CB2DCD0E07D17A0C00A5339A /* RTKInputFilterSetDefinition.h */,
-				CB2DCD0F07D17A0C00A5339A /* RTKInputFilterSetDefinition.m */,
 				CB2DCD1207D17A0C00A5339A /* RTKLinkedListHeader.h */,
-				CB2DCD1307D17A0C00A5339A /* RTKLinkedListHeader.m */,
 				CB2DCD1407D17A0C00A5339A /* RTKLinkedListNode.h */,
-				CB2DCD1507D17A0C00A5339A /* RTKLinkedListNode.m */,
 				CB2DCD1607D17A0C00A5339A /* RTKParsePattern.h */,
-				CB2DCD1707D17A0C00A5339A /* RTKParsePattern.m */,
 				CB2DCD1807D17A0C00A5339A /* RTKPunctuationGroupUnit.h */,
-				CB2DCD1907D17A0C00A5339A /* RTKPunctuationGroupUnit.m */,
 				CB2DCD1A07D17A0C00A5339A /* RTKPunctuationUnit.h */,
-				CB2DCD1B07D17A0C00A5339A /* RTKPunctuationUnit.m */,
 				CB2DCD2007D17A0C00A5339A /* RTKScriptCluster.h */,
-				CB2DCD2107D17A0C00A5339A /* RTKScriptCluster.m */,
 				CB2DCD2207D17A0C00A5339A /* RTKScriptDefinition.h */,
-				CB2DCD2307D17A0C00A5339A /* RTKScriptDefinition.m */,
 				CB2DCD2407D17A0C00A5339A /* RTKScriptPunctuationGroup.h */,
-				CB2DCD2507D17A0C00A5339A /* RTKScriptPunctuationGroup.m */,
 				CB2DCD2607D17A0C00A5339A /* RTKScriptWord.h */,
-				CB2DCD2707D17A0C00A5339A /* RTKScriptWord.m */,
 				CB2DCD2807D17A0C00A5339A /* RTKSyllableUnit.h */,
-				CB2DCD2907D17A0C00A5339A /* RTKSyllableUnit.m */,
 				CB2DCD2A07D17A0C00A5339A /* RTKVowelDefinition.h */,
-				CB2DCD2B07D17A0C00A5339A /* RTKVowelDefinition.m */,
 				CB2DCD2C07D17A0C00A5339A /* RTKWordUnit.h */,
-				CB2DCD2D07D17A0C00A5339A /* RTKWordUnit.m */,
 				CB2DCD2E07D17A0C00A5339A /* RTKWrapper.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		CB2DCCC007D1781F00A5339A /* Script Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				CB2602910D63C675007FA175 /* Headers */,
+				CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */,
+				CB2DCCEE07D17A0C00A5339A /* RTKBinaryTreeHeader.m */,
+				CB2DCCF007D17A0C00A5339A /* RTKBinaryTreeNode.m */,
+				CB2DCCF407D17A0C00A5339A /* RTKConsonantDefinition.m */,
+				CB2DCCF607D17A0C00A5339A /* RTKContextualParsing.m */,
+				CB2DCCF807D17A0C00A5339A /* RTKConvertor.m */,
+				CB2DCCFA07D17A0C00A5339A /* RTKFilter.m */,
+				CB2DCCFE07D17A0C00A5339A /* RTKFontCharacter.m */,
+				CB2DCD0007D17A0C00A5339A /* RTKFontCharacterDefinition.m */,
+				CB2DCD0207D17A0C00A5339A /* RTKFontEncodingDefinition.m */,
+				CB2DCD0407D17A0C00A5339A /* RTKFontGlyphDefinition.m */,
+				CB2DCD0707D17A0C00A5339A /* RTKGlyphAlias.m */,
+				CB2DCD0907D17A0C00A5339A /* RTKIDDatabase.m */,
+				CB2DCD0B07D17A0C00A5339A /* RTKIDMarker.m */,
+				CB2DCD0F07D17A0C00A5339A /* RTKInputFilterSetDefinition.m */,
+				CB2DCD1307D17A0C00A5339A /* RTKLinkedListHeader.m */,
+				CB2DCD1507D17A0C00A5339A /* RTKLinkedListNode.m */,
+				CB2DCD1707D17A0C00A5339A /* RTKParsePattern.m */,
+				CB2DCD1907D17A0C00A5339A /* RTKPunctuationGroupUnit.m */,
+				CB2DCD1B07D17A0C00A5339A /* RTKPunctuationUnit.m */,
+				CB2DCD2107D17A0C00A5339A /* RTKScriptCluster.m */,
+				CB2DCD2307D17A0C00A5339A /* RTKScriptDefinition.m */,
+				CB2DCD2507D17A0C00A5339A /* RTKScriptPunctuationGroup.m */,
+				CB2DCD2707D17A0C00A5339A /* RTKScriptWord.m */,
+				CB2DCD2907D17A0C00A5339A /* RTKSyllableUnit.m */,
+				CB2DCD2B07D17A0C00A5339A /* RTKVowelDefinition.m */,
+				CB2DCD2D07D17A0C00A5339A /* RTKWordUnit.m */,
 				CB2DCD2F07D17A0C00A5339A /* RTKWrapper.m */,
 			);
 			name = "Script Conversion";
@@ -467,6 +515,22 @@
 			productReference = 8D15AC370486D014006FF6A4 /* CleverRabbit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CBAE16A90D62BE9F00FCBBA0 /* transliterate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBAE16AF0D62BECD00FCBBA0 /* Build configuration list for PBXNativeTarget "transliterate" */;
+			buildPhases = (
+				CBAE16A70D62BE9F00FCBBA0 /* Sources */,
+				CBAE16A80D62BE9F00FCBBA0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = transliterate;
+			productName = transliterate;
+			productReference = CBAE16AA0D62BE9F00FCBBA0 /* transliterate */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -480,6 +544,7 @@
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* CleverRabbit */,
+				CBAE16A90D62BE9F00FCBBA0 /* transliterate */,
 			);
 		};
 /* End PBXProject section */
@@ -602,6 +667,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CBAE16A70D62BE9F00FCBBA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBAE16B20D62BF1700FCBBA0 /* transliterate.m in Sources */,
+				CB2602920D63C6B6007FA175 /* RTKAlias.m in Sources */,
+				CB2602990D63C6B7007FA175 /* RTKBinaryTreeHeader.m in Sources */,
+				CB26029A0D63C6B8007FA175 /* RTKBinaryTreeNode.m in Sources */,
+				CB26029B0D63C6B8007FA175 /* RTKConsonantDefinition.m in Sources */,
+				CB26029C0D63C6B9007FA175 /* RTKContextualParsing.m in Sources */,
+				CB26029D0D63C6BA007FA175 /* RTKConvertor.m in Sources */,
+				CB26029E0D63C6BA007FA175 /* RTKFilter.m in Sources */,
+				CB26029F0D63C6BB007FA175 /* RTKFontCharacter.m in Sources */,
+				CB2602A00D63C6BB007FA175 /* RTKFontCharacterDefinition.m in Sources */,
+				CB2602A10D63C6BC007FA175 /* RTKFontEncodingDefinition.m in Sources */,
+				CB2602A20D63C6BD007FA175 /* RTKFontGlyphDefinition.m in Sources */,
+				CB2602A30D63C6BD007FA175 /* RTKGlyphAlias.m in Sources */,
+				CB2602A40D63C6BE007FA175 /* RTKIDDatabase.m in Sources */,
+				CB2602A50D63C6BE007FA175 /* RTKIDMarker.m in Sources */,
+				CB2602A60D63C6BF007FA175 /* RTKInputFilterSetDefinition.m in Sources */,
+				CB2602A70D63C6C0007FA175 /* RTKLinkedListHeader.m in Sources */,
+				CB2602A80D63C6C0007FA175 /* RTKLinkedListNode.m in Sources */,
+				CB2602A90D63C6C1007FA175 /* RTKParsePattern.m in Sources */,
+				CB2602AA0D63C6C2007FA175 /* RTKPunctuationGroupUnit.m in Sources */,
+				CB2602AB0D63C6C2007FA175 /* RTKPunctuationUnit.m in Sources */,
+				CB2602AC0D63C6C3007FA175 /* RTKScriptCluster.m in Sources */,
+				CB2602AD0D63C6C3007FA175 /* RTKScriptDefinition.m in Sources */,
+				CB2602AE0D63C6C4007FA175 /* RTKScriptPunctuationGroup.m in Sources */,
+				CB2602AF0D63C6C4007FA175 /* RTKSyllableUnit.m in Sources */,
+				CB2602B00D63C6C5007FA175 /* RTKScriptWord.m in Sources */,
+				CB2602B10D63C6C6007FA175 /* RTKVowelDefinition.m in Sources */,
+				CB2602B20D63C6C7007FA175 /* RTKWordUnit.m in Sources */,
+				CB2602B30D63C6C8007FA175 /* RTKWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -648,6 +749,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CBAE16AC0D62BE9F00FCBBA0 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = transliterate;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		CBAE16AD0D62BE9F00FCBBA0 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = transliterate;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		CBAE16AE0D62BE9F00FCBBA0 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = transliterate;
+				ZERO_LINK = YES;
+			};
+			name = Default;
+		};
 		CBBC7E6E0864666100E3D3DC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -721,6 +887,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CBAE16AF0D62BECD00FCBBA0 /* Build configuration list for PBXNativeTarget "transliterate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBAE16AC0D62BE9F00FCBBA0 /* Development */,
+				CBAE16AD0D62BE9F00FCBBA0 /* Deployment */,
+				CBAE16AE0D62BE9F00FCBBA0 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
 		CBBC7E6D0864666100E3D3DC /* Build configuration list for PBXNativeTarget "CleverRabbit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

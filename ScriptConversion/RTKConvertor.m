@@ -148,11 +148,11 @@
     
     if([lock tryLock])
     {
-        NSLog(@"-- loadInputFilterSetDefinition");
+        //NSLog(@"-- loadInputFilterSetDefinition");
         [inputFilterSetDefinitionDict setObject:[[RTKInputFilterSetDefinition alloc] initWithFilePath:filePath
                                                                                       usingIDDatabase:generalDatabase]
                                          forKey:filePath];
-        NSLog(@"**** loadInputFilterSetDefinition");
+        //NSLog(@"**** loadInputFilterSetDefinition");
         [lock unlock];
     }
 }
@@ -174,13 +174,13 @@
     
     if([lock tryLock])
     {
-        NSLog(@"-- loadScriptDefinition");
+        //NSLog(@"-- loadScriptDefinition");
         {
             [scriptDefinitionDict setObject:[[RTKScriptDefinition alloc] initWithFilePath:filePath
                                                                           usingIDDatabase:generalDatabase]
                                      forKey:filePath];
         }
-        NSLog(@"**** loadScriptDefinition");
+        //NSLog(@"**** loadScriptDefinition");
         [lock unlock];
     }
 }
@@ -203,13 +203,13 @@
     
     if([lock tryLock])
     {
-        NSLog(@"-- loadFontEncodingDefinition");
+        //NSLog(@"-- loadFontEncodingDefinition");
         
         [fontEncodingDefinitionDict setObject:[[RTKFontEncodingDefinition alloc] initWithFilePath:filePath
                                                                                   usingIDDatabase:generalDatabase]
                                        forKey:filePath];
         
-        NSLog(@"**** loadFontEncodingDefinition");
+        //NSLog(@"**** loadFontEncodingDefinition");
         [lock unlock];
     }
 }
@@ -293,9 +293,7 @@
     
     
     speechTreeList = [RTKConvertor speechTreeFromPhonemeList:phonemicList
-                                             usingIDDatabase:generalDatabase];
-    [phonemicList release];
-    
+                                             usingIDDatabase:generalDatabase];    
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
     
@@ -309,7 +307,7 @@
                                             endOfSyllable:[generalDatabase idForString:@"endOfSyllable"]
                                           beginningOfWord:[generalDatabase idForString:@"beginningOfWord"]
                                                 endOfWord:[generalDatabase idForString:@"endOfWord"]];
-    [speechTreeList release];
+
     
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
@@ -317,7 +315,7 @@
     
     fontList = [fontEncodingDefinition fontCharacterListFromScriptList:scriptList
                                                        usingIDDatabase:generalDatabase];
-    [scriptList release];
+
     
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
@@ -325,7 +323,6 @@
     [dataDict setObject:[RTKConvertor getStringFromList:fontList
                                         usingIDDatabase:generalDatabase]
                  forKey:@"RTKFont"];
-    [fontList release];
     
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
@@ -360,6 +357,10 @@
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
     
+    [phonemicList release];
+    [speechTreeList release];
+    [scriptList release];
+    [fontList release];    
     
     [inputFilterSetDefinition release];
     [scriptDefinition release];

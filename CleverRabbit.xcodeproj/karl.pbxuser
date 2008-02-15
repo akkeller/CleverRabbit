@@ -2,7 +2,7 @@
 {
 	089C1660FE840EACC02AAC07 /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {889, 511}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 588}}";
 			sepNavSelRange = "{145, 0}";
 			sepNavVisRange = "{0, 148}";
 			sepNavVisRect = "{{0, 0}, {604, 532}}";
@@ -15,7 +15,6 @@
 		activeExecutable = CBAE16AB0D62BE9F00FCBBA0 /* transliterate */;
 		activeTarget = CBAE16A90D62BE9F00FCBBA0 /* transliterate */;
 		addToTargets = (
-			CBAE16A90D62BE9F00FCBBA0 /* transliterate */,
 		);
 		breakpoints = (
 		);
@@ -106,7 +105,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					351,
-					354,
+					601,
 				);
 				PBXFileTableDataSourceColumnsKey = (
 					PBXFindDataSource_MessageID,
@@ -158,7 +157,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					637,
+					659,
 					60,
 					20,
 					87,
@@ -701,9 +700,9 @@
 	};
 	8D15AC360486D014006FF6A4 /* Info.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {889, 1632}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 1632}}";
 			sepNavSelRange = "{2141, 0}";
-			sepNavVisRange = "{0, 1082}";
+			sepNavVisRange = "{180, 902}";
 			sepNavVisRect = "{{0, 563}, {688, 613}}";
 			sepNavWindowFrame = "{{51, -3}, {974, 744}}";
 		};
@@ -748,9 +747,9 @@
 	};
 	CB044DA607BF0035008E657C /* bugsAndFeatures.txt */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {889, 2160}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 2160}}";
 			sepNavSelRange = "{5033, 0}";
-			sepNavVisRange = "{1566, 1445}";
+			sepNavVisRange = "{1624, 1387}";
 			sepNavVisRect = "{{0, 1330}, {604, 532}}";
 			sepNavWindowFrame = "{{44, 53}, {973, 688}}";
 		};
@@ -966,7 +965,7 @@
 	};
 	CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {916, 6976}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 7008}}";
 			sepNavSelRange = "{10470, 13}";
 			sepNavVisRange = "{0, 981}";
 			sepNavVisRect = "{{0, 2716}, {728, 532}}";
@@ -2150,6 +2149,13 @@
 		vrLen = 1593;
 		vrLoc = 1871;
 	};
+	CB26036A0D649093007FA175 /* regression-test.py */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {916, 588}}";
+			sepNavSelRange = "{690, 0}";
+			sepNavVisRange = "{0, 690}";
+		};
+	};
 	CB2DCCEB07D17A0C00A5339A /* RTKAlias.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {894, 548}}";
@@ -2655,7 +2661,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {916, 28480}}";
 			sepNavSelRange = "{2606, 0}";
-			sepNavVisRange = "{1747, 1544}";
+			sepNavVisRange = "{1808, 1483}";
 			sepNavVisRect = "{{0, 20765}, {939, 613}}";
 			sepNavWindowFrame = "{{-1, 62}, {1025, 684}}";
 		};
@@ -3287,9 +3293,9 @@
 	};
 	CB581CD407E40DC400857854 /* RTKArrayCategory.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {916, 1152}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 1104}}";
 			sepNavSelRange = "{907, 0}";
-			sepNavVisRange = "{1063, 962}";
+			sepNavVisRange = "{466, 1119}";
 			sepNavVisRect = "{{0, 476}, {728, 532}}";
 			sepNavWindowFrame = "{{50, -5}, {993, 746}}";
 		};
@@ -3364,7 +3370,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {916, 1344}}";
 			sepNavSelRange = "{1459, 21}";
-			sepNavVisRange = "{864, 1098}";
+			sepNavVisRange = "{0, 1178}";
 			sepNavVisRect = "{{0, 0}, {728, 532}}";
 			sepNavWindowFrame = "{{49, 18}, {958, 723}}";
 		};
@@ -4032,9 +4038,9 @@
 	};
 	CBAE16B10D62BF1700FCBBA0 /* transliterate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {916, 1552}}";
-			sepNavSelRange = "{2891, 0}";
-			sepNavVisRange = "{1871, 1593}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 1536}}";
+			sepNavSelRange = "{47, 382}";
+			sepNavVisRange = "{781, 1440}";
 		};
 	};
 	CBAE16B70D62BF2B00FCBBA0 /* PBXTextBookmark */ = {
@@ -4638,9 +4644,9 @@
 	};
 	CBD3C6ED07D6CA3F00B15535 /* get_definitions.command */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {889, 800}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 768}}";
 			sepNavSelRange = "{676, 0}";
-			sepNavVisRange = "{72, 1328}";
+			sepNavVisRange = "{0, 1098}";
 			sepNavVisRect = "{{0, 70}, {604, 532}}";
 			sepNavWindowFrame = "{{50, -5}, {599, 746}}";
 		};
@@ -4681,7 +4687,7 @@
 	};
 	CBDD5D3D0AA145DD0081D3F1 /* RTKGroupDocument.py */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {894, 548}}";
+			sepNavIntBoundsRect = "{{0, 0}, {916, 588}}";
 			sepNavSelRange = "{139, 0}";
 			sepNavVisRange = "{0, 454}";
 			sepNavVisRect = "{{0, 0}, {604, 532}}";

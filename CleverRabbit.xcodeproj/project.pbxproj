@@ -157,6 +157,7 @@
 		CB2349A607DCCCAC005D0DE4 /* RTKCleverRabbitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKCleverRabbitController.h; sourceTree = "<group>"; };
 		CB25DB4C07B43C0B006DADA3 /* RTKVerse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKVerse.h; sourceTree = "<group>"; };
 		CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKVerse.m; sourceTree = "<group>"; };
+		CB26036A0D649093007FA175 /* regression-test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "regression-test.py"; sourceTree = "<group>"; };
 		CB2DCCEB07D17A0C00A5339A /* RTKAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTKAlias.h; path = ScriptConversion/RTKAlias.h; sourceTree = "<group>"; };
 		CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTKAlias.m; path = ScriptConversion/RTKAlias.m; sourceTree = "<group>"; };
 		CB2DCCED07D17A0C00A5339A /* RTKBinaryTreeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RTKBinaryTreeHeader.h; path = ScriptConversion/RTKBinaryTreeHeader.h; sourceTree = "<group>"; };
@@ -346,6 +347,7 @@
 				32DBCF750370BD2300C91783 /* CleverRabbit_Prefix.pch */,
 				2A37F4B0FDCFA73011CA2CEA /* main.m */,
 				CBAE16B10D62BF1700FCBBA0 /* transliterate.m */,
+				CB26036A0D649093007FA175 /* regression-test.py */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";

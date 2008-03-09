@@ -269,8 +269,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateExpansionKey</key>
 							<array>
 								<string>2A37F4AAFDCFA73011CA2CEA</string>
-								<string>2A37F4ABFDCFA73011CA2CEA</string>
 								<string>2A37F4AFFDCFA73011CA2CEA</string>
+								<string>2A37F4B8FDCFA73011CA2CEA</string>
 								<string>2A37F4C3FDCFA73011CA2CEA</string>
 								<string>1058C7A6FEA54F5311CA2CBB</string>
 								<string>1058C7A8FEA54F5311CA2CBB</string>
@@ -281,8 +281,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>16</integer>
+									<integer>6</integer>
+									<integer>4</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -328,7 +328,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>transliterate.m</string>
+								<string>socks5-iphone-karlk.net.command</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>transliterate.m</string>
+										<string>socks5-iphone-karlk.net.command</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB2603670D640482007FA175</string>
+										<string>CB1C1F3B0D83B8C40063E47D</string>
 										<key>history</key>
 										<array>
 											<string>CB5412A808AED8CA00CAB00C</string>
@@ -403,10 +403,8 @@
 											<string>CBAE15F70D62BADB00FCBBA0</string>
 											<string>CBAE15F90D62BADB00FCBBA0</string>
 											<string>CBAE15FB0D62BADB00FCBBA0</string>
-											<string>CBAE15FC0D62BADB00FCBBA0</string>
 											<string>CBAE15FD0D62BADB00FCBBA0</string>
 											<string>CBAE15FE0D62BADB00FCBBA0</string>
-											<string>CBAE15FF0D62BADB00FCBBA0</string>
 											<string>CBAE16000D62BADB00FCBBA0</string>
 											<string>CBAE16070D62BADB00FCBBA0</string>
 											<string>CBAE16120D62BADB00FCBBA0</string>
@@ -416,7 +414,6 @@
 											<string>CBAE16B70D62BF2B00FCBBA0</string>
 											<string>CBAE17160D63A4D500FCBBA0</string>
 											<string>CBAE17180D63A4D500FCBBA0</string>
-											<string>CBAE17190D63A4D500FCBBA0</string>
 											<string>CB2602ED0D63E119007FA175</string>
 											<string>CB2602EE0D63E119007FA175</string>
 											<string>CB2602EF0D63E119007FA175</string>
@@ -424,27 +421,27 @@
 											<string>CB2602F10D63E119007FA175</string>
 											<string>CB2602F30D63E119007FA175</string>
 											<string>CB2602F50D63E119007FA175</string>
-											<string>CB2602F60D63E119007FA175</string>
-											<string>CB2602F90D63E119007FA175</string>
-											<string>CB2602FA0D63E119007FA175</string>
 											<string>CB2602FC0D63E119007FA175</string>
 											<string>CB2602FE0D63E119007FA175</string>
-											<string>CB2603000D63E119007FA175</string>
-											<string>CB2603020D63E119007FA175</string>
 											<string>CB2603030D63E119007FA175</string>
 											<string>CB2603040D63E119007FA175</string>
 											<string>CB2603430D64013C007FA175</string>
-											<string>CB2603440D64013C007FA175</string>
-											<string>CB2603450D64013C007FA175</string>
 											<string>CB2603460D64013C007FA175</string>
 											<string>CB2603470D64013C007FA175</string>
 											<string>CB2603480D64013C007FA175</string>
-											<string>CB2603640D640482007FA175</string>
-											<string>CB2603650D640482007FA175</string>
-										</array>
-										<key>nextStack</key>
-										<array>
-											<string>CB2603660D640482007FA175</string>
+											<string>CBD890340D654BBD0018D121</string>
+											<string>CBD890350D654BBD0018D121</string>
+											<string>CBD890360D654BBD0018D121</string>
+											<string>CBD890370D654BBD0018D121</string>
+											<string>CBD890380D654BBD0018D121</string>
+											<string>CBD890390D654BBD0018D121</string>
+											<string>CBD8903A0D654BBD0018D121</string>
+											<string>CBD8903B0D654BBD0018D121</string>
+											<string>CB87F9970D70CAF9002744EF</string>
+											<string>CB0406540D7B5F7B0025AA28</string>
+											<string>CB1C1F350D83B8C40063E47D</string>
+											<string>CB1C1F360D83B8C40063E47D</string>
+											<string>CB1C1F370D83B8C40063E47D</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -528,70 +525,22 @@
 											<string>CBAE161E0D62BADB00FCBBA0</string>
 											<string>CBAE16200D62BADB00FCBBA0</string>
 											<string>CBAE16220D62BADB00FCBBA0</string>
-											<string>CBAE16530D62BADB00FCBBA0</string>
 											<string>CBAE165C0D62BADB00FCBBA0</string>
 											<string>CBAE16BA0D62BF2B00FCBBA0</string>
 											<string>CBAE171F0D63A4D500FCBBA0</string>
 											<string>CB2603060D63E119007FA175</string>
-											<string>CB2603070D63E119007FA175</string>
-											<string>CB2603080D63E119007FA175</string>
 											<string>CB2603090D63E119007FA175</string>
-											<string>CB26030A0D63E119007FA175</string>
-											<string>CB26030B0D63E119007FA175</string>
-											<string>CB26030C0D63E119007FA175</string>
 											<string>CB26030D0D63E119007FA175</string>
 											<string>CB26030E0D63E119007FA175</string>
-											<string>CB26030F0D63E119007FA175</string>
-											<string>CB2603100D63E119007FA175</string>
 											<string>CB2603110D63E119007FA175</string>
-											<string>CB2603120D63E119007FA175</string>
-											<string>CB2603130D63E119007FA175</string>
-											<string>CB2603140D63E119007FA175</string>
-											<string>CB2603150D63E119007FA175</string>
-											<string>CB2603160D63E119007FA175</string>
-											<string>CB2603170D63E119007FA175</string>
-											<string>CB2603180D63E119007FA175</string>
-											<string>CB2603190D63E119007FA175</string>
-											<string>CB26031A0D63E119007FA175</string>
-											<string>CB26031B0D63E119007FA175</string>
-											<string>CB26031C0D63E119007FA175</string>
-											<string>CB26031D0D63E119007FA175</string>
-											<string>CB26031E0D63E119007FA175</string>
-											<string>CB26031F0D63E119007FA175</string>
-											<string>CB2603200D63E119007FA175</string>
-											<string>CB2603210D63E119007FA175</string>
-											<string>CB2603220D63E119007FA175</string>
-											<string>CB2603230D63E119007FA175</string>
-											<string>CB2603240D63E119007FA175</string>
-											<string>CB2603250D63E119007FA175</string>
-											<string>CB2603260D63E119007FA175</string>
-											<string>CB2603270D63E119007FA175</string>
-											<string>CB2603280D63E119007FA175</string>
-											<string>CB2603290D63E119007FA175</string>
-											<string>CB26032A0D63E119007FA175</string>
-											<string>CB26032B0D63E119007FA175</string>
 											<string>CB26032C0D63E119007FA175</string>
-											<string>CB26032D0D63E119007FA175</string>
 											<string>CB26032E0D63E119007FA175</string>
 											<string>CB26032F0D63E119007FA175</string>
-											<string>CB2603300D63E119007FA175</string>
-											<string>CB2603310D63E119007FA175</string>
-											<string>CB2603330D63E119007FA175</string>
-											<string>CB2603340D63E119007FA175</string>
-											<string>CB2603360D63E119007FA175</string>
 											<string>CB2603370D63E119007FA175</string>
-											<string>CB2603380D63E119007FA175</string>
-											<string>CB2603390D63E119007FA175</string>
-											<string>CB26034B0D64013C007FA175</string>
-											<string>CB26034D0D64013C007FA175</string>
-											<string>CB26034E0D64013C007FA175</string>
-											<string>CB26034F0D64013C007FA175</string>
-											<string>CB2603500D64013C007FA175</string>
-											<string>CB2603510D64013C007FA175</string>
-											<string>CB2603520D64013C007FA175</string>
-											<string>CB2603530D64013C007FA175</string>
-											<string>CB2603540D64013C007FA175</string>
-											<string>CB2603550D64013C007FA175</string>
+											<string>CBD8903E0D654BBD0018D121</string>
+											<string>CB0406570D7B5F7B0025AA28</string>
+											<string>CB1C1F390D83B8C40063E47D</string>
+											<string>CB1C1F3A0D83B8C40063E47D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -649,9 +598,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB26033B0D63E119007FA175</string>
+				<string>CB1C1F330D8388840063E47D</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CB26033C0D63E119007FA175</string>
+				<string>CB1C1F340D8388840063E47D</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -793,15 +742,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB26033D0D63E119007FA175</string>
-		<string>CB26033E0D63E119007FA175</string>
-		<string>CB26033F0D63E119007FA175</string>
-		<string>CB2603400D63E119007FA175</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1CD10A99069EF8BA00B06720</string>
-		<string>1C530D57069F1CE1000CFCEE</string>
-		<string>CBB807C40D548EB5001DD83A</string>
-		<string>/Users/karl/Development/CleverRabbit/cleverrabbit/CleverRabbit.xcodeproj</string>
+		<string>/Users/karl/Development/CleverRabbit/CleverRabbit/CleverRabbit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>43 55 1237 723 0 0 1280 778 </string>
@@ -842,8 +783,6 @@
 							<string>415pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXBuildLogShowsTranscriptDefaultKey</key>
@@ -885,7 +824,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CBB807C40D548EB5001DD83A</string>
-				<string>CB2602C80D63DA33007FA175</string>
+				<string>CB04065D0D7B5F7B0025AA28</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

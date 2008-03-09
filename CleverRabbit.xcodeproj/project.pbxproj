@@ -12,6 +12,7 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
+		CB04066A0D7B65250025AA28 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = CB5413A708AEF2D100CAB00C /* LICENSE */; };
 		CB044DA707BF0035008E657C /* bugsAndFeatures.txt in Resources */ = {isa = PBXBuildFile; fileRef = CB044DA607BF0035008E657C /* bugsAndFeatures.txt */; };
 		CB06450809B414880057078F /* tiger.icns in Resources */ = {isa = PBXBuildFile; fileRef = CB06450709B414870057078F /* tiger.icns */; };
 		CB2349A707DCCCAC005D0DE4 /* RTKCleverRabbitController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2349A507DCCCAC005D0DE4 /* RTKCleverRabbitController.m */; };
@@ -610,6 +611,7 @@
 				CB06450809B414880057078F /* tiger.icns in Resources */,
 				CBDD5D310AA142CA0081D3F1 /* RTKGroup.nib in Resources */,
 				CBDD5D3E0AA145DD0081D3F1 /* RTKGroupDocument.py in Resources */,
+				CB04066A0D7B65250025AA28 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +841,10 @@
 		CBBC7E6F0864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"i386,",
+					ppc,
+				);
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
@@ -848,6 +854,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = CleverRabbit;
+				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
 				YACC_GENERATE_DEBUGGING_DIRECTIVES = NO;
 				ZERO_LINK = NO;

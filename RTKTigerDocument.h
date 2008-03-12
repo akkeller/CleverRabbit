@@ -43,6 +43,8 @@
     NSMutableArray * verseTypes;
     
     // UI Objects
+    
+    // Single Verse View
     IBOutlet NSWindow * documentWindow;
     IBOutlet NSToolbar * toolbar;
     NSMutableDictionary * toolbarItems;
@@ -90,6 +92,10 @@
 
 	
 	IBOutlet NSSplitView * splitViewOfTextViews;
+    
+    // Multi Verse View
+    IBOutlet NSTextView *multiVerseTextView;
+    
 	
     // Definition files
     NSString * inputDefinitionPath;

@@ -841,18 +841,18 @@
 		CBBC7E6F0864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"i386,",
-					ppc,
-				);
+				ARCHS = i386;
 				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /Users/Shared/DevToTest;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = CleverRabbit;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
@@ -884,6 +884,10 @@
 		CBBC7E730864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"i386,",
+					ppc,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
 			};
 			name = Deployment;

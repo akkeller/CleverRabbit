@@ -26,7 +26,7 @@
 			<string>ObjC</string>
 			<key>OUTLETS</key>
 			<dict>
-				<key>multiVerseTextView</key>
+				<key>publishedTextView</key>
 				<string>NSTextView</string>
 			</dict>
 			<key>SUPERCLASS</key>

@@ -85,7 +85,7 @@
 					43,
 					43,
 					20,
-					264,
+					247,
 					20,
 				);
 				PBXFileTableDataSourceColumnsKey = (
@@ -174,7 +174,7 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 226786256;
+			PBXPerProjectTemplateStateSaveDate = 227060606;
 			PBXPrepackagedSmartGroups_v2 = (
 				{
 					PBXTransientLocationAtTop = bottom;
@@ -351,7 +351,7 @@
 					};
 				},
 			);
-			PBXWorkspaceStateSaveDate = 226786256;
+			PBXWorkspaceStateSaveDate = 227060606;
 		};
 		perUserProjectItems = {
 			CB0406540D7B5F7B0025AA28 = CB0406540D7B5F7B0025AA28 /* PBXTextBookmark */;
@@ -905,11 +905,6 @@
 		name = "socks5-iphone-karlk.net.command";
 		path = "/Users/karl/bin/custom-scripts/socks5-iphone-karlk.net.command";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {916, 588}}";
-			sepNavSelRange = "{181, 0}";
-			sepNavVisRange = "{0, 181}";
-		};
 	};
 	CB2349A507DCCCAC005D0DE4 /* RTKCleverRabbitController.m */ = {
 		uiCtxt = {

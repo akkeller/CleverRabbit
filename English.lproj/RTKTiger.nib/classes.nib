@@ -24,11 +24,6 @@
 			<string>NSTextView</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
-			<key>OUTLETS</key>
-			<dict>
-				<key>publishedTextView</key>
-				<string>NSTextView</string>
-			</dict>
 			<key>SUPERCLASS</key>
 			<string>NSText</string>
 		</dict>
@@ -122,6 +117,8 @@
 				<string>RTKTigerTextView</string>
 				<key>notesView</key>
 				<string>NSView</string>
+				<key>publishedTextView</key>
+				<string>NSTextView</string>
 				<key>referenceTableColumn</key>
 				<string>NSTableColumn</string>
 				<key>revisionTableColumn</key>

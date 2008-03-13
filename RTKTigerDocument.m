@@ -786,6 +786,11 @@ http://borkware.com/quickies/everything-by-date
 
 #pragma mark -
 
+- (void)updatePublishedTextView
+{
+    [publishedTextView setString:@"Test"];
+}
+
 // This whole method is ugly. It updates pretty much everything
 // regardless of what needs updating. That is by design. I have 
 // bigger fish to fry right now.
@@ -873,6 +878,7 @@ http://borkware.com/quickies/everything-by-date
             [notesTextView setString:[revision notes]];
         if(![[checkingTextView string] isEqualToString:[revision checking]])
             [checkingTextView setString:[revision checking]];
+        
         
         
         NSFont * font;
@@ -982,6 +988,8 @@ http://borkware.com/quickies/everything-by-date
 			[revisionTableColumn setEditable:!verseLocked];
 		}
 	}
+    
+    [self updatePublishedTextView];
 }
 
 
@@ -1402,8 +1410,11 @@ constrainMinCoordinate:(float *)min
         [revision setNotes:[[object string] copy]];
     } else if(object == checkingTextView) {
         [revision setChecking:[[object string] copy]];
+    } else if(object == publishedTextView) {
+        [self publishedTextViewDidChange];
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", object);
+        NSLog(@"publishedTextView: %@", publishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
@@ -1412,6 +1423,11 @@ constrainMinCoordinate:(float *)min
     [versesTableView setNeedsDisplayInRect:rowRect];
 	
     [self ensureOneBlankVerse];
+}
+
+- (void)publishedTextViewDidChange
+{
+    NSBeep();
 }
 
 - (void)reloadTableData:(id)dummy

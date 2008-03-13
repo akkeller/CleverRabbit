@@ -93,9 +93,8 @@
 	
 	IBOutlet NSSplitView * splitViewOfTextViews;
     
-    // Multi Verse View
-    IBOutlet NSTextView *multiVerseTextView;
-    
+    // Published View
+    IBOutlet NSTextView *publishedTextView;
 	
     // Definition files
     NSString * inputDefinitionPath;

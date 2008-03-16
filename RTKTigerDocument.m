@@ -798,7 +798,6 @@ http://borkware.com/quickies/everything-by-date
 {
     // quick non-editable prototype
     NSMutableArray * verses = [book verses];
-    NSMutableArray * strings = [NSMutableArray new];
     
     NSEnumerator * e = [verses objectEnumerator];
     RTKVerse * verse = nil;
@@ -808,27 +807,26 @@ http://borkware.com/quickies/everything-by-date
         NSString *type = [verse type];
         
         if([type isEqualToString:@"\\v"]) {
-            [strings addObject:[[verse reference] verse]];
-            [strings addObject:@" "];
-            [strings addObject:[revision roman]];
-            [strings addObject:@" "];
+            [publishedTextView insertText:[[verse reference] verse]];
+            [publishedTextView insertText:@" "];
+            [publishedTextView insertText:[revision roman]];
+            [publishedTextView insertText:@" "];
         } else if([type isEqualToString:@"\\p"]) {
-            [strings addObject:@"\n\n"];
+            [publishedTextView insertText:@"\n\n"];
         } else if([type isEqualToString:@"\\s1"]) {
-            [strings addObject:@"\n"];
-            [strings addObject:[revision roman]];
-            [strings addObject:@"\n\n"];
+            [publishedTextView insertText:@"\n"];
+            [publishedTextView insertText:[revision roman]];
+            [publishedTextView insertText:@"\n\n"];
         } else if([type isEqualToString:@"\\mt1"]) {
-            [strings addObject:@"\n"];
-            [strings addObject:[revision roman]];
-            [strings addObject:@"\n"];
+            [publishedTextView insertText:@"\n"];
+            [publishedTextView insertText:[revision roman]];
+            [publishedTextView insertText:@"\n"];
         } else if([type isEqualToString:@"\\c"]) {
-            [strings addObject:@"\n"];
-            [strings addObject:[[verse reference] chapter]];
-            [strings addObject:@"\n"];
+            [publishedTextView insertText:@"\n"];
+            [publishedTextView insertText:[[verse reference] chapter]];
+            [publishedTextView insertText:@"\n"];
         }
     }
-    [publishedTextView setString:[strings componentsJoinedByString:@""]];
 }
 
 // This whole method is ugly. It updates pretty much everything

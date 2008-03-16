@@ -659,8 +659,10 @@ http://borkware.com/quickies/everything-by-date
     id object = [dict objectForKey:key];
     
     if(object)
+        // Read the setting from the document if possible.
         [self setValue:object forKey:key];
     else
+        // If setting not present in the document, set it from the application defaults.
         [self setValue:[d valueForKey:key] forKey:key];
 }
 
@@ -784,11 +786,49 @@ http://borkware.com/quickies/everything-by-date
     creationDate = newCreationDate;
 }
 
-#pragma mark -
+#pragma mark - UI
 
+/*
+ The view of the published representation of the document makes use of a simple NSTextView. 
+ The controller uses a structure to map segments of the string to verses of the model.
+ Each node in the structure links to one verse of the model and maintains a list of text ranges and their corresponding attributes.
+ The structure is a binary tree. The binary tree's leaves are doubly linked. A verse object contains the text, the number and footnotes. 
+ */
 - (void)updatePublishedTextView
 {
-    [publishedTextView setString:@"Test"];
+    // quick non-editable prototype
+    NSMutableArray * verses = [book verses];
+    NSMutableArray * strings = [NSMutableArray new];
+    
+    NSEnumerator * e = [verses objectEnumerator];
+    RTKVerse * verse = nil;
+    while(verse = [e nextObject]) {
+        
+        RTKRevision * revision = [verse currentRevision];
+        NSString *type = [verse type];
+        
+        if([type isEqualToString:@"\\v"]) {
+            [strings addObject:[[verse reference] verse]];
+            [strings addObject:@" "];
+            [strings addObject:[revision roman]];
+            [strings addObject:@" "];
+        } else if([type isEqualToString:@"\\p"]) {
+            [strings addObject:@"\n\n"];
+        } else if([type isEqualToString:@"\\s1"]) {
+            [strings addObject:@"\n"];
+            [strings addObject:[revision roman]];
+            [strings addObject:@"\n\n"];
+        } else if([type isEqualToString:@"\\mt1"]) {
+            [strings addObject:@"\n"];
+            [strings addObject:[revision roman]];
+            [strings addObject:@"\n"];
+        } else if([type isEqualToString:@"\\c"]) {
+            [strings addObject:@"\n"];
+            [strings addObject:[[verse reference] chapter]];
+            [strings addObject:@"\n"];
+        }
+    }
+    [publishedTextView setString:[strings componentsJoinedByString:@""]];
 }
 
 // This whole method is ugly. It updates pretty much everything

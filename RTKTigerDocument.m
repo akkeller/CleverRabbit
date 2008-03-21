@@ -798,6 +798,7 @@ http://borkware.com/quickies/everything-by-date
 {
     // quick non-editable prototype
     NSMutableArray * verses = [book verses];
+    NSMutableArray * strings = [NSMutableArray new];
     
     NSEnumerator * e = [verses objectEnumerator];
     RTKVerse * verse = nil;
@@ -807,26 +808,30 @@ http://borkware.com/quickies/everything-by-date
         NSString *type = [verse type];
         
         if([type isEqualToString:@"\\v"]) {
-            [publishedTextView insertText:[[verse reference] verse]];
-            [publishedTextView insertText:@" "];
-            [publishedTextView insertText:[revision roman]];
-            [publishedTextView insertText:@" "];
+            [strings addObject:[[verse reference] verse]];
+            [strings addObject:@" "];
+            [strings addObject:[revision roman]];
+            [strings addObject:@" "];
         } else if([type isEqualToString:@"\\p"]) {
-            [publishedTextView insertText:@"\n\n"];
+            [strings addObject:@"\n\n"];
         } else if([type isEqualToString:@"\\s1"]) {
-            [publishedTextView insertText:@"\n"];
-            [publishedTextView insertText:[revision roman]];
-            [publishedTextView insertText:@"\n\n"];
+            [strings addObject:@"\n"];
+            [strings addObject:[revision roman]];
+            [strings addObject:@"\n\n"];
         } else if([type isEqualToString:@"\\mt1"]) {
-            [publishedTextView insertText:@"\n"];
-            [publishedTextView insertText:[revision roman]];
-            [publishedTextView insertText:@"\n"];
+            [strings addObject:@"\n"];
+            [strings addObject:[revision roman]];
+            [strings addObject:@"\n"];
         } else if([type isEqualToString:@"\\c"]) {
-            [publishedTextView insertText:@"\n"];
-            [publishedTextView insertText:[[verse reference] chapter]];
-            [publishedTextView insertText:@"\n"];
+            [strings addObject:@"\n"];
+            [strings addObject:[[verse reference] chapter]];
+            [strings addObject:@"\n"];
         }
     }
+    
+    [publishedTextView setString:[strings componentsJoinedByString:@""]];
+    // Alternate line directly manipulating the NSTextStorage object. Same effect.
+    //[[publishedTextView textStorage] setAttributedString:[[NSAttributedString alloc] initWithString:[strings componentsJoinedByString:@""]]];
 }
 
 // This whole method is ugly. It updates pretty much everything

@@ -153,7 +153,7 @@ BOOL generateMetaStrings = NO;
 		[documentWindow makeFirstResponder:romanTextView];
 		
 		[self setDictionary:[NSDictionary dictionary]];
-		
+        
 		[self updateUI];
 		
 		[versesTableView selectRow:0 byExtendingSelection:NO];
@@ -680,6 +680,12 @@ http://borkware.com/quickies/everything-by-date
     [self setValueForKey:@"RTKCheckingColumnWidth" fromDictionary:dict];
 }
 
+
+/*
+ loadDataRepresentation:ofType: is called when a file is opened, but not when a new document is created. 
+ Given data and a type string, it creates the necessary model objects to represent the document. 
+ If called at all, it is called before awakeFromNib.
+ */
 - (BOOL)loadDataRepresentation:(NSData *)data 
                         ofType:(NSString *)aType
 {

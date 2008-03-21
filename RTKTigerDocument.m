@@ -830,6 +830,8 @@ http://borkware.com/quickies/everything-by-date
     }
     
     [publishedTextView setString:[strings componentsJoinedByString:@""]];
+    
+    
     // Alternate line directly manipulating the NSTextStorage object. Same effect.
     //[[publishedTextView textStorage] setAttributedString:[[NSAttributedString alloc] initWithString:[strings componentsJoinedByString:@""]]];
 }
@@ -1428,9 +1430,13 @@ constrainMinCoordinate:(float *)min
 #pragma mark -
 #pragma mark text view delegate methods
 
+/*
+ textDidChange is a delegate method that is called when the user modifies an NSTextView.
+ We update the appropriate RTKVerse or RTKRevision object from the changed text field.
+ */
 - (void)textDidChange:(NSNotification *)notification
 {
-    NSTextView * object = [notification object];
+    NSTextView * changedTextView = [notification object];
     
     NSMutableArray * verses = [book verses];
     RTKVerse * verse = [verses objectAtIndex:[[visibleVerseIndexes objectAtIndex:[versesTableView selectedRow]] intValue]];
@@ -1438,29 +1444,31 @@ constrainMinCoordinate:(float *)min
     NSMutableArray * revisions = [verse revisions];
     RTKRevision * revision = [revisions objectAtIndex:revisionIndex];
     
-    if(object == romanTextView) {
-        [revision setRoman:[[object string] copy]];
+    if(changedTextView == romanTextView) {
+        [revision setRoman:[[changedTextView string] copy]];
 		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
 			[self convertRevision:revision
 				 withHighPriority:YES];
 		else
 			[self updateCommiteeMeetingText:YES];
-    } else if(object == scriptTextView) {
-        [revision setScript:[[object string] copy]];
-    } else if(object == backTranslationTextView) {
-        [revision setBackTranslation:[[object string] copy]];
-    } else if(object == notesTextView) {
-        [revision setNotes:[[object string] copy]];
-    } else if(object == checkingTextView) {
-        [revision setChecking:[[object string] copy]];
-    } else if(object == publishedTextView) {
+    } else if(changedTextView == scriptTextView) {
+        [revision setScript:[[changedTextView string] copy]];
+    } else if(changedTextView == backTranslationTextView) {
+        [revision setBackTranslation:[[changedTextView string] copy]];
+    } else if(changedTextView == notesTextView) {
+        [revision setNotes:[[changedTextView string] copy]];
+    } else if(changedTextView == checkingTextView) {
+        [revision setChecking:[[changedTextView string] copy]];
+    } else if(changedTextView == publishedTextView) {
         [self publishedTextViewDidChange];
     } else {
-        NSLog(@"unhandled textview %@ sent to textDidChange", object);
+        NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);
         NSLog(@"publishedTextView: %@", publishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
+    
+    [self updatePublishedTextView];
 	
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];

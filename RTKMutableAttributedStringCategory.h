@@ -18,6 +18,7 @@
 - (void)subscript;
 - (void)smallFontSize;
 - (void)largeFontSize;
+- (void)addAttribute:(NSString *)name value:(id)value;
 
 @end
 

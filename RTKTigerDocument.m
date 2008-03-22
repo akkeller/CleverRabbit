@@ -1414,34 +1414,38 @@ constrainMinCoordinate:(float *)min
 				 withHighPriority:YES];
 		else
 			[self updateCommiteeMeetingText:YES];
+        [self updatePublishedTextView];
     } else if(changedTextView == scriptTextView) {
         [revision setScript:[[changedTextView string] copy]];
+        [self updatePublishedTextView];
     } else if(changedTextView == backTranslationTextView) {
         [revision setBackTranslation:[[changedTextView string] copy]];
+        [self updatePublishedTextView];
     } else if(changedTextView == notesTextView) {
         [revision setNotes:[[changedTextView string] copy]];
+        [self updatePublishedTextView];
     } else if(changedTextView == checkingTextView) {
         [revision setChecking:[[changedTextView string] copy]];
+        [self updatePublishedTextView];
     } else if(changedTextView == publishedTextView) {
-        [self publishedTextViewDidChange];
+        [self publishedTextViewDidChange:notification];
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);
         NSLog(@"publishedTextView: %@", publishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
-    
-    [self updatePublishedTextView];
-	
+
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];
 	
     [self ensureOneBlankVerse];
 }
 
-- (void)publishedTextViewDidChange
+- (void)publishedTextViewDidChange:(NSNotification *)notification
 {
-    NSBeep();
+    //NSLog([notification description]);
+    NSLog([[publishedTextView typingAttributes] description]);
 }
 
 - (void)reloadTableData:(id)dummy

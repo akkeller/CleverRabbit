@@ -28,11 +28,16 @@
 
 - (void)smallFontSize
 {
-    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:9.0] range:NSMakeRange(0, [self length])];
+    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:9.0]];
 }
 - (void)largeFontSize
 {
-    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:14.0] range:NSMakeRange(0, [self length])];
+    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:14.0]];
+}
+
+- (void)addAttribute:(NSString *)name value:(id)value
+{
+    [self addAttribute:name value:value range:NSMakeRange(0, [self length])];
 }
 
 @end

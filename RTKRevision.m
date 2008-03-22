@@ -178,7 +178,6 @@
     return string;
 }
 
-
 - (NSString *)stringWithVerseNumber:(NSString *)verseNumber
 {
     NSMutableString * string = [NSMutableString new];
@@ -198,6 +197,16 @@
 
     return string;
 }
+
+- (NSMutableAttributedString *)mutableAttributedString
+{
+    // TODO: Add support for transliteration.
+    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:roman];
+    // Provide a link back from the string to this object.
+    [string addAttribute:@"RTKRevision" value:self];
+    return string;
+}
+
 
 - (void)setDictionary:(NSDictionary *)theDictionary
 {

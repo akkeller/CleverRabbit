@@ -15,6 +15,7 @@
 #import "RTKMutableArrayCategory.h"
 #import "RTKArrayCategory.h"
 #import "RTKStringCategory.h"
+#import "RTKMutableAttributedStringCategory.h"
 
 #import "Chomp/Chomp.h"
 
@@ -264,34 +265,47 @@
     id string;
     if([type isEqualToString:@"\\v"]) {
         string = [[NSMutableAttributedString alloc] initWithString:[reference verse]];
+        
+        [string addAttribute:@"RTKVerseComponent" value:@"Verse Reference"];
+        
         [string superscript];
         [string smallFontSize];
+    
         [strings addObject:string];
         [strings addObject:@" "];
-        [strings addObject:[revision roman]];
+        string = [revision mutableAttributedString];
+        [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
+        [strings addObject:string];
         [strings addObject:@" "];
+        
     } else if([type isEqualToString:@"\\p"]) {
         [strings addObject:@"\n\n"];
     } else if([type isEqualToString:@"\\s1"]) {
-        string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+        string = [revision mutableAttributedString];
+        [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
         [strings addObject:@"\n\n"];
         [strings addObject:string];
         [strings addObject:@"\n\n"];
     } else if([type isEqualToString:@"\\mt1"]) {
-        string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+        string = [revision mutableAttributedString];
+        [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
         [strings addObject:@"\n"];
         [strings addObject:string];
         [strings addObject:@"\n"];
     } else if([type isEqualToString:@"\\c"]) {
         string = [[NSMutableAttributedString alloc] initWithString:[reference chapter]];
+        [string addAttribute:@"RTKVerseComponent" value:@"Chapter Reference"];
+        
         [string largeFontSize];
         [strings addObject:@"\n"];
         [strings addObject:string];
         [strings addObject:@"\n"];
     }
-    return [strings mutableAttributedStringFromComponents];
+    NSMutableAttributedString * outputString = [strings mutableAttributedStringFromComponents];
+    [outputString addAttribute:@"RTKVerse" value:self];
+    return outputString;
 }
 
 - (void)setDictionary:(NSDictionary *)theDictionary

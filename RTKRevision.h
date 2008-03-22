@@ -61,6 +61,7 @@
 - (BOOL)blank;
 - (BOOL)matchesString:(NSString *)string;
 
+- (NSMutableAttributedString *)mutableAttributedString;
 - (NSString *)stringWithVerseNumber:(NSString *)verseNumber;
 
 

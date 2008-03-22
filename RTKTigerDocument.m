@@ -14,6 +14,7 @@
 #import "RTKCleverRabbitController.h"
 #import "RTKArrayCategory.h"
 #import "RTKStringCategory.h"
+#import "RTKMutableAttributedStringCategory.h"
 
 #define RTKNOROWSELECTED -1
 
@@ -153,6 +154,8 @@ BOOL generateMetaStrings = NO;
 		[documentWindow makeFirstResponder:romanTextView];
 		
 		[self setDictionary:[NSDictionary dictionary]];
+        
+        [self buildPublishedTable];
         
 		[self updateUI];
 		
@@ -737,6 +740,11 @@ http://borkware.com/quickies/everything-by-date
     return loaded;
 }
 
+- (void)buildPublishedTable
+{
+    
+}
+
 #pragma mark -
 #pragma mark accessors
 
@@ -794,12 +802,6 @@ http://borkware.com/quickies/everything-by-date
 
 #pragma mark - UI
 
-/*
- The view of the published representation of the document makes use of a simple NSTextView. 
- The controller uses a structure to map segments of the string to verses of the model.
- Each node in the structure links to one verse of the model and maintains a list of text ranges and their corresponding attributes.
- The structure is a binary tree. The binary tree's leaves are doubly linked. A verse object contains the text, the number and footnotes. 
- */
 - (void)updatePublishedTextView
 {
     // quick non-editable prototype
@@ -808,43 +810,56 @@ http://borkware.com/quickies/everything-by-date
     
     NSEnumerator * e = [verses objectEnumerator];
     RTKVerse * verse = nil;
+    id string = nil;
     while(verse = [e nextObject]) {
         
         RTKRevision * revision = [verse currentRevision];
         NSString *type = [verse type];
         
         if([type isEqualToString:@"\\v"]) {
-            [strings addObject:[[verse reference] verse]];
+            string = [[NSMutableAttributedString alloc] initWithString:[[verse reference] verse]];
+            [string superscript];
+            [string smallFontSize];
+            [strings addObject:string];
             [strings addObject:@" "];
             [strings addObject:[revision roman]];
             [strings addObject:@" "];
         } else if([type isEqualToString:@"\\p"]) {
             [strings addObject:@"\n\n"];
         } else if([type isEqualToString:@"\\s1"]) {
-            [strings addObject:@"\n"];
-            [strings addObject:[revision roman]];
+            string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+            [string largeFontSize];
+            [strings addObject:@"\n\n"];
+            [strings addObject:string];
             [strings addObject:@"\n\n"];
         } else if([type isEqualToString:@"\\mt1"]) {
+            string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+            [string largeFontSize];
             [strings addObject:@"\n"];
-            [strings addObject:[revision roman]];
+            [strings addObject:string];
             [strings addObject:@"\n"];
         } else if([type isEqualToString:@"\\c"]) {
+            string = [[NSMutableAttributedString alloc] initWithString:[[verse reference] chapter]];
+            [string largeFontSize];
             [strings addObject:@"\n"];
-            [strings addObject:[[verse reference] chapter]];
+            [strings addObject:string];
             [strings addObject:@"\n"];
         }
     }
     
-    [publishedTextView setString:[strings componentsJoinedByString:@""]];
-    
-    
-    // Alternate line directly manipulating the NSTextStorage object. Same effect.
-    //[[publishedTextView textStorage] setAttributedString:[[NSAttributedString alloc] initWithString:[strings componentsJoinedByString:@""]]];
+    // Generate a single mutable attributed string from the array "strings".
+    NSMutableAttributedString * outputString = [[NSMutableAttributedString new] autorelease];
+    e = [strings objectEnumerator];
+    while (string = [e nextObject]) {
+        if([string isKindOfClass:[NSString class]]) {
+            [outputString appendAttributedString:[[[NSAttributedString alloc] initWithString:string] autorelease]];
+        } else if([string isKindOfClass:[NSAttributedString class]]) {
+            [outputString appendAttributedString:string];
+        }
+    }
+    [[publishedTextView textStorage] setAttributedString:outputString];
 }
 
-// This whole method is ugly. It updates pretty much everything
-// regardless of what needs updating. That is by design. I have 
-// bigger fish to fry right now.
 - (void)updateUI
 {
 	[self performSelectorOnMainThread: @selector(updateUIMainThread:)
@@ -852,6 +867,7 @@ http://borkware.com/quickies/everything-by-date
 						waitUntilDone: NO];
 }
 
+// This method updates pretty much everything regardless of what needs updating. 
 - (void)updateUIMainThread:(id)dummy
 {
     int selectedRow;

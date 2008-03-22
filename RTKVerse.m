@@ -13,6 +13,7 @@
 #import "RTKVerse.h"
 #import "RTKRevision.h"
 #import "RTKMutableArrayCategory.h"
+#import "RTKArrayCategory.h"
 #import "RTKStringCategory.h"
 
 #import "Chomp/Chomp.h"
@@ -254,6 +255,43 @@
         return [NSString stringWithFormat:@"%@ %@ %@", type, [reference book], [revision roman]];
     }
     return [NSString stringWithFormat:@"%@ %@", type, [revision roman]];
+}
+
+- (NSMutableAttributedString *)mutableAttributedString
+{
+    RTKRevision * revision = [self currentRevision];
+    NSMutableArray * strings = [[[NSMutableArray alloc] init] autorelease];
+    id string;
+    if([type isEqualToString:@"\\v"]) {
+        string = [[NSMutableAttributedString alloc] initWithString:[reference verse]];
+        [string superscript];
+        [string smallFontSize];
+        [strings addObject:string];
+        [strings addObject:@" "];
+        [strings addObject:[revision roman]];
+        [strings addObject:@" "];
+    } else if([type isEqualToString:@"\\p"]) {
+        [strings addObject:@"\n\n"];
+    } else if([type isEqualToString:@"\\s1"]) {
+        string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+        [string largeFontSize];
+        [strings addObject:@"\n\n"];
+        [strings addObject:string];
+        [strings addObject:@"\n\n"];
+    } else if([type isEqualToString:@"\\mt1"]) {
+        string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
+        [string largeFontSize];
+        [strings addObject:@"\n"];
+        [strings addObject:string];
+        [strings addObject:@"\n"];
+    } else if([type isEqualToString:@"\\c"]) {
+        string = [[NSMutableAttributedString alloc] initWithString:[reference chapter]];
+        [string largeFontSize];
+        [strings addObject:@"\n"];
+        [strings addObject:string];
+        [strings addObject:@"\n"];
+    }
+    return [strings mutableAttributedStringFromComponents];
 }
 
 - (void)setDictionary:(NSDictionary *)theDictionary

@@ -155,6 +155,11 @@
     return [strings componentsJoinedByString:@"\n"];
 }
 
+- (NSMutableAttributedString *)mutableAttributedString
+{
+    return [[[verses collect] mutableAttributedString] mutableAttributedStringFromComponents];
+}
+
 - (void)setDictionary:(NSDictionary *)theDictionary
 {
     [theDictionary retain];

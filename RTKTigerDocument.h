@@ -95,7 +95,7 @@
     
     // Published View
     IBOutlet NSTextView * publishedTextView;
-    NSMutableArray * publishedVerses;
+    NSMutableArray * publishedTable;
     /*
      Structure to map from a position in the text view to an RTKVerse in the RTKBook.
      Each verse represented as an NSMutableDictionary containing a verse number, verse text, and eventually footnote offsets.

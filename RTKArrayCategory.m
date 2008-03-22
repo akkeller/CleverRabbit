@@ -63,6 +63,22 @@ NSArray * indexSetToArray(NSIndexSet * indexSet)
     return [array copy];    
 }
 
+// Returns an autoreleased NSMutableAttributedString composed of the NSString and NSAttributedString objects in the array.
+- (NSMutableAttributedString *)mutableAttributedStringFromComponents
+{
+    NSMutableAttributedString * outputString = [[NSMutableAttributedString new] autorelease];
+    NSEnumerator * e = [self objectEnumerator];
+    id string = nil;
+    while (string = [e nextObject]) {
+        if([string isKindOfClass:[NSString class]]) { // Also includes NSMutableString
+            [outputString appendAttributedString:[[[NSAttributedString alloc] initWithString:string] autorelease]];
+        } else if([string isKindOfClass:[NSAttributedString class]]) { // Also includes NSMutableAttributedString
+            [outputString appendAttributedString:string];
+        }
+    }
+    return outputString;
+}
+
 - (NSArray *)deepCopy
 {
     return [[self collect] deepCopy];

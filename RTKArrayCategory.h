@@ -18,6 +18,7 @@
 
 - (NSArray *)arrayWithObjectsAtIndexes:(id)indexes;
 - (NSArray *)arrayByRemovingObjectsAtIndexes:(id)indexes;
+- (NSMutableAttributedString *)mutableAttributedStringFromComponents;
 - (NSArray *)deepCopy;
 
 @end

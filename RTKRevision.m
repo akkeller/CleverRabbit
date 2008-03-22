@@ -50,7 +50,7 @@
 }
 
 
-+ (RTKRevision *)revisionWithDictionary:dict
++ (RTKRevision *)revisionWithDictionary:(NSDictionary *)dict
 {
     return [[[RTKRevision alloc] initWithDictionary:dict] autorelease];
 }

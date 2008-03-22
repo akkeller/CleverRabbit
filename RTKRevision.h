@@ -30,6 +30,7 @@
 }
 
 - (id)initWithDictionary:(NSDictionary *)dict;
++ (RTKRevision *)revisionWithDictionary:(NSDictionary *)dict;
 - (id)initWithString:(NSString *)string;
 - (id)initWithSFMString:(NSString *)string;
 - (id)deepCopy;

@@ -740,6 +740,8 @@ http://borkware.com/quickies/everything-by-date
     return loaded;
 }
 
+
+// Builds a data structure to map ranges of the text in the publishdTextView to verse objects.
 - (void)buildPublishedTable
 {
     
@@ -805,59 +807,7 @@ http://borkware.com/quickies/everything-by-date
 - (void)updatePublishedTextView
 {
     // quick non-editable prototype
-    NSMutableArray * verses = [book verses];
-    NSMutableArray * strings = [NSMutableArray new];
-    
-    NSEnumerator * e = [verses objectEnumerator];
-    RTKVerse * verse = nil;
-    id string = nil;
-    while(verse = [e nextObject]) {
-        
-        RTKRevision * revision = [verse currentRevision];
-        NSString *type = [verse type];
-        
-        if([type isEqualToString:@"\\v"]) {
-            string = [[NSMutableAttributedString alloc] initWithString:[[verse reference] verse]];
-            [string superscript];
-            [string smallFontSize];
-            [strings addObject:string];
-            [strings addObject:@" "];
-            [strings addObject:[revision roman]];
-            [strings addObject:@" "];
-        } else if([type isEqualToString:@"\\p"]) {
-            [strings addObject:@"\n\n"];
-        } else if([type isEqualToString:@"\\s1"]) {
-            string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
-            [string largeFontSize];
-            [strings addObject:@"\n\n"];
-            [strings addObject:string];
-            [strings addObject:@"\n\n"];
-        } else if([type isEqualToString:@"\\mt1"]) {
-            string = [[NSMutableAttributedString alloc] initWithString:[revision roman]];
-            [string largeFontSize];
-            [strings addObject:@"\n"];
-            [strings addObject:string];
-            [strings addObject:@"\n"];
-        } else if([type isEqualToString:@"\\c"]) {
-            string = [[NSMutableAttributedString alloc] initWithString:[[verse reference] chapter]];
-            [string largeFontSize];
-            [strings addObject:@"\n"];
-            [strings addObject:string];
-            [strings addObject:@"\n"];
-        }
-    }
-    
-    // Generate a single mutable attributed string from the array "strings".
-    NSMutableAttributedString * outputString = [[NSMutableAttributedString new] autorelease];
-    e = [strings objectEnumerator];
-    while (string = [e nextObject]) {
-        if([string isKindOfClass:[NSString class]]) {
-            [outputString appendAttributedString:[[[NSAttributedString alloc] initWithString:string] autorelease]];
-        } else if([string isKindOfClass:[NSAttributedString class]]) {
-            [outputString appendAttributedString:string];
-        }
-    }
-    [[publishedTextView textStorage] setAttributedString:outputString];
+    [[publishedTextView textStorage] setAttributedString:[book mutableAttributedString]];
 }
 
 - (void)updateUI

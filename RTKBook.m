@@ -157,7 +157,9 @@
 
 - (NSMutableAttributedString *)mutableAttributedString
 {
-    return [[[verses collect] mutableAttributedString] mutableAttributedStringFromComponents];
+    NSMutableArray * strings = [[[verses collect] mutableAttributedString] mutableCopy];
+    [strings removeLastObject];
+    return [strings mutableAttributedStringFromComponents];
 }
 
 - (void)setDictionary:(NSDictionary *)theDictionary

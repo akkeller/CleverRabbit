@@ -154,9 +154,7 @@ BOOL generateMetaStrings = NO;
 		[documentWindow makeFirstResponder:romanTextView];
 		
 		[self setDictionary:[NSDictionary dictionary]];
-        
-        [self buildPublishedTable];
-        
+
 		[self updateUI];
 		
 		[versesTableView selectRow:0 byExtendingSelection:NO];
@@ -738,13 +736,6 @@ http://borkware.com/quickies/everything-by-date
 		[self regenerateAllScript];
     
     return loaded;
-}
-
-
-// Builds a data structure to map ranges of the text in the publishdTextView to verse objects.
-- (void)buildPublishedTable
-{
-    
 }
 
 #pragma mark -

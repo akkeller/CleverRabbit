@@ -328,7 +328,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RTKBook.m</string>
+								<string>RTKTigerDocument.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RTKBook.m</string>
+										<string>RTKTigerDocument.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB52FC1E0D95AD620052B484</string>
+										<string>CBE664190D95B3FB0013C6AB</string>
 										<key>history</key>
 										<array>
 											<string>CB5412A808AED8CA00CAB00C</string>
@@ -412,8 +412,6 @@
 											<string>CB2602FE0D63E119007FA175</string>
 											<string>CB2603040D63E119007FA175</string>
 											<string>CB2603430D64013C007FA175</string>
-											<string>CB2456FB0D8CDB1F00B5EAA3</string>
-											<string>CB2456FD0D8CDB1F00B5EAA3</string>
 											<string>CB2456FE0D8CDB1F00B5EAA3</string>
 											<string>CB24576E0D9454B500B5EAA3</string>
 											<string>CB24578B0D94639500B5EAA3</string>
@@ -424,18 +422,18 @@
 											<string>CB2458650D9477BD00B5EAA3</string>
 											<string>CB2458710D94790400B5EAA3</string>
 											<string>CB52FBD50D95ACAF0052B484</string>
-											<string>CB52FBD60D95ACAF0052B484</string>
 											<string>CB52FBD70D95ACAF0052B484</string>
 											<string>CB52FBD80D95ACAF0052B484</string>
-											<string>CB52FBD90D95ACAF0052B484</string>
-											<string>CB52FBDA0D95ACAF0052B484</string>
-											<string>CB52FBDB0D95ACAF0052B484</string>
-											<string>CB52FBDC0D95ACAF0052B484</string>
-											<string>CB52FBDD0D95ACAF0052B484</string>
 											<string>CB52FBDE0D95ACAF0052B484</string>
-											<string>CB52FBDF0D95ACAF0052B484</string>
-											<string>CB52FBE00D95ACAF0052B484</string>
-											<string>CB52FBE10D95ACAF0052B484</string>
+											<string>CB52FC5C0D95B2990052B484</string>
+											<string>CB52FC5D0D95B2990052B484</string>
+											<string>CB52FC5E0D95B2990052B484</string>
+											<string>CB52FC6D0D95B3DB0052B484</string>
+											<string>CB52FC6E0D95B3DB0052B484</string>
+											<string>CB52FC6F0D95B3DB0052B484</string>
+											<string>CBE664150D95B3FB0013C6AB</string>
+											<string>CBE664160D95B3FB0013C6AB</string>
+											<string>CB52FC6C0D95B3DB0052B484</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -531,58 +529,11 @@
 											<string>CB2457F50D94713800B5EAA3</string>
 											<string>CB2458070D94713800B5EAA3</string>
 											<string>CB2458850D947AD600B5EAA3</string>
-											<string>CB52FBE20D95ACAF0052B484</string>
-											<string>CB52FBE30D95ACAF0052B484</string>
-											<string>CB52FBE40D95ACAF0052B484</string>
-											<string>CB52FBE50D95ACAF0052B484</string>
-											<string>CB52FBE60D95ACAF0052B484</string>
-											<string>CB52FBE70D95ACAF0052B484</string>
-											<string>CB52FBE80D95ACAF0052B484</string>
-											<string>CB52FBE90D95ACAF0052B484</string>
-											<string>CB52FBEA0D95ACAF0052B484</string>
-											<string>CB52FBEB0D95ACAF0052B484</string>
-											<string>CB52FBEC0D95ACAF0052B484</string>
-											<string>CB52FBED0D95ACAF0052B484</string>
-											<string>CB52FBEE0D95ACAF0052B484</string>
-											<string>CB52FBEF0D95ACAF0052B484</string>
-											<string>CB52FBF00D95ACAF0052B484</string>
-											<string>CB52FBF10D95ACAF0052B484</string>
-											<string>CB52FBF20D95ACAF0052B484</string>
-											<string>CB52FBF30D95ACAF0052B484</string>
-											<string>CB52FBF40D95ACAF0052B484</string>
-											<string>CB52FBF50D95ACAF0052B484</string>
 											<string>CB52FBF60D95ACAF0052B484</string>
 											<string>CB52FBF70D95ACAF0052B484</string>
-											<string>CB52FBF80D95ACAF0052B484</string>
-											<string>CB52FBF90D95ACAF0052B484</string>
-											<string>CB52FBFA0D95ACAF0052B484</string>
-											<string>CB52FBFB0D95ACAF0052B484</string>
-											<string>CB52FBFC0D95ACAF0052B484</string>
-											<string>CB52FBFD0D95ACAF0052B484</string>
-											<string>CB52FBFE0D95ACAF0052B484</string>
-											<string>CB52FBFF0D95ACAF0052B484</string>
-											<string>CB52FC000D95ACAF0052B484</string>
-											<string>CB52FC010D95ACAF0052B484</string>
-											<string>CB52FC020D95ACAF0052B484</string>
-											<string>CB52FC030D95ACAF0052B484</string>
-											<string>CB52FC040D95ACAF0052B484</string>
-											<string>CB52FC050D95ACAF0052B484</string>
-											<string>CB52FC060D95ACAF0052B484</string>
-											<string>CB52FC070D95ACAF0052B484</string>
-											<string>CB52FC080D95ACAF0052B484</string>
-											<string>CB52FC090D95ACAF0052B484</string>
-											<string>CB52FC0A0D95ACAF0052B484</string>
-											<string>CB52FC0B0D95ACAF0052B484</string>
-											<string>CB52FC0C0D95ACAF0052B484</string>
-											<string>CB52FC0D0D95ACAF0052B484</string>
-											<string>CB52FC0E0D95ACAF0052B484</string>
-											<string>CB52FC0F0D95ACAF0052B484</string>
-											<string>CB52FC100D95ACAF0052B484</string>
-											<string>CB52FC110D95ACAF0052B484</string>
-											<string>CB52FC120D95ACAF0052B484</string>
-											<string>CB52FC130D95ACAF0052B484</string>
-											<string>CB52FC140D95ACAF0052B484</string>
-											<string>CB52FC150D95ACAF0052B484</string>
+											<string>CB52FC710D95B3DB0052B484</string>
+											<string>CBE664170D95B3FB0013C6AB</string>
+											<string>CBE664180D95B3FB0013C6AB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -640,9 +591,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB52FBC40D95A51F0052B484</string>
+				<string>CBE6641A0D95B3FB0013C6AB</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>CB52FBC50D95A51F0052B484</string>
+				<string>CBE6641B0D95B3FB0013C6AB</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -784,13 +735,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>CB52FC1A0D95AD100052B484</string>
-		<string>CB52FC1B0D95AD100052B484</string>
-		<string>CB52FC1C0D95AD100052B484</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Users/karl/Development/CleverRabbit/CleverRabbit/CleverRabbit.xcodeproj</string>
 		<string>CBB807C40D548EB5001DD83A</string>
+		<string>/Users/karl/Development/CleverRabbit/CleverRabbit/CleverRabbit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>46 55 1237 723 0 0 1280 778 </string>
@@ -809,14 +757,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RTKVerse.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -874,7 +820,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>CBB807C40D548EB5001DD83A</string>
-				<string>CB52FBC60D95A51F0052B484</string>
+				<string>CBE6641C0D95B3FB0013C6AB</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -885,7 +831,7 @@
 			<key>WindowToolGUID</key>
 			<string>CBB807C40D548EB5001DD83A</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -994,13 +940,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>CB52FBC70D95A51F0052B484</string>
+				<string>CBE6641D0D95B3FB0013C6AB</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>CB52FBC80D95A51F0052B484</string>
-				<string>CB52FBC90D95A51F0052B484</string>
-				<string>CB52FBCA0D95A51F0052B484</string>
-				<string>CB52FBCB0D95A51F0052B484</string>
-				<string>CB52FBCC0D95A51F0052B484</string>
+				<string>CBE6641E0D95B3FB0013C6AB</string>
+				<string>CBE6641F0D95B3FB0013C6AB</string>
+				<string>CBE664200D95B3FB0013C6AB</string>
+				<string>CBE664210D95B3FB0013C6AB</string>
+				<string>CBE664220D95B3FB0013C6AB</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1156,7 +1102,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>CB52FBCD0D95A51F0052B484</string>
+				<string>CBE664230D95B3FB0013C6AB</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>

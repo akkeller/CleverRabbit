@@ -229,8 +229,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -283,7 +281,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
+									<integer>12</integer>
 									<integer>3</integer>
 									<integer>0</integer>
 								</array>
@@ -323,12 +321,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RTKMutableAttributedStringCategory.m</string>
+								<string>RTKTigerDocument.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +336,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RTKMutableAttributedStringCategory.m</string>
+										<string>RTKTigerDocument.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBD1FF9D0D96497E007562BA</string>
+										<string>CBD1FFBB0D964BCF007562BA</string>
 										<key>history</key>
 										<array>
 											<string>CB5412A808AED8CA00CAB00C</string>
@@ -421,8 +421,6 @@
 											<string>CB08F8070D95FD1D00B7A566</string>
 											<string>CB848DFD0D962E7000AAC9F0</string>
 											<string>CBD1FEE00D96377A007562BA</string>
-											<string>CBD1FEE40D96377A007562BA</string>
-											<string>CBD1FEE60D96377A007562BA</string>
 											<string>CBD1FEE70D96377A007562BA</string>
 											<string>CBD1FEE80D96377A007562BA</string>
 											<string>CBD1FF090D963972007562BA</string>
@@ -430,15 +428,17 @@
 											<string>CBD1FF100D963A05007562BA</string>
 											<string>CBD1FF170D963B5F007562BA</string>
 											<string>CBD1FF2E0D9643E2007562BA</string>
-											<string>CBD1FF2F0D9643E2007562BA</string>
 											<string>CBD1FF380D9644E6007562BA</string>
 											<string>CBD1FF920D96497E007562BA</string>
 											<string>CBD1FF930D96497E007562BA</string>
-											<string>CBD1FF940D96497E007562BA</string>
-											<string>CBD1FF950D96497E007562BA</string>
 											<string>CBD1FF960D96497E007562BA</string>
-											<string>CBD1FF970D96497E007562BA</string>
-											<string>CBD1FF370D9644E6007562BA</string>
+											<string>CBD1FFA30D964BCF007562BA</string>
+											<string>CBD1FFA40D964BCF007562BA</string>
+											<string>CBD1FFA50D964BCF007562BA</string>
+											<string>CBD1FFA60D964BCF007562BA</string>
+											<string>CBD1FFA70D964BCF007562BA</string>
+											<string>CBD1FFA80D964BCF007562BA</string>
+											<string>CBD1FFA90D964BCF007562BA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -558,6 +558,23 @@
 											<string>CBD1FF9A0D96497E007562BA</string>
 											<string>CBD1FF9B0D96497E007562BA</string>
 											<string>CBD1FF9C0D96497E007562BA</string>
+											<string>CBD1FFAA0D964BCF007562BA</string>
+											<string>CBD1FFAB0D964BCF007562BA</string>
+											<string>CBD1FFAC0D964BCF007562BA</string>
+											<string>CBD1FFAD0D964BCF007562BA</string>
+											<string>CBD1FFAE0D964BCF007562BA</string>
+											<string>CBD1FFAF0D964BCF007562BA</string>
+											<string>CBD1FFB00D964BCF007562BA</string>
+											<string>CBD1FFB10D964BCF007562BA</string>
+											<string>CBD1FFB20D964BCF007562BA</string>
+											<string>CBD1FFB30D964BCF007562BA</string>
+											<string>CBD1FFB40D964BCF007562BA</string>
+											<string>CBD1FFB50D964BCF007562BA</string>
+											<string>CBD1FFB60D964BCF007562BA</string>
+											<string>CBD1FFB70D964BCF007562BA</string>
+											<string>CBD1FFB80D964BCF007562BA</string>
+											<string>CBD1FFB90D964BCF007562BA</string>
+											<string>CBD1FFBA0D964BCF007562BA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

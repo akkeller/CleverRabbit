@@ -1477,6 +1477,8 @@ constrainMinCoordinate:(float *)min
         NSTextStorage *textStorage = [publishedTextView textStorage];
         NSRange selectedRange = [publishedTextView selectedRange];
         
+        [textStorage removeAttribute:NSBackgroundColorAttributeName];
+        
         // Don't allow editing end of text field.
         if(selectedRange.location == [textStorage length]) {
             [publishedTextView setEditable:NO];
@@ -1521,8 +1523,6 @@ constrainMinCoordinate:(float *)min
             [publishedTextView setEditable:NO];
             return;
         }
-        
-        [textStorage removeAttribute:NSBackgroundColorAttributeName];
         
         // Allow editing if selection is within the text of a verse.
         if([firstComponent isEqualToString:@"Verse Text"]) {

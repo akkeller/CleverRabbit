@@ -87,7 +87,7 @@ BOOL generateMetaStrings = NO;
         [self setBindingsFromDictionary:nil];
         
         [self setVerseTypes:[NSMutableArray arrayWithObjects:
-            @"\\v", @"\\p", @"\\s1", @"\\s2", @"\\r", @"\\mt1", @"\\mt2", @"\\mt3", @"\\is", @"\\ip", @"\\h", nil]];
+                             @"\\v", @"\\p", @"\\s1", @"\\s2", @"\\r", @"\\mt1", @"\\mt2", @"\\mt3", @"\\is", @"\\ip", @"\\h", nil]];
         [self setDictionary:[NSDictionary dictionary]];
 		
         // Keep a transcription thread running at all times.
@@ -154,7 +154,7 @@ BOOL generateMetaStrings = NO;
 		[documentWindow makeFirstResponder:romanTextView];
 		
 		[self setDictionary:[NSDictionary dictionary]];
-
+        
 		[self updateUI];
 		
 		[versesTableView selectRow:0 byExtendingSelection:NO];
@@ -372,10 +372,10 @@ BOOL generateMetaStrings = NO;
 #pragma mark -
 #pragma mark drag and drop
 /* Some very handy links.
-http://www.nongnu.org/gstutorial/en/ch13s04.html
-http://borkware.com/quickies/one?topic=NSTableView
-http://borkware.com/quickies/everything-by-date
-*/
+ http://www.nongnu.org/gstutorial/en/ch13s04.html
+ http://borkware.com/quickies/one?topic=NSTableView
+ http://borkware.com/quickies/everything-by-date
+ */
 
 - (void)setDraggedVerseIndexArray:(NSArray *)indexArray
 {
@@ -420,12 +420,12 @@ http://borkware.com/quickies/everything-by-date
                  proposedRow: (int)row
        proposedDropOperation: (NSTableViewDropOperation)op
 {	/* Example found at http://www.nongnu.org/gstutorial/en/ch13s04.html */
-
+    
     //NSLog(@"checking drop zone");
-
+    
 	if(row > [[book verses] count])
-	return NSDragOperationNone;
-
+        return NSDragOperationNone;
+    
 	if([item draggingSource] == nil) {	// dragging from other application
 		return NSDragOperationNone;
 	} else if([item draggingSource] == versesTableView) {	// dragging within document
@@ -473,7 +473,7 @@ http://borkware.com/quickies/everything-by-date
             [versesTableView reloadData];
             
             [versesTableView selectRowIndexes:[NSIndexSet indexSetWithIndexesInRange:
-                NSMakeRange((row - selectionPointCorrection), verseCount)]
+                                               NSMakeRange((row - selectionPointCorrection), verseCount)]
                          byExtendingSelection:NO];
         } else {
             NSMutableArray * verses = [book verses];
@@ -492,7 +492,7 @@ http://borkware.com/quickies/everything-by-date
             [versesTableView reloadData];
             
             [versesTableView selectRowIndexes:[NSIndexSet indexSetWithIndexesInRange:
-                NSMakeRange(row, verseCount)]
+                                               NSMakeRange(row, verseCount)]
                          byExtendingSelection:NO];            
         }
         // TODO: Change this when undo/redo is supported
@@ -565,47 +565,47 @@ http://borkware.com/quickies/everything-by-date
 	
     if([aType isEqualToString:@"rtktiger"])
 	 {
-        NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dictionary];
-        
-        [dict setObject:[book dictionaryRepresentation] forKey:@"book"];
-        
-        [dict setObject:@"Keys prefixed with RTK are specific to the document in CleverRabbit.app. \n Those not prefixed store actual data."
-                 forKey:@"ANoteForPosterity"];
-        
-        [dict setObject:[[NSDate date] description] forKey:@"RTKSaveDate"];
-        [dict setObject:[creationDate description] forKey:@"RTKCreationDate"];
-        
-        // TODO: Should probably be using a better version format.
-        [dict setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
-                 forKey:@"RTKBuildVersion"];
-        
-        [dict setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
-		
-        [dict setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
-		[dict setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
-		
-		NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
-		
-        [d setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
-		
-        [d setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
-		[d setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
-		
-		
-		
-        data = [[dict description] dataUsingEncoding:NSUTF8StringEncoding];
+         NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dictionary];
+         
+         [dict setObject:[book dictionaryRepresentation] forKey:@"book"];
+         
+         [dict setObject:@"Keys prefixed with RTK are specific to the document in CleverRabbit.app. \n Those not prefixed store actual data."
+                  forKey:@"ANoteForPosterity"];
+         
+         [dict setObject:[[NSDate date] description] forKey:@"RTKSaveDate"];
+         [dict setObject:[creationDate description] forKey:@"RTKCreationDate"];
+         
+         // TODO: Should probably be using a better version format.
+         [dict setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
+                  forKey:@"RTKBuildVersion"];
+         
+         [dict setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
+         
+         [dict setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
+         [dict setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
+         
+         NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+         
+         [d setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
+         
+         [d setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
+         [d setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
+         
+         
+         
+         data = [[dict description] dataUsingEncoding:NSUTF8StringEncoding];
 	 } else if([aType isEqualToString:@"txt"]) {        
 		 
 		 NSString * string = [book string];
@@ -717,13 +717,13 @@ http://borkware.com/quickies/everything-by-date
         loaded = YES;
     } else if([aType isEqualToString:@"txt"]) {
         [self setBook:[[[RTKBook alloc] initWithString:
-            [[NSMutableString allocWithZone:[self zone]] initWithData:data 
-                                                             encoding:NSUTF8StringEncoding]] autorelease]];
+                        [[NSMutableString allocWithZone:[self zone]] initWithData:data 
+                                                                         encoding:NSUTF8StringEncoding]] autorelease]];
         loaded = YES;
     } else if([aType isEqualToString:@"ptx"]) {
         [self setBook:[[[RTKBook alloc] initWithSFMString:
-            [[NSMutableString allocWithZone:[self zone]] initWithData:data 
-                                                             encoding:NSUTF8StringEncoding]] autorelease]];
+                        [[NSMutableString allocWithZone:[self zone]] initWithData:data 
+                                                                         encoding:NSUTF8StringEncoding]] autorelease]];
         loaded = YES;
     }
     
@@ -879,7 +879,7 @@ http://borkware.com/quickies/everything-by-date
             [romanTextView setString:[revision roman]];
         if(![[scriptTextView string] isEqualToString:[revision script]]) {
             [scriptTextView setString:[revision script]];
-			[self updateCommiteeMeetingText:YES];		}
+        [self updateCommiteeMeetingText:YES];		}
         if(![[backTranslationTextView string] isEqualToString:[revision backTranslation]])
             [backTranslationTextView setString:[revision backTranslation]];
         if(![[notesTextView string] isEqualToString:[revision notes]])
@@ -954,47 +954,47 @@ http://borkware.com/quickies/everything-by-date
         
 #pragma mark Locking
 		
-		{
-			BOOL verseLocked = [verse locked];
-			BOOL revisionLocked = [revision locked];
-			int revisionCount = [verse revisionCount];
-			int revisionIndex = [verse currentRevisionIndex];
-			
-			[[[NSApp delegate] newVerseMenuItem] setEnabled:YES];
-			[[[NSApp delegate] deleteVerseMenuItem] setEnabled:!verseLocked];
-			[[[NSApp delegate] lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
-			
-			[deleteVerseButton setEnabled:(!verseLocked ? NSOnState : NSOffState)];
-			
-			[referenceTableColumn setEditable:!(verseLocked || revisionLocked)];
-			[typeTableColumn setEditable:!(verseLocked || revisionLocked)];
-			[revisionTableColumn setEditable:!(verseLocked || revisionLocked)];
-			
-			[[[NSApp delegate] lockRevisionMenuItem] setEnabled:!verseLocked];
-			[[[NSApp delegate] lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
-			[[[NSApp delegate] deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
-			[[[NSApp delegate] newRevisionMenuItem] setEnabled:!verseLocked];
-			
-			[newRevisionButton setEnabled:!verseLocked];
-			[deleteRevisionButton setEnabled:!(verseLocked || revisionLocked)];
-			
-			[[appController nextRevisionMenuItem] setEnabled:
-				(([verse currentRevisionIndex] < [verse revisionCount] - 1) && !verseLocked)];
-			[[appController previousRevisionMenuItem] setEnabled:
-				(([verse currentRevisionIndex] > 0) && !verseLocked)];
-			
-			[[appController nextVerseMenuItem] setEnabled:(selectedRow < verseCount - 1)];
-			[[appController previousVerseMenuItem] setEnabled:(selectedRow > 0)];
-			
-			[romanTextView setEditable:!(verseLocked || revisionLocked)];
-			[backTranslationTextView setEditable:!(verseLocked || revisionLocked)];
-			[notesTextView setEditable:!(verseLocked || revisionLocked)];
-			[checkingTextView setEditable:!(verseLocked || revisionLocked)];
-			
-			[referenceTableColumn setEditable:!verseLocked];
-			[typeTableColumn setEditable:!verseLocked];
-			[revisionTableColumn setEditable:!verseLocked];
-		}
+     {
+         BOOL verseLocked = [verse locked];
+         BOOL revisionLocked = [revision locked];
+         int revisionCount = [verse revisionCount];
+         int revisionIndex = [verse currentRevisionIndex];
+         
+         [[[NSApp delegate] newVerseMenuItem] setEnabled:YES];
+         [[[NSApp delegate] deleteVerseMenuItem] setEnabled:!verseLocked];
+         [[[NSApp delegate] lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
+         
+         [deleteVerseButton setEnabled:(!verseLocked ? NSOnState : NSOffState)];
+         
+         [referenceTableColumn setEditable:!(verseLocked || revisionLocked)];
+         [typeTableColumn setEditable:!(verseLocked || revisionLocked)];
+         [revisionTableColumn setEditable:!(verseLocked || revisionLocked)];
+         
+         [[[NSApp delegate] lockRevisionMenuItem] setEnabled:!verseLocked];
+         [[[NSApp delegate] lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
+         [[[NSApp delegate] deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
+         [[[NSApp delegate] newRevisionMenuItem] setEnabled:!verseLocked];
+         
+         [newRevisionButton setEnabled:!verseLocked];
+         [deleteRevisionButton setEnabled:!(verseLocked || revisionLocked)];
+         
+         [[appController nextRevisionMenuItem] setEnabled:
+          (([verse currentRevisionIndex] < [verse revisionCount] - 1) && !verseLocked)];
+         [[appController previousRevisionMenuItem] setEnabled:
+          (([verse currentRevisionIndex] > 0) && !verseLocked)];
+         
+         [[appController nextVerseMenuItem] setEnabled:(selectedRow < verseCount - 1)];
+         [[appController previousVerseMenuItem] setEnabled:(selectedRow > 0)];
+         
+         [romanTextView setEditable:!(verseLocked || revisionLocked)];
+         [backTranslationTextView setEditable:!(verseLocked || revisionLocked)];
+         [notesTextView setEditable:!(verseLocked || revisionLocked)];
+         [checkingTextView setEditable:!(verseLocked || revisionLocked)];
+         
+         [referenceTableColumn setEditable:!verseLocked];
+         [typeTableColumn setEditable:!verseLocked];
+         [revisionTableColumn setEditable:!verseLocked];
+     }
 	}
     
     [self updatePublishedTextView];
@@ -1063,12 +1063,12 @@ http://borkware.com/quickies/everything-by-date
     NSString * precedingType = [precedingVerse type];
     NSString * verseNumber = [precedingReference verse];
     NSString * reference =  [NSString stringWithFormat:@"%@ %@", 
-        [precedingReference book],
-        [precedingReference chapter]];
+                             [precedingReference book],
+                             [precedingReference chapter]];
     
     if([verseNumber length] > 0) {
         verseNumber = [NSString stringWithFormat:@"%i", 
-            [verseNumber intValue] + ([precedingType isEqualToString:@"\\v"] ? 1 : 0)];
+                       [verseNumber intValue] + ([precedingType isEqualToString:@"\\v"] ? 1 : 0)];
         reference = [NSString stringWithFormat:@"%@:%@", reference, verseNumber];
     }
     [verse setReference:reference];
@@ -1343,7 +1343,7 @@ http://borkware.com/quickies/everything-by-date
 			string = [romanTextView string];
 	
 	[[NSNotificationCenter defaultCenter] postNotification:
-		[NSNotification notificationWithName:@"RTKChangedCommitteeString" object:string]];
+     [NSNotification notificationWithName:@"RTKChangedCommitteeString" object:string]];
 }
 
 #pragma mark -
@@ -1435,7 +1435,7 @@ constrainMinCoordinate:(float *)min
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
-
+    
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];
 	
@@ -1444,17 +1444,31 @@ constrainMinCoordinate:(float *)min
 
 // Informs the appropriate RTKVerse object of its changes.
 - (void)publishedTextViewDidChange:(NSNotification *)notification
-{
-    NSLog([[publishedTextView typingAttributes] description]);
+{    
+    NSLog(@"publishedTextViewDidChange");
 
-    NSRange selectedRange = [publishedTextView selectedRange];
     NSTextStorage *textStorage = [publishedTextView textStorage];
     
+    NSRange selectedRange = [publishedTextView selectedRange];
+    
+    NSLog(@"Selected Range: %i, %i", selectedRange.location, selectedRange.length);
+    NSLog(@"Text Storage Length: %i", [textStorage length]);
     NSRange verseRange;
+    
+    /*
+     if(selectedRange.location == [textStorage length]) {
+        NSLog(@"Document rejected change.");
+        [self updatePublishedTextView];
+        [publishedTextView setSelectedRange:selectedRange];
+        return;
+    }
+     */
+    
     RTKVerse *verse = [textStorage attribute:@"RTKVerse" 
-                                     atIndex:selectedRange.location 
+                                     atIndex:selectedRange.location
                        longestEffectiveRange:&verseRange
                                      inRange:NSMakeRange(0, [textStorage length])];
+    NSLog(@"got here");
     NSAttributedString *verseString = [textStorage attributedSubstringFromRange:verseRange];
     
     //NSLog([verseString string]);
@@ -1469,24 +1483,73 @@ constrainMinCoordinate:(float *)min
 }
 
 - (void)textViewDidChangeSelection:(NSNotification *)notification
-{    
+{   
+    NSLog(@"textViewDidChangeSelection");
     NSTextView * changedTextView = [notification object];
     
     if(changedTextView = publishedTextView) {
         NSTextStorage *textStorage = [publishedTextView textStorage];
         NSRange selectedRange = [publishedTextView selectedRange];
-        /*
+        
+        // Don't allow editing end of text field.
+        if(selectedRange.location == [textStorage length]) {
+            [publishedTextView setEditable:NO];
+            return;
+        }
+        
+        // Temporary logging for testing.
+        NSLog([[textStorage attributesAtIndex:selectedRange.location effectiveRange:NULL] description]);
+        
         RTKVerse *firstVerse = [textStorage attribute:@"RTKVerse"
                                               atIndex:selectedRange.location
                                 longestEffectiveRange:NULL
                                               inRange:NSMakeRange(0, [textStorage length])];
         
-         RTKVerse *lastVerse = [textStorage attribute:@"RTKVerse" 
+        RTKVerse *lastVerse = [textStorage attribute:@"RTKVerse" 
                                              atIndex:(selectedRange.location + selectedRange.length)
                                longestEffectiveRange:NULL
                                              inRange:NSMakeRange(0, [textStorage length])];
-        */
-        //[publishedTextView setEditable:(firstVerse == lastVerse)];
+        
+        NSString *firstComponent = [textStorage attribute:@"RTKVerseComponent" 
+                                                  atIndex:selectedRange.location
+                                    longestEffectiveRange:NULL
+                                                  inRange:NSMakeRange(0, [textStorage length])];
+        
+        NSString *lastComponent = [textStorage attribute:@"RTKVerseComponent" 
+                                                 atIndex:(selectedRange.location + selectedRange.length)
+                                   longestEffectiveRange:NULL
+                                                 inRange:NSMakeRange(0, [textStorage length])];
+        
+        NSString *nextToLastComponent = nil;
+        if((selectedRange.location + selectedRange.length - 1) > 0) {
+            nextToLastComponent = [textStorage attribute:@"RTKVerseComponent" 
+                                                 atIndex:selectedRange.location + selectedRange.length - 1
+                                   longestEffectiveRange:NULL
+                                                 inRange:NSMakeRange(0, [textStorage length])];
+        }
+        
+        // Don't allow editing if selection spans multiple verses or components.
+        if((firstVerse != lastVerse) || ((firstComponent != lastComponent) && (firstComponent != nextToLastComponent)) ) {
+            [publishedTextView setEditable:NO];
+            return;
+        }
+        
+        // Allow editing if selection is within the text of a verse.
+        if([firstComponent isEqualToString:@"Verse Text"]) {
+            [publishedTextView setEditable:YES];
+        } else {
+            if((selectedRange.location + selectedRange.length - 1) > 0) {
+                
+                // Allow editing if at the end of a "Verse Text" section.
+                if([nextToLastComponent isEqualToString:@"Verse Text"]) {
+                    [publishedTextView setEditable:YES];
+                    [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
+                                                                           effectiveRange:NULL]];
+                } else {
+                    [publishedTextView setEditable:NO];
+                }
+            }
+        }
     }
 }
 
@@ -1732,7 +1795,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	} else {
 		[versesTableView removeTableColumn:scriptTableColumn];
 		[scriptView removeFromSuperview];
-
+        
 	}
 	[self readSplitViewRectsFromDefaults];
 	[self writeSplitViewRectsToDefaults];
@@ -1796,26 +1859,26 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
             NSString * transcriptionType = [d valueForKey:@"RTKTranscriptionType"];
             fontOutputString = transcriptionType;
             /*if([transcriptionType isEqualToString:@"No Transcription"]) {
-                fontOutputString = @"No Transcription -- You can turn this on in the Preferences.";
-            } else if([transcriptionType isEqualToString:@"External Transcription"]) {
-                fontOutputString = @"External Transcription -- This should eventually use TECkit, Perl, Python or any other command line tool.";
-            } else if([transcriptionType isEqualToString:@"RTK Transcription"]) */{
-                NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
-                NSDictionary * output = [RTKSharedConvertor convertString:[revision roman]
-                                                              inputSystem:[definitionDir stringByAppendingString:
-                                                                  [[d objectForKey:@"RTKInputSystem"] stringByAppendingString:@".rtkinput"]]
-                                                             scriptSystem:[definitionDir stringByAppendingString:
-                                                                 [[d objectForKey:@"RTKScriptSystem"] stringByAppendingString:@".rtkscript"]]
-                                                               fontSystem:[definitionDir stringByAppendingString:
-                                                                   [[d objectForKey:@"RTKEncodingSystem"] stringByAppendingString:@".rtkfont"]]
-                                                          withMetaStrings:generateMetaStrings
-                                                      checkForPunctuation:NO];
-                
-                if(generateMetaStrings)
-                    NSLog(@"%@", [output description]);
-                
-                fontOutputString = [output objectForKey:@"RTKFont"];            
-            }
+             fontOutputString = @"No Transcription -- You can turn this on in the Preferences.";
+             } else if([transcriptionType isEqualToString:@"External Transcription"]) {
+             fontOutputString = @"External Transcription -- This should eventually use TECkit, Perl, Python or any other command line tool.";
+             } else if([transcriptionType isEqualToString:@"RTK Transcription"]) */{
+                 NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
+                 NSDictionary * output = [RTKSharedConvertor convertString:[revision roman]
+                                                               inputSystem:[definitionDir stringByAppendingString:
+                                                                            [[d objectForKey:@"RTKInputSystem"] stringByAppendingString:@".rtkinput"]]
+                                                              scriptSystem:[definitionDir stringByAppendingString:
+                                                                            [[d objectForKey:@"RTKScriptSystem"] stringByAppendingString:@".rtkscript"]]
+                                                                fontSystem:[definitionDir stringByAppendingString:
+                                                                            [[d objectForKey:@"RTKEncodingSystem"] stringByAppendingString:@".rtkfont"]]
+                                                           withMetaStrings:generateMetaStrings
+                                                       checkForPunctuation:NO];
+                 
+                 if(generateMetaStrings)
+                     NSLog(@"%@", [output description]);
+                 
+                 fontOutputString = [output objectForKey:@"RTKFont"];            
+             }
 			
             if(fontOutputString)
                 [revision setScript:fontOutputString];

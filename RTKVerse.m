@@ -311,6 +311,7 @@
 - (BOOL)updateWithAttributedString:(NSAttributedString *)string 
                            atIndex:(NSUInteger)index
 {
+    //NSLog(@"> updateWithAttributedString");
     NSRange componentRange;
     NSString *component = [string attribute:@"RTKVerseComponent" 
                                      atIndex:index 
@@ -328,8 +329,10 @@
     
     if([component isEqualToString:@"Verse Text"]) {
         [[self currentRevision] setRoman:[componentString string]];
+       // NSLog(@"< updateWithAttributedString");
         return YES; // Verse accepted change.
     }
+   // NSLog(@"< updateWithAttributedString");
     return NO; // Verse rejected change.
 }
 

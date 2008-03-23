@@ -23,6 +23,7 @@
     
     NSDictionary * characterSwaps;
     
+    BOOL limitEditingToSpecifiedRange;
     NSRange allowedEditingRange;
 }
 

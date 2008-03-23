@@ -45,25 +45,29 @@
 - (void)setAllowEditing:(BOOL)allow
 {
     if(allow)
-        [self setAllowedEditingRange:NSMakeRange(0,[[self textStorage] length])];
+        limitEditingToSpecifiedRange = NO;
+        //[self setAllowedEditingRange:NSMakeRange(0,[[self textStorage] length])];
     else
+        limitEditingToSpecifiedRange = YES;
         [self setAllowedEditingRange:NSMakeRange(-1,0)];
 }
 
 - (void)setAllowedEditingRange:(NSRange)range
 {
+    limitEditingToSpecifiedRange = YES;
     allowedEditingRange = range;
 }
 
 - (BOOL)shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
 {
-    if(affectedCharRange.location < allowedEditingRange.location)
-        return NO;
-    if(affectedCharRange.location > allowedEditingRange.location + allowedEditingRange.length)
-        return NO;
-    if(affectedCharRange.location + affectedCharRange.length > allowedEditingRange.location + allowedEditingRange.length)
-        return NO;
-    
+    if(limitEditingToSpecifiedRange) {
+        if(affectedCharRange.location < allowedEditingRange.location)
+            return NO;
+        if(affectedCharRange.location > allowedEditingRange.location + allowedEditingRange.length)
+            return NO;
+        if(affectedCharRange.location + affectedCharRange.length > allowedEditingRange.location + allowedEditingRange.length)
+            return NO;
+    }
     return [super shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
 }
 

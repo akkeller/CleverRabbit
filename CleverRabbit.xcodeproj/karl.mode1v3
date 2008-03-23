@@ -283,12 +283,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>46</integer>
-									<integer>43</integer>
+									<integer>36</integer>
+									<integer>35</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 203}, {255, 664}}</string>
+							<string>{{0, 0}, {255, 664}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -327,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RTKTigerDocument.m</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -335,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RTKTigerDocument.m</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBD101520D96D28C007562BA</string>
+										<string>CBD101820D96D7EC007562BA</string>
 										<key>history</key>
 										<array>
 											<string>CB5412A808AED8CA00CAB00C</string>
@@ -419,10 +419,6 @@
 											<string>CBD1FF960D96497E007562BA</string>
 											<string>CBD1FFC10D96B83B007562BA</string>
 											<string>CBD1FFC20D96B83B007562BA</string>
-											<string>CBD1FFC30D96B83B007562BA</string>
-											<string>CBD1FFC40D96B83B007562BA</string>
-											<string>CBD1FFC50D96B83B007562BA</string>
-											<string>CBD1FFC60D96B83B007562BA</string>
 											<string>CBD100790D96BF7E007562BA</string>
 											<string>CBD100EF0D96CA2B007562BA</string>
 											<string>CBD101010D96CBBC007562BA</string>
@@ -435,11 +431,15 @@
 											<string>CBD1012D0D96CF2B007562BA</string>
 											<string>CBD1012E0D96CF2B007562BA</string>
 											<string>CBD1012F0D96CF2B007562BA</string>
-											<string>CBD101300D96CF2B007562BA</string>
-											<string>CBD101310D96CF2B007562BA</string>
-											<string>CBD101320D96CF2B007562BA</string>
-											<string>CBD101500D96D28C007562BA</string>
-											<string>CB089E6809AE4BDA0004D3F7</string>
+											<string>CBD101570D96D311007562BA</string>
+											<string>CBD101580D96D311007562BA</string>
+											<string>CBD101590D96D311007562BA</string>
+											<string>CBD101650D96D60B007562BA</string>
+											<string>CBD101660D96D60B007562BA</string>
+											<string>CBD101670D96D60B007562BA</string>
+											<string>CBD101680D96D60B007562BA</string>
+											<string>CBD1017D0D96D7B3007562BA</string>
+											<string>CBD1017E0D96D7B3007562BA</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -711,6 +711,24 @@
 											<string>CBD101430D96CF2B007562BA</string>
 											<string>CBD101440D96CF2B007562BA</string>
 											<string>CBD101510D96D28C007562BA</string>
+											<string>CBD1015A0D96D311007562BA</string>
+											<string>CBD1015B0D96D311007562BA</string>
+											<string>CBD1015C0D96D311007562BA</string>
+											<string>CBD1015D0D96D311007562BA</string>
+											<string>CBD101610D96D34E007562BA</string>
+											<string>CBD1016A0D96D60B007562BA</string>
+											<string>CBD1016B0D96D60B007562BA</string>
+											<string>CBD1016C0D96D60B007562BA</string>
+											<string>CBD1016D0D96D60B007562BA</string>
+											<string>CBD1016E0D96D60B007562BA</string>
+											<string>CBD1016F0D96D60B007562BA</string>
+											<string>CBD101700D96D60B007562BA</string>
+											<string>CBD101710D96D60B007562BA</string>
+											<string>CBD101720D96D60B007562BA</string>
+											<string>CBD101730D96D60B007562BA</string>
+											<string>CBD101740D96D60B007562BA</string>
+											<string>CBD101750D96D60B007562BA</string>
+											<string>CBD1017F0D96D7B3007562BA</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

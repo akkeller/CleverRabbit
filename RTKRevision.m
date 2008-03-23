@@ -13,7 +13,7 @@
 
 
 #import "RTKRevision.h"
-
+#import "RTKStringCategory.h"
 #import "Chomp/Chomp.h"
 
 

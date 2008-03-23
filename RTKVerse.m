@@ -258,11 +258,20 @@
     return [NSString stringWithFormat:@"%@ %@", type, [revision roman]];
 }
 
+// TODO: Check for retain problems. Should be autoreleasing more stuff here.
 - (NSMutableAttributedString *)mutableAttributedString
 {
     RTKRevision * revision = [self currentRevision];
     NSMutableArray * strings = [[[NSMutableArray alloc] init] autorelease];
     id string;
+    
+    NSMutableAttributedString *newLineString = [[[NSMutableAttributedString alloc] initWithString:@"\n"] autorelease];
+    [newLineString normalFontSize];
+    
+    NSMutableAttributedString *spaceString = [[[NSMutableAttributedString alloc] initWithString:@" "] autorelease];
+    [spaceString normalFontSize];
+    
+    
     if([type isEqualToString:@"\\v"]) {
         string = [[NSMutableAttributedString alloc] initWithString:[reference verse]];
         
@@ -272,36 +281,39 @@
         [string smallFontSize];
     
         [strings addObject:string];
-        [strings addObject:@" "];
+        [strings addObject:spaceString];
+        
         string = [revision mutableAttributedString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
+        [string normalFontSize];
+        
         [strings addObject:string];
-        [strings addObject:@" "];
+        [strings addObject:spaceString];
         
     } else if([type isEqualToString:@"\\p"]) {
-        [strings addObject:@"\n\n"];
+        [strings addObject:newLineString]; [strings addObject:newLineString];
     } else if([type isEqualToString:@"\\s1"]) {
         string = [revision mutableAttributedString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
-        [strings addObject:@"\n\n"];
+        [strings addObject:newLineString]; [strings addObject:newLineString];
         [strings addObject:string];
-        [strings addObject:@"\n\n"];
+        [strings addObject:newLineString]; [strings addObject:newLineString];
     } else if([type isEqualToString:@"\\mt1"]) {
         string = [revision mutableAttributedString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
-        [strings addObject:@"\n"];
+        [strings addObject:newLineString];
         [strings addObject:string];
-        [strings addObject:@"\n"];
+        [strings addObject:newLineString];
     } else if([type isEqualToString:@"\\c"]) {
         string = [[NSMutableAttributedString alloc] initWithString:[reference chapter]];
         [string addAttribute:@"RTKVerseComponent" value:@"Chapter Reference"];
         
         [string largeFontSize];
-        [strings addObject:@"\n"];
+        [strings addObject:newLineString];
         [strings addObject:string];
-        [strings addObject:@"\n"];
+        [strings addObject:newLineString];
     }
     NSMutableAttributedString * outputString = [strings mutableAttributedStringFromComponents];
     [outputString addAttribute:@"RTKVerse" value:self];

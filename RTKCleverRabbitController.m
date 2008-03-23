@@ -56,7 +56,9 @@
 		[d setObject:[NSNumber numberWithInt:12] forKey:@"RTKNotesFontSize"];
 		[d setObject:@"Helvetica" forKey:@"RTKCheckingFontName"];
 		[d setObject:[NSNumber numberWithInt:12] forKey:@"RTKCheckingFontSize"];
-		
+        [d setObject:@"Helvetica" forKey:@"RTKPublishedFontName"];
+		[d setObject:[NSNumber numberWithInt:12] forKey:@"RTKPublishedFontSize"];
+
 		[d setValue:@"No Transcription" forKey:@"RTKTranscriptionType"];
 		
 		[[NSUserDefaults standardUserDefaults]

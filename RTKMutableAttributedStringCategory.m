@@ -28,11 +28,23 @@
 
 - (void)smallFontSize
 {
-    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:9.0]];
+    NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:(NSString *)[d valueForKey:@"RTKPublishedFontName"]
+                                                                 size:9.0/12.0*[(NSString *) [d valueForKey:@"RTKPublishedFontSize"] floatValue]]];
 }
+
+- (void)normalFontSize
+{
+    NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:(NSString *)[d valueForKey:@"RTKPublishedFontName"]
+                                                                 size:[(NSString *) [d valueForKey:@"RTKPublishedFontSize"] floatValue]]];
+}
+
 - (void)largeFontSize
 {
-    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Helvetica" size:14.0]];
+    NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+    [self addAttribute:NSFontAttributeName value:[NSFont fontWithName:(NSString *)[d valueForKey:@"RTKPublishedFontName"]
+                                                                 size:14.0/12.0*[(NSString *) [d valueForKey:@"RTKPublishedFontSize"] floatValue]]];
 }
 
 - (void)addAttribute:(NSString *)name value:(id)value

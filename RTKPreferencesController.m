@@ -134,6 +134,10 @@ extern id RTKSharedConvertor;
     [self updateFontTextField:checkingFontTextField
                  withFontName:(NSString *)[d valueForKey:@"RTKCheckingFontName"] 
                          size:(NSNumber *)[d valueForKey:@"RTKCheckingFontSize"]];
+    [self updateFontTextField:publishedFontTextField
+                 withFontName:(NSString *)[d valueForKey:@"RTKPublishedFontName"] 
+                         size:(NSNumber *)[d valueForKey:@"RTKPublishedFontSize"]];
+    
     
     NSString * transcriptionType = [d valueForKey:@"RTKTranscriptionType"];
     if([transcriptionType isEqualToString:@"No Transcription"]) {
@@ -370,6 +374,9 @@ static NSString * fontSizeToChange = nil;
     } else if(sender == checkingFontButton) {
         fontNameToChange = @"RTKCheckingFontName";
         fontSizeToChange = @"RTKCheckingFontSize";
+    } else if(sender == publishedFontButton) {
+        fontNameToChange = @"RTKPublishedFontName";
+        fontSizeToChange = @"RTKPublishedFontSize";
     }
     
     [preferencesWindow makeFirstResponder:preferencesWindow];

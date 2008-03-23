@@ -35,6 +35,7 @@
     IBOutlet NSButton * backTranslationFontButton;
     IBOutlet NSButton * notesFontButton;
     IBOutlet NSButton * checkingFontButton;
+    IBOutlet NSButton * publishedFontButton;
     
 	IBOutlet NSTextField * committeeFontTextField;
     IBOutlet NSTextField * scriptFontTextField;
@@ -42,6 +43,7 @@
     IBOutlet NSTextField * backTranslationFontTextField;
     IBOutlet NSTextField * notesFontTextField;
     IBOutlet NSTextField * checkingFontTextField;
+    IBOutlet NSTextField * publishedFontTextField;
     
     IBOutlet NSMatrix * convertorMatrix;
 

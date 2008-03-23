@@ -1444,34 +1444,16 @@ constrainMinCoordinate:(float *)min
 
 // Informs the appropriate RTKVerse object of its changes.
 - (void)publishedTextViewDidChange:(NSNotification *)notification
-{    
-    NSLog(@"publishedTextViewDidChange");
-
+{
     NSTextStorage *textStorage = [publishedTextView textStorage];
-    
     NSRange selectedRange = [publishedTextView selectedRange];
     
-    NSLog(@"Selected Range: %i, %i", selectedRange.location, selectedRange.length);
-    NSLog(@"Text Storage Length: %i", [textStorage length]);
-    NSRange verseRange;
-    
-    /*
-     if(selectedRange.location == [textStorage length]) {
-        NSLog(@"Document rejected change.");
-        [self updatePublishedTextView];
-        [publishedTextView setSelectedRange:selectedRange];
-        return;
-    }
-     */
-    
+    NSRange verseRange;    
     RTKVerse *verse = [textStorage attribute:@"RTKVerse" 
                                      atIndex:selectedRange.location
                        longestEffectiveRange:&verseRange
                                      inRange:NSMakeRange(0, [textStorage length])];
-    NSLog(@"got here");
     NSAttributedString *verseString = [textStorage attributedSubstringFromRange:verseRange];
-    
-    //NSLog([verseString string]);
     
     BOOL changeAccepted = [verse updateWithAttributedString:verseString atIndex:(selectedRange.location - verseRange.location)];
     

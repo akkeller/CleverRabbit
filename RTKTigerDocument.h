@@ -94,7 +94,7 @@
 	IBOutlet NSSplitView * splitViewOfTextViews;
     
     // Published View
-    IBOutlet NSTextView * publishedTextView;
+    IBOutlet RTKTigerTextView * publishedTextView;
     NSRange previouslyHighlightedRangeInPublishedTextView;
     
 	

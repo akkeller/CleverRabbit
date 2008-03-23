@@ -18,7 +18,6 @@
 {
 	if(self = [super init]) {		
 		// Set default preferences settings
-		// This should really be in RTKPreferencesController.m
 		NSMutableDictionary * d = [NSMutableDictionary dictionary];
 		
 		[d setObject:@"KSCII" forKey:@"RTKEncodingSystem"];

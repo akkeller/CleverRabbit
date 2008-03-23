@@ -90,7 +90,7 @@ BOOL generateMetaStrings = NO;
         [self setBindingsFromDictionary:nil];
         
         [self setVerseTypes:[NSMutableArray arrayWithObjects:
-                             @"\\v", @"\\p", @"\\s1", @"\\s2", @"\\r", @"\\mt1", @"\\mt2", @"\\mt3", @"\\is", @"\\ip", @"\\h", nil]];
+                             @"\\v", @"\\p", @"\\c", @"\\s1", @"\\s2", @"\\r", @"\\mt1", @"\\mt2", @"\\mt3", @"\\is", @"\\ip", @"\\h", nil]];
         [self setDictionary:[NSDictionary dictionary]];
 		
         // Keep a transcription thread running at all times.
@@ -1481,7 +1481,7 @@ constrainMinCoordinate:(float *)min
         
         // Don't allow editing end of text field.
         if(selectedRange.location == [textStorage length]) {
-            [publishedTextView setEditable:NO];
+            [publishedTextView setAllowEditing:NO];
             return;
         }
         
@@ -1520,26 +1520,26 @@ constrainMinCoordinate:(float *)min
         
         // Don't allow editing if selection spans multiple verses or components.
         if((firstVerse != lastVerse) || ((firstComponent != lastComponent) && (firstComponent != nextToLastComponent)) ) {
-            [publishedTextView setEditable:NO];
+            [publishedTextView setAllowEditing:NO];
             return;
         }
         
         // Allow editing if selection is within the text of a verse.
         if([firstComponent isEqualToString:@"Verse Text"]) {
-            [publishedTextView setEditable:YES];
+            [publishedTextView setAllowedEditingRange:firstComponentRange];
             [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
         } else {
             if((selectedRange.location + selectedRange.length - 1) > 0) {
                 
                 // Allow editing if at the end of a "Verse Text" section.
                 if([nextToLastComponent isEqualToString:@"Verse Text"]) {
-                    [publishedTextView setEditable:YES];
-                    NSRange verseTextRange;
                     [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
                                                                            effectiveRange:NULL]];
                     [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:nextToLastComponentRange];
+                    [publishedTextView setAllowedEditingRange:nextToLastComponentRange];
+
                 } else {
-                    [publishedTextView setEditable:NO];
+                    [publishedTextView setAllowEditing:NO];
                 }
             }
         }

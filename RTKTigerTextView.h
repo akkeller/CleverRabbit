@@ -22,9 +22,16 @@
     NSMutableString * originalString;
     
     NSDictionary * characterSwaps;
+    
+    NSRange allowedEditingRange;
 }
+
 
 - (void)insertText:(id)aString;
 - (void)setCharacterSwaps:(NSDictionary *)theCharacterSwaps;
+
+- (void)setAllowEditing:(BOOL)allow;
+- (void)setAllowedEditingRange:(NSRange)range;
+
 
 @end

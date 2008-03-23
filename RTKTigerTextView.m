@@ -37,8 +37,37 @@
     [super dealloc];
 }
 
+- (void)setAllowEditing:(BOOL)allow
+{
+    if(allow)
+        [self setAllowedEditingRange:NSMakeRange(0,[[self textStorage] length])];
+    else
+        [self setAllowedEditingRange:NSMakeRange(0,0)];
+}
+
+- (void)setAllowedEditingRange:(NSRange)range
+{
+    allowedEditingRange = range;
+}
+
+- (BOOL)shouldChangeTextInRange:(NSRange)affectedCharRange replacementString:(NSString *)replacementString
+{
+    if(affectedCharRange.location < allowedEditingRange.location)
+        return NO;
+    if(affectedCharRange.location > allowedEditingRange.location + allowedEditingRange.length)
+        return NO;
+    if(affectedCharRange.location + affectedCharRange.length > allowedEditingRange.location + allowedEditingRange.length)
+        return NO;
+    
+    return [super shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
+}
+
 - (void)insertText:(id)aString
 {
+    NSLog(@"Attempting to insert Character: %i", [aString characterAtIndex:0]);
+    [super insertText:aString];
+    return;
+    
     if([aString isEqualToString:@"\t"]) {
         if(!window)
             NSLog(@"window not set");

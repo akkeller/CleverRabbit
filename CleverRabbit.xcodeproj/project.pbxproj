@@ -17,6 +17,8 @@
 		CB06450809B414880057078F /* tiger.icns in Resources */ = {isa = PBXBuildFile; fileRef = CB06450709B414870057078F /* tiger.icns */; };
 		CB2349A707DCCCAC005D0DE4 /* RTKCleverRabbitController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2349A507DCCCAC005D0DE4 /* RTKCleverRabbitController.m */; };
 		CB2349A807DCCCAC005D0DE4 /* RTKCleverRabbitController.h in Resources */ = {isa = PBXBuildFile; fileRef = CB2349A607DCCCAC005D0DE4 /* RTKCleverRabbitController.h */; };
+		CB2457990D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2457980D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m */; };
+		CB24579A0D946E9100B5EAA3 /* RTKMutableAttributedStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2457980D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m */; };
 		CB25DB4E07B43C0B006DADA3 /* RTKVerse.h in Resources */ = {isa = PBXBuildFile; fileRef = CB25DB4C07B43C0B006DADA3 /* RTKVerse.h */; };
 		CB25DB4F07B43C0B006DADA3 /* RTKVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */; };
 		CB2602920D63C6B6007FA175 /* RTKAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCCEC07D17A0C00A5339A /* RTKAlias.m */; };
@@ -156,6 +158,8 @@
 		CB06450709B414870057078F /* tiger.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = tiger.icns; sourceTree = "<group>"; };
 		CB2349A507DCCCAC005D0DE4 /* RTKCleverRabbitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKCleverRabbitController.m; sourceTree = "<group>"; };
 		CB2349A607DCCCAC005D0DE4 /* RTKCleverRabbitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKCleverRabbitController.h; sourceTree = "<group>"; };
+		CB2457970D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKMutableAttributedStringCategory.h; sourceTree = "<group>"; };
+		CB2457980D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKMutableAttributedStringCategory.m; sourceTree = "<group>"; };
 		CB25DB4C07B43C0B006DADA3 /* RTKVerse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKVerse.h; sourceTree = "<group>"; };
 		CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKVerse.m; sourceTree = "<group>"; };
 		CB26036A0D649093007FA175 /* regression-test.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "regression-test.py"; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 				CB581CD407E40DC400857854 /* RTKArrayCategory.m */,
 				CB581EB807E7780B00857854 /* RTKMutableArrayCategory.m */,
 				CB86ACA40879F4F3001D55F3 /* RTKStringCategory.m */,
+				CB2457980D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m */,
 				CBA9338107C805A100156906 /* RTKRevision.m */,
 				CB25DB4D07B43C0B006DADA3 /* RTKVerse.m */,
 				CBB9D1C807C457DF00E4C5B9 /* RTKBook.m */,
@@ -484,6 +489,7 @@
 		CBE483840988A7FC00BF6F50 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				CB2457970D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.h */,
 				CB581EB707E7780B00857854 /* RTKMutableArrayCategory.h */,
 				CB581CD307E40DC400857854 /* RTKArrayCategory.h */,
 				CB86ACA30879F4F2001D55F3 /* RTKStringCategory.h */,
@@ -669,6 +675,7 @@
 				CB54133B08AEE9AF00CAB00C /* NSCollections+CHOMPIteration.m in Sources */,
 				CB54133C08AEE9AF00CAB00C /* NSObject+CHOMPHOM.m in Sources */,
 				CB54133D08AEE9AF00CAB00C /* NSObject+CHOMPIteration.m in Sources */,
+				CB2457990D946E9000B5EAA3 /* RTKMutableAttributedStringCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +713,7 @@
 				CB2602B20D63C6C7007FA175 /* RTKWordUnit.m in Sources */,
 				CB2602B30D63C6C8007FA175 /* RTKWrapper.m in Sources */,
 				CB2603420D6400ED007FA175 /* RTKStringCategory.m in Sources */,
+				CB24579A0D946E9100B5EAA3 /* RTKMutableAttributedStringCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,17 +850,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					"i386,",
 					ppc,
+					i386,
 				);
 				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /Users/Shared/DevToTest;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(HOME)/Applications";
+				INSTALL_PATH = /;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PRODUCT_NAME = CleverRabbit;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
@@ -884,6 +895,10 @@
 		CBBC7E730864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"i386,",
+					ppc,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.3;
 			};
 			name = Deployment;

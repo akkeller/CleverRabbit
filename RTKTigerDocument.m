@@ -1510,9 +1510,10 @@ constrainMinCoordinate:(float *)min
                                longestEffectiveRange:NULL
                                              inRange:NSMakeRange(0, [textStorage length])];
         
+        NSRange firstComponentRange;
         NSString *firstComponent = [textStorage attribute:@"RTKVerseComponent" 
                                                   atIndex:selectedRange.location
-                                    longestEffectiveRange:NULL
+                                    longestEffectiveRange:&firstComponentRange
                                                   inRange:NSMakeRange(0, [textStorage length])];
         
         NSString *lastComponent = [textStorage attribute:@"RTKVerseComponent" 
@@ -1521,10 +1522,11 @@ constrainMinCoordinate:(float *)min
                                                  inRange:NSMakeRange(0, [textStorage length])];
         
         NSString *nextToLastComponent = nil;
+        NSRange nextToLastComponentRange;
         if((selectedRange.location + selectedRange.length - 1) > 0) {
             nextToLastComponent = [textStorage attribute:@"RTKVerseComponent" 
                                                  atIndex:selectedRange.location + selectedRange.length - 1
-                                   longestEffectiveRange:NULL
+                                   longestEffectiveRange:&nextToLastComponentRange
                                                  inRange:NSMakeRange(0, [textStorage length])];
         }
         
@@ -1534,17 +1536,22 @@ constrainMinCoordinate:(float *)min
             return;
         }
         
+        [textStorage removeAttribute:NSBackgroundColorAttributeName];
+        
         // Allow editing if selection is within the text of a verse.
         if([firstComponent isEqualToString:@"Verse Text"]) {
             [publishedTextView setEditable:YES];
+            [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
         } else {
             if((selectedRange.location + selectedRange.length - 1) > 0) {
                 
                 // Allow editing if at the end of a "Verse Text" section.
                 if([nextToLastComponent isEqualToString:@"Verse Text"]) {
                     [publishedTextView setEditable:YES];
+                    NSRange verseTextRange;
                     [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
                                                                            effectiveRange:NULL]];
+                    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:nextToLastComponentRange];
                 } else {
                     [publishedTextView setEditable:NO];
                 }

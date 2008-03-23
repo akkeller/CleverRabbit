@@ -52,4 +52,9 @@
     [self addAttribute:name value:value range:NSMakeRange(0, [self length])];
 }
 
+- (void)removeAttribute:(NSString *)name
+{
+    [self removeAttribute:name range:NSMakeRange(0, [self length])];
+}
+
 @end

@@ -56,6 +56,7 @@
 - (NSMenuItem *)deleteVerseMenuItem;
 - (NSMenuItem *)nextVerseMenuItem;
 - (NSMenuItem *)previousVerseMenuItem;
+- (NSMenuItem *)lockVerseMenuItem;
 
 - (NSMenuItem *)newRevisionMenuItem;
 - (NSMenuItem *)deleteRevisionMenuItem;

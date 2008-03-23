@@ -32,7 +32,10 @@
 - (id)initWithDictionary:(NSDictionary *)dict;
 + (RTKRevision *)revisionWithDictionary:(NSDictionary *)dict;
 - (id)initWithString:(NSString *)string;
++ (RTKRevision *)revisionWithString:string;
 - (id)initWithSFMString:(NSString *)string;
++ (RTKRevision *)revisionWithSFMString:(NSString*)string;
+- (void)appendLine:(NSString *)line;
 - (id)deepCopy;
 
 - (NSString *)roman;
@@ -52,8 +55,6 @@
 
 - (void)setDictionary:(NSDictionary *)theDictionary;
 - (NSDictionary *)dictionary;
-
-- (NSString *)string;
 
 - (NSMutableString *)textSafeStringForString:(NSString *)string;
 - (NSMutableString *)stringFromTextSafeString:(NSString *)textSafeString;

@@ -29,6 +29,7 @@
 - (NSMutableDictionary *)dictionaryRepresentation;
 - (NSString *)string;
 - (NSString *)sfmString;
+- (NSMutableAttributedString *)mutableAttributedString;
 - (NSMutableArray *)verses;
 
 - (void)setDictionary:(NSDictionary *)theDictionary;

@@ -13,8 +13,11 @@
 #import "RTKTigerDocument.h"
 #import "RTKCleverRabbitController.h"
 #import "RTKArrayCategory.h"
+#import "RTKMutableArrayCategory.h"
 #import "RTKStringCategory.h"
 #import "RTKMutableAttributedStringCategory.h"
+
+#import "Chomp.h"
 
 #define RTKNOROWSELECTED -1
 
@@ -355,7 +358,7 @@ BOOL generateMetaStrings = NO;
         else
             lastIndex++;
         
-        NSMutableArray * pastedVerses = [[[NSApp delegate] copiedVersesArray] deepCopy];
+        NSArray * pastedVerses = [[[NSApp delegate] copiedVersesArray] deepCopy];
         
         [[book verses] replaceObjectsInRange:NSMakeRange(lastIndex,0)
                         withObjectsFromArray:pastedVerses];
@@ -477,7 +480,7 @@ BOOL generateMetaStrings = NO;
                          byExtendingSelection:NO];
         } else {
             NSMutableArray * verses = [book verses];
-            NSMutableArray * draggedVerses = [[NSApp delegate] draggedVersesArray];
+            NSArray * draggedVerses = [[NSApp delegate] draggedVersesArray];
             
             int verseIndex = 0;
             if(row > 0)
@@ -879,7 +882,8 @@ BOOL generateMetaStrings = NO;
             [romanTextView setString:[revision roman]];
         if(![[scriptTextView string] isEqualToString:[revision script]]) {
             [scriptTextView setString:[revision script]];
-        [self updateCommiteeMeetingText:YES];		}
+        [self updateCommiteeMeetingText:YES];		
+        }
         if(![[backTranslationTextView string] isEqualToString:[revision backTranslation]])
             [backTranslationTextView setString:[revision backTranslation]];
         if(![[notesTextView string] isEqualToString:[revision notes]])

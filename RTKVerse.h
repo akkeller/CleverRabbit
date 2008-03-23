@@ -38,6 +38,7 @@
 - (id)initWithSFMString:(NSString *)string
            andStateDict:(NSMutableDictionary *)dict;
 - (id)deepCopy;
+- (void)updateTypeFieldToUSFM;
 - (NSString *)string;
 - (NSString *)sfmString;
 
@@ -56,6 +57,9 @@
 - (BOOL)matchesString:(NSString *)string;
 - (void)setDictionary:(NSDictionary *)theDictionary;
 - (NSDictionary *)dictionary;
+
+- (BOOL)updateWithAttributedString:(NSAttributedString *)string 
+                           atIndex:(NSUInteger)index;
 
 #pragma mark - revision management
 

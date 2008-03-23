@@ -14,6 +14,7 @@
 
 #import "RTKRevision.h"
 #import "RTKStringCategory.h"
+#import "RTKMutableAttributedStringCategory.h"
 #import "Chomp/Chomp.h"
 
 

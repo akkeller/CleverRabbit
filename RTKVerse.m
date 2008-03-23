@@ -39,9 +39,10 @@
 - (id)initWithDictionary:(NSDictionary *)dict
 {
     if(self = [self init]) {
-        [self setRevisions:
-            [[RTKRevision collectSelf] revisionWithDictionary:
-                [[dict objectForKey:@"revisions"] each]]];
+        [self setRevisions: (NSMutableArray *)
+         [[RTKRevision collectSelf] revisionWithDictionary:
+          [[dict objectForKey:@"revisions"] each]]];
+        
         [self setReference:[dict objectForKey:@"reference"]];
 		
         [self setType:[dict objectForKey:@"usfmType"]];
@@ -96,7 +97,7 @@
 {
     NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     
-    NSArray * revisionsArray = [[revisions collect] dictionaryRepresentation];
+    NSArray * revisionsArray = (NSArray *) [[revisions collect] dictionaryRepresentation];
     
     [dict setObject:revisionsArray
              forKey:@"revisions"];
@@ -163,7 +164,7 @@
         } else if([formatMarker isEqualToString:@"\\mt"]) {
             if([[dict objectForKey:@"preceding format marker"] isEqualToString:@"\\v"])
                 [dict setObject:[NSString stringWithFormat:@"%i", 
-                    [[[[dict objectForKey:@"verse"] componentsSeparatedByString:@"-"] lastObject] intValue] + 1] forKey:@"verse"];
+                                 [[[[dict objectForKey:@"verse"] componentsSeparatedByString:@"-"] lastObject] intValue] + 1] forKey:@"verse"];
             if([formatMarkerData intValue] > 0) { // A numbered major title size.
                 formatMarker = [NSString stringWithFormat:@"%@ %@", formatMarker, formatMarkerData];
                 [strings removeObjectAtIndex:0];
@@ -172,15 +173,15 @@
         } else {
             if([[dict objectForKey:@"preceding format marker"] isEqualToString:@"\\v"])
                 [dict setObject:[NSString stringWithFormat:@"%i", 
-                    [[[[dict objectForKey:@"verse"] componentsSeparatedByString:@"-"] lastObject] intValue] + 1] forKey:@"verse"];
+                                 [[[[dict objectForKey:@"verse"] componentsSeparatedByString:@"-"] lastObject] intValue] + 1] forKey:@"verse"];
             [strings removeObjectAtIndex:0];   
         }
         
         [self setType:formatMarker];
         [self setReference:[NSString stringWithFormat:@"%@ %@:%@", 
-            [dict objectForKey:@"book"],
-            [dict objectForKey:@"chapter"],
-            [dict objectForKey:@"verse"]]];
+                            [dict objectForKey:@"book"],
+                            [dict objectForKey:@"chapter"],
+                            [dict objectForKey:@"verse"]]];
         string = [strings componentsJoinedByString:@" "];
         
         [revisions removeAllObjects];
@@ -226,7 +227,7 @@
     NSMutableString * string = [NSMutableString new];
     
     RTKRevision * revision = [self currentRevision];
-
+    
     NSString * outputReference = nil;
     if([type isEqualToString:@"\\v"]) {
         outputReference = [NSString stringWithFormat:@"(%@) ", [reference verse]];
@@ -235,7 +236,7 @@
     }
     
     [string appendString:
-        [revision stringWithVerseNumber:outputReference]];
+     [revision stringWithVerseNumber:outputReference]];
     
     return string;
 }
@@ -249,7 +250,7 @@
     if ([marker isEqualToString:@"\\v"]) {
         return [NSString stringWithFormat:@"%@ %@ %@", type, [reference verse], [revision roman]];
     } else if ([marker isEqualToString:@"\\c"]) {
-       return [NSString stringWithFormat:@"%@ %@", type, [reference chapter]];
+        return [NSString stringWithFormat:@"%@ %@", type, [reference chapter]];
     } else if ([marker isEqualToString:@"\\mt"]) {
         return [NSString stringWithFormat:@"%@ %@", type, [revision roman]];
     } else if ([marker isEqualToString:@"\\id"]) {
@@ -279,7 +280,7 @@
         
         [string superscript];
         [string smallFontSize];
-    
+        
         [strings addObject:string];
         [strings addObject:spaceString];
         
@@ -325,9 +326,9 @@
 {
     NSRange componentRange;
     NSString *component = [string attribute:@"RTKVerseComponent" 
-                                     atIndex:index 
-                       longestEffectiveRange:&componentRange
-                                     inRange:NSMakeRange(0, [string length])];
+                                    atIndex:index 
+                      longestEffectiveRange:&componentRange
+                                    inRange:NSMakeRange(0, [string length])];
     
     if(!component) // If it didn't find the component, check one character back.
         component = [string attribute:@"RTKVerseComponent" 

@@ -17,8 +17,10 @@
 - (void)superscript;
 - (void)subscript;
 - (void)smallFontSize;
+- (void)normalFontSize;
 - (void)largeFontSize;
 - (void)addAttribute:(NSString *)name value:(id)value;
+- (void)removeAttribute:(NSString *)name;
 
 @end
 

@@ -151,8 +151,11 @@
 - (IBAction)switchRevision:(id)sender;
 - (IBAction)lockRevision:(id)sender;
 
+- (void)updateCommiteeMeetingText:(BOOL)mirrorText;
+
 - (void)updateUI;
 - (void)readSplitViewRectsFromDefaults;
+- (void)writeSplitViewRectsToDefaults;
 - (void)ensureOneBlankVerse;
 
 - (void)setFieldEditor:(BOOL)editor;
@@ -169,6 +172,8 @@
 -(void)regenerateAllScript;
 -(void)convertRevision:(RTKRevision *)revision
       withHighPriority:(BOOL)highPriority;
+
+- (void)publishedTextViewDidChange:(NSNotification *)notification;
 
 
 @end

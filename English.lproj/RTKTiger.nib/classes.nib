@@ -118,7 +118,7 @@
 				<key>notesView</key>
 				<string>NSView</string>
 				<key>publishedTextView</key>
-				<string>NSTextView</string>
+				<string>RTKTigerTextView</string>
 				<key>referenceTableColumn</key>
 				<string>NSTableColumn</string>
 				<key>revisionTableColumn</key>

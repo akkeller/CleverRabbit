@@ -1511,7 +1511,7 @@ constrainMinCoordinate:(float *)min
         
         NSString *nextToLastComponent = nil;
         NSRange nextToLastComponentRange;
-        if((selectedRange.location + selectedRange.length - 1) > 0) {
+        if( (selectedRange.location + selectedRange.length - 1) > 0 && !((selectedRange.location == 0) && (selectedRange.length == 0)) ) {
             nextToLastComponent = [textStorage attribute:@"RTKVerseComponent" 
                                                  atIndex:selectedRange.location + selectedRange.length - 1
                                    longestEffectiveRange:&nextToLastComponentRange
@@ -1528,7 +1528,9 @@ constrainMinCoordinate:(float *)min
         if([firstComponent isEqualToString:@"Verse Text"]) {
             [publishedTextView setAllowedEditingRange:firstComponentRange];
             [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
-        } else {
+            NSRange dummyRange;
+            [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:firstComponentRange.location effectiveRange:&dummyRange]];
+             } else {
             if((selectedRange.location + selectedRange.length - 1) > 0) {
                 
                 // Allow editing if at the end of a "Verse Text" section.

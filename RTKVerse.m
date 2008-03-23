@@ -337,7 +337,7 @@
                               inRange:NSMakeRange(0, [string length])];
     NSAttributedString *componentString = [string attributedSubstringFromRange:componentRange];
     
-    if([component isEqualToString:@"Verse Text"]) { // && index != componentRange.location) {
+    if([component isEqualToString:@"Verse Text"]) {
         [[self currentRevision] setRoman:[componentString string]];
         return YES; // Verse accepted change.
     }

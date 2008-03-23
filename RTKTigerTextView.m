@@ -37,12 +37,17 @@
     [super dealloc];
 }
 
+- (BOOL)dragSelectionWithEvent:(NSEvent *)event offset:(NSSize)mouseOffset slideBack:(BOOL)slideBack
+{
+    return NO;
+}
+
 - (void)setAllowEditing:(BOOL)allow
 {
     if(allow)
         [self setAllowedEditingRange:NSMakeRange(0,[[self textStorage] length])];
     else
-        [self setAllowedEditingRange:NSMakeRange(0,0)];
+        [self setAllowedEditingRange:NSMakeRange(-1,0)];
 }
 
 - (void)setAllowedEditingRange:(NSRange)range
@@ -62,13 +67,28 @@
     return [super shouldChangeTextInRange:affectedCharRange replacementString:replacementString];
 }
 
+// Force all pasting to plain text so it will take the attributes of the surrounding text.
+- (void)paste:(id)sender
+{
+    [self pasteAsPlainText:sender];
+}
+
+- (void)pasteAsPlainText:(id)sender
+{
+    [super pasteAsPlainText:sender];
+}
+
+- (void)pasteAsRichText:(id)sender
+{
+    [self pasteAsPlainText:sender];
+}
+
 - (void)insertText:(id)aString
 {
-    NSLog(@"Attempting to insert Character: %i", [aString characterAtIndex:0]);
-    [super insertText:aString];
-    return;
-    
-    if([aString isEqualToString:@"\t"]) {
+    if(characterSwaps == nil) {
+        [super insertText:aString];
+        return;
+    } else if([aString isEqualToString:@"\t"]) {
         if(!window)
             NSLog(@"window not set");
         [window makeFirstResponder:nextTextView];

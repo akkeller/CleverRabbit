@@ -308,6 +308,32 @@
     return outputString;
 }
 
+- (BOOL)updateWithAttributedString:(NSAttributedString *)string 
+                           atIndex:(NSUInteger)index
+{
+    NSRange componentRange;
+    NSString *component = [string attribute:@"RTKVerseComponent" 
+                                     atIndex:index 
+                       longestEffectiveRange:&componentRange
+                                     inRange:NSMakeRange(0, [string length])];
+    
+    if(!component) // If it didn't find the component, check one character back.
+        component = [string attribute:@"RTKVerseComponent" 
+                              atIndex:(index-1) 
+                longestEffectiveRange:&componentRange
+                              inRange:NSMakeRange(0, [string length])];
+    NSAttributedString *componentString = [string attributedSubstringFromRange:componentRange];
+    
+    //NSLog(@"ComponentString: %@", [componentString string]);
+    
+    if([component isEqualToString:@"Verse Text"]) {
+        [[self currentRevision] setRoman:[componentString string]];
+        return YES; // Verse accepted change.
+    }
+    return NO; // Verse rejected change.
+}
+
+
 - (void)setDictionary:(NSDictionary *)theDictionary
 {
     [theDictionary retain];

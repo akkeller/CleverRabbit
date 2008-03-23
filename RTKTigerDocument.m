@@ -1442,10 +1442,58 @@ constrainMinCoordinate:(float *)min
     [self ensureOneBlankVerse];
 }
 
+// Informs the appropriate RTKVerse object of its changes.
 - (void)publishedTextViewDidChange:(NSNotification *)notification
 {
-    //NSLog([notification description]);
     NSLog([[publishedTextView typingAttributes] description]);
+
+    NSRange selectedRange = [publishedTextView selectedRange];
+    NSTextStorage *textStorage = [publishedTextView textStorage];
+    
+    NSRange verseRange;
+    RTKVerse *verse = [textStorage attribute:@"RTKVerse" 
+                                     atIndex:selectedRange.location 
+                       longestEffectiveRange:&verseRange
+                                     inRange:NSMakeRange(0, [textStorage length])];
+    NSAttributedString *verseString = [textStorage attributedSubstringFromRange:verseRange];
+    
+    //NSLog([verseString string]);
+    
+    BOOL changeAccepted = [verse updateWithAttributedString:verseString atIndex:(selectedRange.location - verseRange.location)];
+    
+    if(!changeAccepted) {
+        NSLog(@"RTKVerse rejected change.");
+        [self updatePublishedTextView];
+        [publishedTextView setSelectedRange:selectedRange];
+    }
+}
+
+- (void)textViewDidChangeSelection:(NSNotification *)notification
+{    
+    NSTextView * changedTextView = [notification object];
+    
+    if(changedTextView = publishedTextView) {
+        NSTextStorage *textStorage = [publishedTextView textStorage];
+        NSRange selectedRange = [publishedTextView selectedRange];
+        /*
+        RTKVerse *firstVerse = [textStorage attribute:@"RTKVerse"
+                                              atIndex:selectedRange.location
+                                longestEffectiveRange:NULL
+                                              inRange:NSMakeRange(0, [textStorage length])];
+        
+         RTKVerse *lastVerse = [textStorage attribute:@"RTKVerse" 
+                                             atIndex:(selectedRange.location + selectedRange.length)
+                               longestEffectiveRange:NULL
+                                             inRange:NSMakeRange(0, [textStorage length])];
+        */
+        //[publishedTextView setEditable:(firstVerse == lastVerse)];
+    }
+}
+
+
+- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
+{
+    [self updateUI];
 }
 
 - (void)reloadTableData:(id)dummy

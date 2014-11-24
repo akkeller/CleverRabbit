@@ -30,6 +30,7 @@
 
 - (void)insertText:(id)aString;
 - (void)setCharacterSwaps:(NSDictionary *)theCharacterSwaps;
+- (void)setOriginalString:(NSMutableString *)theOriginalString;
 
 - (void)setAllowEditing:(BOOL)allow;
 - (void)setAllowedEditingRange:(NSRange)range;

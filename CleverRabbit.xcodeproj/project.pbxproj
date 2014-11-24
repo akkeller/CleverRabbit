@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 42;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -108,7 +108,6 @@
 		CB2DCD7907D17A0C00A5339A /* RTKWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DCD2F07D17A0C00A5339A /* RTKWrapper.m */; };
 		CB3CB7B807C8FDD7003AB0B3 /* RTKTigerTextView.h in Resources */ = {isa = PBXBuildFile; fileRef = CB3CB7B607C8FDD7003AB0B3 /* RTKTigerTextView.h */; };
 		CB3CB7B907C8FDD7003AB0B3 /* RTKTigerTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3CB7B707C8FDD7003AB0B3 /* RTKTigerTextView.m */; };
-		CB483C5407B187B700D628EF /* RTKTiger.nib in Resources */ = {isa = PBXBuildFile; fileRef = CB483C5207B187B700D628EF /* RTKTiger.nib */; };
 		CB483C7F07B189A500D628EF /* RTKTigerDocument.h in Resources */ = {isa = PBXBuildFile; fileRef = CB483C7D07B189A500D628EF /* RTKTigerDocument.h */; };
 		CB483C8007B189A500D628EF /* RTKTigerDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = CB483C7E07B189A500D628EF /* RTKTigerDocument.m */; };
 		CB54133508AEE9AF00CAB00C /* CHOMPEnumeratorCollectTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = CB54132308AEE9AF00CAB00C /* CHOMPEnumeratorCollectTrampoline.m */; };
@@ -124,6 +123,7 @@
 		CB581CD607E40DC400857854 /* RTKArrayCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB581CD407E40DC400857854 /* RTKArrayCategory.m */; };
 		CB581EB907E7780B00857854 /* RTKMutableArrayCategory.h in Resources */ = {isa = PBXBuildFile; fileRef = CB581EB707E7780B00857854 /* RTKMutableArrayCategory.h */; };
 		CB581EBA07E7780C00857854 /* RTKMutableArrayCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB581EB807E7780B00857854 /* RTKMutableArrayCategory.m */; };
+		CB5AC85114BF874900C90F21 /* RTKTiger.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB5AC85014BF874900C90F21 /* RTKTiger.xib */; };
 		CB86ACA50879F4F3001D55F3 /* RTKStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CB86ACA40879F4F3001D55F3 /* RTKStringCategory.m */; };
 		CB8F620C07BDCC1600698E17 /* cr_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CB8F620B07BDCC1600698E17 /* cr_icon.icns */; };
 		CBA9338207C805A100156906 /* RTKRevision.h in Resources */ = {isa = PBXBuildFile; fileRef = CBA9338007C805A000156906 /* RTKRevision.h */; };
@@ -139,7 +139,6 @@
 		CBD3C77207D7F06100B15535 /* downloaded_definitions in Resources */ = {isa = PBXBuildFile; fileRef = CBD3C76F07D7F06100B15535 /* downloaded_definitions */; };
 		CBDD5D310AA142CA0081D3F1 /* RTKGroup.nib in Resources */ = {isa = PBXBuildFile; fileRef = CBDD5D2F0AA142C90081D3F1 /* RTKGroup.nib */; };
 		CBDD5D3E0AA145DD0081D3F1 /* RTKGroupDocument.py in Resources */ = {isa = PBXBuildFile; fileRef = CBDD5D3D0AA145DD0081D3F1 /* RTKGroupDocument.py */; };
-		CBE5FA5607DD5C1500CA8A01 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D15AC360486D014006FF6A4 /* Info.plist */; };
 		CBE5FA5707DD5C1C00CA8A01 /* CleverRabbit_Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* CleverRabbit_Prefix.pch */; };
 /* End PBXBuildFile section */
 
@@ -249,6 +248,7 @@
 		CB581CD407E40DC400857854 /* RTKArrayCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKArrayCategory.m; sourceTree = "<group>"; };
 		CB581EB707E7780B00857854 /* RTKMutableArrayCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKMutableArrayCategory.h; sourceTree = "<group>"; };
 		CB581EB807E7780B00857854 /* RTKMutableArrayCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKMutableArrayCategory.m; sourceTree = "<group>"; };
+		CB5AC85014BF874900C90F21 /* RTKTiger.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RTKTiger.xib; sourceTree = "<group>"; };
 		CB86ACA30879F4F2001D55F3 /* RTKStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKStringCategory.h; sourceTree = "<group>"; };
 		CB86ACA40879F4F3001D55F3 /* RTKStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKStringCategory.m; sourceTree = "<group>"; };
 		CB8F620B07BDCC1600698E17 /* cr_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = cr_icon.icns; sourceTree = "<group>"; };
@@ -366,8 +366,9 @@
 				CB044DA607BF0035008E657C /* bugsAndFeatures.txt */,
 				CBD3C6ED07D6CA3F00B15535 /* get_definitions.command */,
 				CB06450709B414870057078F /* tiger.icns */,
-				CB8F620B07BDCC1600698E17 /* cr_icon.icns */,
 				CB483C5207B187B700D628EF /* RTKTiger.nib */,
+				CB5AC85014BF874900C90F21 /* RTKTiger.xib */,
+				CB8F620B07BDCC1600698E17 /* cr_icon.icns */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
 				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
@@ -546,9 +547,19 @@
 /* Begin PBXProject section */
 		2A37F4A9FDCFA73011CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
 			buildConfigurationList = CBBC7E710864666100E3D3DC /* Build configuration list for PBXProject "CleverRabbit" */;
-			compatibilityVersion = "Xcode 2.4";
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* CleverRabbit */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -567,7 +578,6 @@
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
 				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
-				CB483C5407B187B700D628EF /* RTKTiger.nib in Resources */,
 				CB483C7F07B189A500D628EF /* RTKTigerDocument.h in Resources */,
 				CB25DB4E07B43C0B006DADA3 /* RTKVerse.h in Resources */,
 				CB8F620C07BDCC1600698E17 /* cr_icon.icns in Resources */,
@@ -608,7 +618,6 @@
 				CBD3C76B07D7F04F00B15535 /* active_definitions in Resources */,
 				CBD3C77207D7F06100B15535 /* downloaded_definitions in Resources */,
 				CB2349A807DCCCAC005D0DE4 /* RTKCleverRabbitController.h in Resources */,
-				CBE5FA5607DD5C1500CA8A01 /* Info.plist in Resources */,
 				CBE5FA5707DD5C1C00CA8A01 /* CleverRabbit_Prefix.pch in Resources */,
 				CB581CD507E40DC400857854 /* RTKArrayCategory.h in Resources */,
 				CB581EB907E7780B00857854 /* RTKMutableArrayCategory.h in Resources */,
@@ -618,6 +627,7 @@
 				CBDD5D310AA142CA0081D3F1 /* RTKGroup.nib in Resources */,
 				CBDD5D3E0AA145DD0081D3F1 /* RTKGroupDocument.py in Resources */,
 				CB04066A0D7B65250025AA28 /* LICENSE in Resources */,
+				CB5AC85114BF874900C90F21 /* RTKTiger.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,7 +778,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -780,7 +789,6 @@
 					"-framework",
 					AppKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = transliterate;
 				ZERO_LINK = YES;
 			};
@@ -791,7 +799,6 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -802,7 +809,6 @@
 					"-framework",
 					AppKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = transliterate;
 				ZERO_LINK = NO;
 			};
@@ -811,7 +817,6 @@
 		CBAE16AE0D62BE9F00FCBBA0 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
@@ -822,7 +827,6 @@
 					"-framework",
 					AppKit,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = transliterate;
 				ZERO_LINK = YES;
 			};
@@ -831,15 +835,16 @@
 		CBBC7E6E0864666100E3D3DC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = CleverRabbit;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -849,21 +854,17 @@
 		CBBC7E6F0864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = /Users/Shared/DevToTest;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /;
-				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = CleverRabbit;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
@@ -875,11 +876,13 @@
 		CBBC7E700864666100E3D3DC /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = CleverRabbit;
 				WRAPPER_EXTENSION = app;
 			};
@@ -888,25 +891,21 @@
 		CBBC7E720864666100E3D3DC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Development;
 		};
 		CBBC7E730864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					"i386,",
-					ppc,
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Deployment;
 		};
 		CBBC7E740864666100E3D3DC /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 			};
 			name = Default;
 		};

@@ -174,7 +174,7 @@
                                options:NSLiteralSearch
                                  range:NSMakeRange(0,[string length])];
     if(!string)
-        string = @"";
+        string = [NSMutableString stringWithString:@""];  // AKK 2012
     
     return string;
 }
@@ -199,10 +199,10 @@
     return string;
 }
 
-- (NSMutableAttributedString *)mutableAttributedString
+- (NSMutableAttributedString *)mutableAttributedString:(BOOL)romanString
 {
     // TODO: Add support for transliteration.
-    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:roman];
+    NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:(romanString ? roman : script)];
     // Provide a link back from the string to this object.
     [string addAttribute:@"RTKRevision" value:self];
     return string;

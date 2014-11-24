@@ -155,9 +155,9 @@
     return [strings componentsJoinedByString:@"\n"];
 }
 
-- (NSMutableAttributedString *)mutableAttributedString
+- (NSMutableAttributedString *)mutableAttributedString:(BOOL)romanString
 {
-    NSMutableArray * strings = [[[verses collect] mutableAttributedString] mutableCopy];
+    NSMutableArray * strings = [[[verses collect] mutableAttributedString:romanString] mutableCopy];
     [strings removeLastObject];
     return [strings mutableAttributedStringFromComponents];
 }

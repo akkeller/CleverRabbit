@@ -62,7 +62,7 @@
 - (BOOL)blank;
 - (BOOL)matchesString:(NSString *)string;
 
-- (NSMutableAttributedString *)mutableAttributedString;
+- (NSMutableAttributedString *)mutableAttributedString:(BOOL)romanString;
 - (NSString *)stringWithVerseNumber:(NSString *)verseNumber;
 
 

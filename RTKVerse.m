@@ -260,7 +260,7 @@
 }
 
 // TODO: Check for retain problems. Should be autoreleasing more stuff here.
-- (NSMutableAttributedString *)mutableAttributedString
+- (NSMutableAttributedString *)mutableAttributedString:(BOOL)romanString
 {
     RTKRevision * revision = [self currentRevision];
     NSMutableArray * strings = [[[NSMutableArray alloc] init] autorelease];
@@ -284,7 +284,7 @@
         [strings addObject:string];
         [strings addObject:spaceString];
         
-        string = [revision mutableAttributedString];
+        string = [revision mutableAttributedString:romanString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string normalFontSize];
         
@@ -294,14 +294,14 @@
     } else if([type isEqualToString:@"\\p"]) {
         [strings addObject:newLineString]; [strings addObject:newLineString];
     } else if([type isEqualToString:@"\\s1"]) {
-        string = [revision mutableAttributedString];
+        string = [revision mutableAttributedString:romanString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
         [strings addObject:newLineString]; [strings addObject:newLineString];
         [strings addObject:string];
         [strings addObject:newLineString]; [strings addObject:newLineString];
     } else if([type isEqualToString:@"\\mt1"]) {
-        string = [revision mutableAttributedString];
+        string = [revision mutableAttributedString:romanString];
         [string addAttribute:@"RTKVerseComponent" value:@"Verse Text"];
         [string largeFontSize];
         [strings addObject:newLineString];
@@ -339,6 +339,9 @@
     
     if([component isEqualToString:@"Verse Text"]) {
         [[self currentRevision] setRoman:[componentString string]];
+        
+        NSLog([componentString string]);
+        
         return YES; // Verse accepted change.
     }
     return NO; // Verse rejected change.

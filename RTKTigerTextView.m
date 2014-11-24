@@ -44,12 +44,12 @@
 
 - (void)setAllowEditing:(BOOL)allow
 {
-    if(allow)
+    if(allow) {
         limitEditingToSpecifiedRange = NO;
-        //[self setAllowedEditingRange:NSMakeRange(0,[[self textStorage] length])];
-    else
+    } else {
         limitEditingToSpecifiedRange = YES;
         [self setAllowedEditingRange:NSMakeRange(-1,0)];
+    }
 }
 
 - (void)setAllowedEditingRange:(NSRange)range
@@ -89,18 +89,20 @@
 
 - (void)insertText:(id)aString
 {
-    if(characterSwaps == nil) {
-        [super insertText:aString];
-        return;
-    } else if([aString isEqualToString:@"\t"]) {
+    if([aString isEqualToString:@"\t"]) {
         if(!window)
             NSLog(@"window not set");
         [window makeFirstResponder:nextTextView];
+    } else if(characterSwaps == nil) {
+        NSLog(@"characterSwaps == nil");
+        [super insertText:aString];
+        return;
     } else {
+        NSLog(@"else");
         NSNumber * charObject;
         unichar character = [aString characterAtIndex:0];
 
-        if(charObject = [characterSwaps objectForKey:aString])
+        if((charObject = [characterSwaps objectForKey:aString]))
             character = [charObject intValue];
         
         [super insertText:[NSString stringWithCharacters:&character length:1]];

@@ -1,4 +1,4 @@
-//
+    //
 //   RTKTigerDocument.m
 //   (CleverRabbit.app)
 //
@@ -67,8 +67,7 @@ BOOL generateMetaStrings = NO;
                selector:@selector(transliterationOnChanged:)
                    name:@"RTKTransliterationOnChanged"
                  object:nil];
-        
-		
+
 		
         book = [[RTKBook alloc] init];
         
@@ -76,7 +75,6 @@ BOOL generateMetaStrings = NO;
         
         convertingLock = [[NSLock alloc] init];
         [convertingLock lock];
-        //revisionsToConvertLock = [[NSLock alloc] init];
         
         // RTKSharedDatabase and RTKSharedConvertor are global for now.
         // They may not always be global, so don't depend on them.
@@ -110,8 +108,6 @@ BOOL generateMetaStrings = NO;
     [visibleVerseIndexes release];
     [revisionsToConvert release];
     [verseTypes release];
-    [toolbarItems release];
-    [toolbarKeys release];
     [inputDefinitionPath release];
     [scriptDefinitionPath release];
     [encodingDefinitionPath release];
@@ -133,7 +129,7 @@ BOOL generateMetaStrings = NO;
 		[versesTableView registerForDraggedTypes: [NSArray arrayWithObjects: @"RTKVersesInternalToBook", nil]];
 		
 		[versesTableView setTarget:self];
-		[versesTableView setDoubleAction:@selector(tableViewDoubleClicked)];
+		//[versesTableView setDoubleAction:@selector(tableViewDoubleClicked)];
 		
 		[versesTableView setVerticalMotionCanBeginDrag:NO];
 		
@@ -148,8 +144,6 @@ BOOL generateMetaStrings = NO;
 		
 		[self readSplitViewRectsFromDefaults];
 		
-		// The toolbar needs icons and a bit of other work.
-		//[self setupToolbar];
 		
 		[self ensureOneBlankVerse];
 		
@@ -159,17 +153,16 @@ BOOL generateMetaStrings = NO;
 		[self setDictionary:[NSDictionary dictionary]];
         
 		[self updateUI];
+        
+        [self updateRomanPublishedTextView];
 		
-		[versesTableView selectRow:0 byExtendingSelection:NO];
+        [self selectVerse:[[book verses] objectAtIndex:0]];
 		
+        [scriptTextView setAllowEditing:NO];
+        
 		alreadyAwokeFromNib = YES;
 	}
-}
-
-- (void)tableViewDoubleClicked
-{
-    // This isn't being used yet.
-	// NSLog(@"tableViewDoubleClicked");
+    [super awakeFromNib];
 }
 
 #pragma mark -
@@ -179,90 +172,6 @@ BOOL generateMetaStrings = NO;
     return NO;
 }
 
-#pragma mark -
-#pragma mark toolbar
-/*
- http://www.cocoadevcentral.com/articles/000037.php
- */
-
-- (NSToolbarItem *)toolbar:(NSToolbar *)toolbar 
-     itemForItemIdentifier:(NSString *)itemIdentifier
- willBeInsertedIntoToolbar:(BOOL)flag 
-{
-    return [toolbarItems objectForKey:itemIdentifier];
-}
-
-- (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
-{
-    return toolbarKeys;
-}
-
-- (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar*)toolbar
-{
-    //return [[toolbarItems allKeys] subarrayWithRange:NSMakeRange(0,6)];
-    return [toolbarItems allKeys];
-}
-
-- (void) toolbarWillAddItem: (NSNotification *) notification
-{
-    NSToolbarItem *addedItem = [[notification userInfo] objectForKey:@"item"];
-    
-    // set up the item here
-}
-
-- (void)toolbarDidRemoveItem:(NSNotification *)notification
-{
-    NSToolbarItem *removedItem = [[notification userInfo] objectForKey:@"item"];
-    
-    // clear associated info here 
-}
-
-- (IBAction)customizeToolbar:(id)sender 
-{ 
-    [toolbar runCustomizationPalette:sender]; 
-}
-
-- (IBAction)hideShowToolbar:(id)sender 
-{ 
-    [toolbar setVisible:![toolbar isVisible]]; 
-}
-
-- (void)newToolbarItemWithName:(NSString *)name
-						action:(SEL)action
-{
-    NSToolbarItem * item = [[NSToolbarItem alloc] initWithItemIdentifier:name];
-    [item setPaletteLabel:name];
-    [item setLabel:name];
-    [item setTarget:self];
-    [item setAction:action];
-    
-    [toolbarItems setObject:item forKey:name];
-    [toolbarKeys addObject:name];
-    [item release];
-}
-
-- (void)setupToolbar
-{
-    
-    toolbarItems = [[NSMutableDictionary alloc] init];
-    toolbarKeys = [[NSMutableArray alloc] init];
-    
-    [self newToolbarItemWithName:@"New Sentence" action:@selector(newVerse:)];
-    [self newToolbarItemWithName:@"Delete Sentence" action:@selector(deleteVerse:)];
-    
-    [self newToolbarItemWithName:@"New Revision" action:@selector(newRevision:)];
-    [self newToolbarItemWithName:@"Delete Revision" action:@selector(deleteRevision:)];
-    
-    [self newToolbarItemWithName:@"Lock Revision" action:@selector(lockRevision:)];    
-	
-    toolbar = [[NSToolbar alloc] initWithIdentifier:@"RTKTigerToolbar"];
-    
-    [toolbar setDelegate:self];
-    [toolbar setAllowsUserCustomization:YES];
-    [toolbar setAutosavesConfiguration:YES];
-    
-    [documentWindow setToolbar:toolbar];
-}
 
 #pragma mark -
 #pragma mark search
@@ -519,8 +428,11 @@ BOOL generateMetaStrings = NO;
         [characterSwapDictionary setObject:[NSNumber numberWithInt:0xf9] forKey:@"v"];
         [characterSwapDictionary setObject:[NSNumber numberWithInt:0xe8] forKey:@"x"];
         [romanTextView setCharacterSwaps:characterSwapDictionary];
+        [romanPublishedTextView setCharacterSwaps:characterSwapDictionary];
     } else {
         [romanTextView setCharacterSwaps:nil];
+        [romanPublishedTextView setCharacterSwaps:nil];
+
     }
 }
 
@@ -674,7 +586,7 @@ BOOL generateMetaStrings = NO;
 {
     [self setValueForKey:@"RTKDocumentWidth" fromDictionary:dict];
     [self setValueForKey:@"RTKDocumentHeight" fromDictionary:dict];
-    
+
     [self setValueForKey:@"RTKReferenceColumnWidth" fromDictionary:dict];
     [self setValueForKey:@"RTKRevisionColumnWidth" fromDictionary:dict];
     [self setValueForKey:@"RTKScriptColumnWidth" fromDictionary:dict];
@@ -768,6 +680,30 @@ BOOL generateMetaStrings = NO;
     book = theBook;
 }
 
+- (RTKVerse *)currentVerse
+{
+    return currentVerse;
+}
+
+- (void)setCurrentVerse:(RTKVerse *)verse
+{
+    [verse retain];
+    [currentVerse release];
+    currentVerse = verse;
+}
+
+- (RTKRevision *)currentRevision
+{
+    return currentRevision;
+}
+
+- (void)setCurrentRevision:(RTKRevision *)revision
+{
+    [revision retain];
+    [currentRevision release];
+    currentRevision = revision;
+}
+
 - (NSMutableArray *)verseTypes
 {
     return verseTypes;
@@ -798,21 +734,68 @@ BOOL generateMetaStrings = NO;
 
 #pragma mark - UI
 
-- (void)updatePublishedTextView
+- (void)updateRomanPublishedTextView
 {
-    // quick non-editable prototype
-    [[publishedTextView textStorage] setAttributedString:[book mutableAttributedString]];
+    // update roman view
+    [[romanPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:YES]];  // YES = roman, NO = script
+    
+    // update script view
+    [[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
 }
 
 - (void)updateUI
 {
-	[self performSelectorOnMainThread: @selector(updateUIMainThread:)
-						   withObject: nil
-						waitUntilDone: NO];
+    [self updateFonts];
+    [self updateMenusAndButtons];
 }
 
-// This method updates pretty much everything regardless of what needs updating. 
-- (void)updateUIMainThread:(id)dummy
+- (void)updateFonts
+{
+    NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+    NSFont * font;
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKScriptFontName"]
+                           size:[(NSString *) [d valueForKey:@"RTKScriptFontSize"] floatValue]];
+    if(font) [scriptTextView setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKRomanFontName"]
+                           size:[(NSString *) [d valueForKey:@"RTKRomanFontSize"] floatValue]];
+    if(font) [romanTextView setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKBackTranslationFontName"]
+                           size:[(NSString *) [d valueForKey:@"RTKBackTranslationFontSize"] floatValue]];
+    if(font) [backTranslationTextView setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKNotesFontName"]
+                           size:[(NSString *) [d valueForKey:@"RTKNotesFontSize"] floatValue]];
+    if(font) [notesTextView setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKCheckingFontName"]
+                           size:[(NSString *) [d valueForKey:@"RTKCheckingFontSize"] floatValue]];
+    if(font) [checkingTextView setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKScriptFontName"]
+                           size:12];
+    if(font) [[scriptTableColumn dataCell] setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKRomanFontName"]
+                           size:12];
+    if(font) [[romanTableColumn dataCell] setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKBackTranslationFontName"]
+                           size:12];
+    if(font) [[backTranslationTableColumn dataCell] setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKNotesFontName"]
+                           size:12];
+    if(font) [[notesTableColumn dataCell] setFont:font];
+    
+    font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKCheckingFontName"]
+                           size:12];
+    if(font) [[checkingTableColumn dataCell] setFont:font];
+}
+
+- (void) updateMenusAndButtons
 {
     int selectedRow;
     NSIndexSet * selectedRows = [versesTableView selectedRowIndexes];
@@ -836,11 +819,7 @@ BOOL generateMetaStrings = NO;
     }
     
     if(selectedRow == -1 || selectedRow == NSNotFound) {
-        [romanTextView setString:@""];
-        [scriptTextView setString:@""];
-        [backTranslationTextView setString:@""];
-        [notesTextView setString:@""];
-        [checkingTextView setString:@""];
+
         
         [romanTextView setEditable:NO];
         [backTranslationTextView setEditable:NO];
@@ -858,157 +837,54 @@ BOOL generateMetaStrings = NO;
         [[appController nextRevisionMenuItem] setEnabled:NO];
         [[appController previousRevisionMenuItem] setEnabled:NO];
         
-        [[appController lockRevisionMenuItem] setEnabled:NO];        
+        [[appController lockRevisionMenuItem] setEnabled:NO];
+        
     } else {
-        // Get the context we are working in.
-        NSMutableArray * verses = [book verses];
-        RTKVerse * verse = nil;
-        if([visibleVerseIndexes count] > selectedRow) {
-            verse = [verses objectAtIndex:[[visibleVerseIndexes objectAtIndex:selectedRow] intValue]];
-        } else {
-            NSLog(@"[visibleVerseIndexes count] <= selectedRow: %i, %i", [visibleVerseIndexes count], selectedRow);
-            return;
-        }
-        int verseCount = [verses count];
         
-        NSMutableArray * revisions = [verse revisions];
-        int revisionCount = [revisions count];
-        int currentRevisionIndex = [verse currentRevisionIndex];
-        RTKRevision * revision = [revisions objectAtIndex:currentRevisionIndex];
+        BOOL verseLocked = [currentVerse locked];
+        BOOL revisionLocked = [[currentVerse currentRevision] locked];
+        int revisionIndex = [currentVerse currentRevisionIndex];
         
-        // Set the text views that need to change.
-        // Shouldn't be doing it like this -- see repeated accessor calls.
-        if(![[romanTextView string] isEqualToString:[revision roman]])
-            [romanTextView setString:[revision roman]];
-        if(![[scriptTextView string] isEqualToString:[revision script]]) {
-            [scriptTextView setString:[revision script]];
-        [self updateCommiteeMeetingText:YES];		
-        }
-        if(![[backTranslationTextView string] isEqualToString:[revision backTranslation]])
-            [backTranslationTextView setString:[revision backTranslation]];
-        if(![[notesTextView string] isEqualToString:[revision notes]])
-            [notesTextView setString:[revision notes]];
-        if(![[checkingTextView string] isEqualToString:[revision checking]])
-            [checkingTextView setString:[revision checking]];
+        [[[NSApp delegate] newVerseMenuItem] setEnabled:YES];
+        [[[NSApp delegate] deleteVerseMenuItem] setEnabled:!verseLocked];
+        [[[NSApp delegate] lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
         
+        [deleteVerseButton setEnabled:(!verseLocked ? NSOnState : NSOffState)];
         
+        [referenceTableColumn setEditable:!(verseLocked || revisionLocked)];
+        [typeTableColumn setEditable:!(verseLocked || revisionLocked)];
+        [revisionTableColumn setEditable:!(verseLocked || revisionLocked)];
         
-        NSFont * font;
+        [[[NSApp delegate] lockRevisionMenuItem] setEnabled:!verseLocked];
+        [[[NSApp delegate] lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
+        [[[NSApp delegate] deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
+        [[[NSApp delegate] newRevisionMenuItem] setEnabled:!verseLocked];
         
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKScriptFontName"]
-                               size:[(NSString *) [d valueForKey:@"RTKScriptFontSize"] floatValue]];
-        if(font) {
-            [scriptTextView setFont:font];
-        }
+        [newRevisionButton setEnabled:!verseLocked];
+        [deleteRevisionButton setEnabled:!(verseLocked || revisionLocked)];
         
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKRomanFontName"]
-                               size:[(NSString *) [d valueForKey:@"RTKRomanFontSize"] floatValue]];
-        if(font) {
-            [romanTextView setFont:font];
-        }
+        [[appController nextRevisionMenuItem] setEnabled:
+         ((revisionIndex < [currentVerse revisionCount] - 1) && !verseLocked)];
+        [[appController previousRevisionMenuItem] setEnabled:
+         ((revisionIndex > 0) && !verseLocked)];
         
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKBackTranslationFontName"]
-                               size:[(NSString *) [d valueForKey:@"RTKBackTranslationFontSize"] floatValue]];
-        if(font) {
-            [backTranslationTextView setFont:font];
-        }
+        [[appController nextVerseMenuItem] setEnabled:(selectedRow < [[book verses] count] - 1)];
+        [[appController previousVerseMenuItem] setEnabled:(selectedRow > 0)];
         
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKNotesFontName"]
-							   size:[(NSString *) [d valueForKey:@"RTKNotesFontSize"] floatValue]];
-        if(font) {
-            [notesTextView setFont:font];
-        }
+        [romanTextView setEditable:!(verseLocked || revisionLocked)];
+        [backTranslationTextView setEditable:!(verseLocked || revisionLocked)];
+        [notesTextView setEditable:!(verseLocked || revisionLocked)];
+        [checkingTextView setEditable:!(verseLocked || revisionLocked)];
         
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKCheckingFontName"]
-                               size:[(NSString *) [d valueForKey:@"RTKCheckingFontSize"] floatValue]];
-        if(font) {
-            [checkingTextView setFont:font];
-        }
-        
-        
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKScriptFontName"]
-                               size:12];
-        if(font) {
-            [[scriptTableColumn dataCell] setFont:font];
-        }
-        
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKRomanFontName"]
-                               size:12];
-        if(font) {
-            [[romanTableColumn dataCell] setFont:font];
-        }
-        
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKBackTranslationFontName"]
-                               size:12];
-        if(font) {
-            [[backTranslationTableColumn dataCell] setFont:font];
-        }
-        
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKNotesFontName"]
-                               size:12];
-        if(font) {
-            [[notesTableColumn dataCell] setFont:font];
-        }
-        
-        font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKCheckingFontName"]
-                               size:12];
-        if(font) {
-            [[checkingTableColumn dataCell] setFont:font];
-        }
-        
-#pragma mark Locking
-		
-     {
-         BOOL verseLocked = [verse locked];
-         BOOL revisionLocked = [revision locked];
-         int revisionCount = [verse revisionCount];
-         int revisionIndex = [verse currentRevisionIndex];
-         
-         [[[NSApp delegate] newVerseMenuItem] setEnabled:YES];
-         [[[NSApp delegate] deleteVerseMenuItem] setEnabled:!verseLocked];
-         [[[NSApp delegate] lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
-         
-         [deleteVerseButton setEnabled:(!verseLocked ? NSOnState : NSOffState)];
-         
-         [referenceTableColumn setEditable:!(verseLocked || revisionLocked)];
-         [typeTableColumn setEditable:!(verseLocked || revisionLocked)];
-         [revisionTableColumn setEditable:!(verseLocked || revisionLocked)];
-         
-         [[[NSApp delegate] lockRevisionMenuItem] setEnabled:!verseLocked];
-         [[[NSApp delegate] lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
-         [[[NSApp delegate] deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
-         [[[NSApp delegate] newRevisionMenuItem] setEnabled:!verseLocked];
-         
-         [newRevisionButton setEnabled:!verseLocked];
-         [deleteRevisionButton setEnabled:!(verseLocked || revisionLocked)];
-         
-         [[appController nextRevisionMenuItem] setEnabled:
-          (([verse currentRevisionIndex] < [verse revisionCount] - 1) && !verseLocked)];
-         [[appController previousRevisionMenuItem] setEnabled:
-          (([verse currentRevisionIndex] > 0) && !verseLocked)];
-         
-         [[appController nextVerseMenuItem] setEnabled:(selectedRow < verseCount - 1)];
-         [[appController previousVerseMenuItem] setEnabled:(selectedRow > 0)];
-         
-         [romanTextView setEditable:!(verseLocked || revisionLocked)];
-         [backTranslationTextView setEditable:!(verseLocked || revisionLocked)];
-         [notesTextView setEditable:!(verseLocked || revisionLocked)];
-         [checkingTextView setEditable:!(verseLocked || revisionLocked)];
-         
-         [referenceTableColumn setEditable:!verseLocked];
-         [typeTableColumn setEditable:!verseLocked];
-         [revisionTableColumn setEditable:!verseLocked];
-     }
+        [referenceTableColumn setEditable:!verseLocked];
+        [typeTableColumn setEditable:!verseLocked];
+        [revisionTableColumn setEditable:!verseLocked];
 	}
-    
-    [self updatePublishedTextView];
 }
 
 
 - (void)readSplitViewRectsFromDefaults
 {
-	//NSLog(@"readSplitViewRectsFromDefaults");
-	
 	NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
 	
 	if([d boolForKey:@"RTKHorizonatalSplitViewRectSaved"]) {
@@ -1036,8 +912,6 @@ BOOL generateMetaStrings = NO;
 
 - (void)writeSplitViewRectsToDefaults
 {
-	//NSLog(@"writeSplitViewRectsToDefaults");
-	
 	NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
 	[d setObject:[NSNumber numberWithBool:YES] forKey:@"RTKHorizonatalSplitViewRectSaved"];
 	[d setObject:NSStringFromRect([rowView frame]) forKey:@"RTKRowViewRect"];
@@ -1058,7 +932,6 @@ BOOL generateMetaStrings = NO;
 		[d setObject:NSStringFromRect([checkingView frame]) forKey:@"RTKCheckingViewRect"];	
 	}
 }
-
 
 - (void)presetVerse:(RTKVerse *)verse
  fromPrecedingVerse:(RTKVerse *)precedingVerse
@@ -1140,7 +1013,8 @@ BOOL generateMetaStrings = NO;
 
 - (IBAction)deleteVerse:(id)sender
 {
-    NSMutableArray * verses = [book verses];
+    //NSMutableArray * verses = [book verses];
+    int currentVerseIndex = [[book verses] indexOfObject:currentVerse];
     
     NSEnumerator * e = [versesTableView selectedRowEnumerator];
     NSMutableArray * selectedVerseArray = [NSMutableArray new];
@@ -1160,10 +1034,8 @@ BOOL generateMetaStrings = NO;
     
     [versesTableView noteNumberOfRowsChanged];
     [self ensureOneBlankVerse];
-    [self updateUI];
     
-    if(rowIndex > 0)
-        [versesTableView selectRow:(rowIndex - 1) byExtendingSelection:NO];
+    [self selectVerse:[[book verses] objectAtIndex:MIN(currentVerseIndex, [[book verses] count] -1)]];    
     
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
@@ -1171,27 +1043,150 @@ BOOL generateMetaStrings = NO;
 
 - (void)nextVerse:(id)sender
 {
-    int selectedRow = [versesTableView selectedRow];
-    int rowCount = [versesTableView numberOfRows];
-    
-    if(selectedRow < rowCount - 1) {
-        [versesTableView selectRow:(selectedRow + 1) byExtendingSelection:NO];
-        [versesTableView scrollRowToVisible:(selectedRow + 1)];
-    }
+    NSMutableArray * verses = [book verses];
+    int currentVerseIndex = [verses indexOfObject:currentVerse];
+    if(currentVerseIndex < [verses count] -1)
+        [self selectVerse:[verses objectAtIndex:currentVerseIndex + 1]];
 }
 
 - (void)previousVerse:(id)sender
 {
-    int selectedRow = [versesTableView selectedRow];
-    if(selectedRow >= 0) {
-        int rowCount = [versesTableView numberOfRows];
+    NSMutableArray * verses = [book verses];
+    int currentVerseIndex = [verses indexOfObject:currentVerse];
+    if(currentVerseIndex > 0)
+        [self selectVerse:[verses objectAtIndex:currentVerseIndex - 1]];
+}
+
+
+// Updates the UI to reflect the newly selected revision.
+// Returns YES on success, NO on failure.
+- (BOOL)selectRevision:(RTKRevision *)revision
+{
+    if(revision == currentRevision) return YES;
+    
+    currentRevision = revision;
+    
+    [romanTextView setString:[revision roman]];
+    [scriptTextView setString:[revision script]];
+    [backTranslationTextView setString:[revision backTranslation]];
+    [notesTextView setString:[revision notes]];
+    [checkingTextView setString:[revision checking]];
+
+    return YES;
+}
+
+
+- (int)indexOfVerse:(RTKVerse *)verse inTextView:(NSTextView *)textView
+{
+    NSEnumerator * e = [[book verses] objectEnumerator];
+    RTKVerse * v;
+    int i = 0;
+    while(v = [e nextObject]){
         
-        if(selectedRow > 0) {
-            [versesTableView selectRow:(selectedRow - 1) byExtendingSelection:NO];    
-            [versesTableView scrollRowToVisible:(selectedRow - 1)];
-        }
+        
+        i += [[v mutableAttributedString:(textView == romanPublishedTextView)] length];
+        
+        if(v == verse)
+            return i-1;
+        
+        /*
+        if(v == verse)
+            return i;
+        
+        i += [[v mutableAttributedString:(textView == romanPublishedTextView)] length];
+        */
+        
+    }
+    return 0;
+}
+
+
+- (void)updateVerse:(RTKVerse *)verse
+       withOldIndex:(int)index
+inPublishedTextView:(NSTextView *)textView
+{
+    NSTextStorage *textStorage = [textView textStorage];
+    
+    NSRange range;
+    
+    if([textStorage length] < index) {
+        [textStorage insertAttributedString:[verse mutableAttributedString:(textView == romanPublishedTextView)] atIndex:[textStorage length]];
+        
+    } else {
+    
+        [textStorage attribute:@"RTKVerse"
+                  atIndex:index 
+    longestEffectiveRange:&range
+                       inRange:NSMakeRange(0, [textStorage length])];
+        
+        [textStorage replaceCharactersInRange:range withAttributedString:[verse mutableAttributedString:(textView == romanPublishedTextView)]];
     }
 }
+
+
+
+
+- (void)highlightVerse:(RTKVerse *)verse inTextView:(NSTextView *)textView
+{
+    int verseIndex = [self indexOfVerse:verse inTextView:textView];
+    NSTextStorage *textStorage = [textView textStorage];
+    
+    [textStorage removeAttribute:NSBackgroundColorAttributeName];
+    
+    if(verseIndex >= [textStorage length])
+        return;
+    
+    NSRange firstComponentRange;
+    NSString *firstComponent = [textStorage attribute:@"RTKVerse" 
+                                              atIndex:verseIndex
+                                longestEffectiveRange:&firstComponentRange
+                                              inRange:NSMakeRange(0, [textStorage length])];
+    if(firstComponentRange.length == 0)
+        return;
+    
+    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
+    
+    [textView scrollRangeToVisible:firstComponentRange];
+    
+     if([textView selectedRange].location < firstComponentRange.location || [textView selectedRange].location > firstComponentRange.location + firstComponentRange.length -1)
+        [textView setSelectedRange:NSMakeRange(firstComponentRange.location + firstComponentRange.length -1, 0)];
+}
+
+// Updates the UI to reflect the newly selected verse.
+// Returns YES on success, NO on failure.
+- (BOOL)selectVerse:(RTKVerse *)verse
+{
+    // Same verse, so nothing to do.
+    if(verse == currentVerse) return YES;
+
+    // Index of verse, not of row in table, which can be different if using a filtering search.
+    int verseIndex = [[book verses] indexOfObject:verse];
+    
+    // Can't find the verse, so nothing to do.
+    if (verseIndex == NSNotFound) return NO;
+    
+    // Save for next time.
+    currentVerse = verse;
+    
+    // Select verse in table.
+    //[versesTableView selectRow:verseIndex byExtendingSelection:NO]; // 10.0 and later. Deprecated. 
+    [versesTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:verseIndex] byExtendingSelection:NO]; // 10.3 and later.
+    [versesTableView scrollRowToVisible:verseIndex];
+    
+    // Load revision into single-verse text fields.
+    [self selectRevision:[verse currentRevision]];
+    
+    // Highlight verse in published views and scroll to visible.
+    [self highlightVerse:verse inTextView:romanPublishedTextView];
+    [self highlightVerse:verse inTextView:scriptPublishedTextView];
+    
+    // Update Menus, Buttons, and Fonts
+    [self updateUI];
+    
+    // Successfully selected a different verse.
+    return YES;
+}
+
 
 - (IBAction)lockVerse:(id)sender
 {
@@ -1333,23 +1328,6 @@ BOOL generateMetaStrings = NO;
     [self updateUI];
 }
 
-
-#pragma mark -
-#pragma mark commitee meeting update
-
-- (void)updateCommiteeMeetingText:(BOOL)mirrorText
-{
-	NSString *string = @"";
-	if(mirrorText)
-		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
-			string = [scriptTextView string];
-		else
-			string = [romanTextView string];
-	
-	[[NSNotificationCenter defaultCenter] postNotification:
-     [NSNotification notificationWithName:@"RTKChangedCommitteeString" object:string]];
-}
-
 #pragma mark -
 #pragma mark window delegate methods
 
@@ -1357,18 +1335,15 @@ BOOL generateMetaStrings = NO;
 {
     windowIsOpen = NO;
     [convertingLock unlock];
-	[self updateCommiteeMeetingText:NO];
 }
 
 - (void)windowDidBecomeKey:(NSNotification *)aNotification
 {
-	[self updateCommiteeMeetingText:YES];
 	[self readSplitViewRectsFromDefaults];
 }
 
 - (void)windowDidResignKey:(NSNotification *)aNotification
 {
-	//NSLog(@"windowDidResignKey");
 	[self writeSplitViewRectsToDefaults];
 }
 
@@ -1384,7 +1359,6 @@ constrainMinCoordinate:(float *)min
 	maxCoordinate:(float *)max 
 	  ofSubviewAt:(int)offset
 {
-	//NSLog(@"constrain");
 	(*min) = 0.0;
 	(*max) = INFINITY;
 	
@@ -1403,54 +1377,62 @@ constrainMinCoordinate:(float *)min
  */
 - (void)textDidChange:(NSNotification *)notification
 {
+    NSLog(@"textDidChange");
     NSTextView * changedTextView = [notification object];
     
     NSMutableArray * verses = [book verses];
     RTKVerse * verse = [verses objectAtIndex:[[visibleVerseIndexes objectAtIndex:[versesTableView selectedRow]] intValue]];
-    int revisionIndex = [verse currentRevisionIndex];
-    NSMutableArray * revisions = [verse revisions];
-    RTKRevision * revision = [revisions objectAtIndex:revisionIndex];
+    
+    RTKRevision * revision = [verse currentRevision];
     
     if(changedTextView == romanTextView) {
+        
+        int oldVerseIndexInPublishedTextView = [self indexOfVerse:verse inTextView:romanPublishedTextView];
+        
         [revision setRoman:[[changedTextView string] copy]];
+        
+        [self updateVerse:verse withOldIndex:oldVerseIndexInPublishedTextView inPublishedTextView:romanPublishedTextView];
+        [self highlightVerse:verse inTextView:romanPublishedTextView];
+        
 		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
 			[self convertRevision:revision
 				 withHighPriority:YES];
-		else
-			[self updateCommiteeMeetingText:YES];
-        [self updatePublishedTextView];
+
     } else if(changedTextView == scriptTextView) {
         [revision setScript:[[changedTextView string] copy]];
-        [self updatePublishedTextView];
+        //[self updateRomanPublishedTextView];
     } else if(changedTextView == backTranslationTextView) {
         [revision setBackTranslation:[[changedTextView string] copy]];
-        [self updatePublishedTextView];
+        //[self updateRomanPublishedTextView];
     } else if(changedTextView == notesTextView) {
         [revision setNotes:[[changedTextView string] copy]];
-        [self updatePublishedTextView];
+        //[self updateRomanPublishedTextView];
     } else if(changedTextView == checkingTextView) {
         [revision setChecking:[[changedTextView string] copy]];
-        [self updatePublishedTextView];
-    } else if(changedTextView == publishedTextView) {
-        [self publishedTextViewDidChange:notification];
+        //[self updateRomanPublishedTextView];
+    } else if(changedTextView == romanPublishedTextView) {
+        [self romanPublishedTextViewDidChange:notification];
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);
-        NSLog(@"publishedTextView: %@", publishedTextView);
+        NSLog(@"romanPublishedTextView: %@", romanPublishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
     
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];
-	
+	[self updateUI];
     [self ensureOneBlankVerse];
+    
+    //[self selectVerse:verse];
 }
 
 // Informs the appropriate RTKVerse object of its changes.
-- (void)publishedTextViewDidChange:(NSNotification *)notification
+- (void)romanPublishedTextViewDidChange:(NSNotification *)notification
 {
-    NSTextStorage *textStorage = [publishedTextView textStorage];
-    NSRange selectedRange = [publishedTextView selectedRange];
+    NSLog(@"romanPublishedTextViewDidChange");
+    NSTextStorage *textStorage = [romanPublishedTextView textStorage];
+    NSRange selectedRange = [romanPublishedTextView selectedRange];
     
     NSRange verseRange;    
     RTKVerse *verse = [textStorage attribute:@"RTKVerse" 
@@ -1459,29 +1441,37 @@ constrainMinCoordinate:(float *)min
                                      inRange:NSMakeRange(0, [textStorage length])];
     NSAttributedString *verseString = [textStorage attributedSubstringFromRange:verseRange];
     
-    BOOL changeAccepted = [verse updateWithAttributedString:verseString atIndex:(selectedRange.location - verseRange.location)];
+    //BOOL changeAccepted = [verse updateWithAttributedString:verseString atIndex:(selectedRange.location - verseRange.location)];
     
+    BOOL changeAccepted = [verse updateWithAttributedString:[textStorage attributedSubstringFromRange:NSMakeRange(0, [textStorage length])] 
+                                                    atIndex:selectedRange.location];
+
     if(!changeAccepted) {
         NSLog(@"RTKVerse rejected change.");
-        [self updatePublishedTextView];
-        [publishedTextView setSelectedRange:selectedRange];
+        [self updateRomanPublishedTextView];
+        [romanPublishedTextView setSelectedRange:selectedRange];
+    } else {
+        [romanTextView setString:[[verse currentRevision] roman]];
+        
+        if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
+			[self convertRevision:[currentVerse currentRevision]
+				 withHighPriority:YES];
     }
 }
 
 - (void)textViewDidChangeSelection:(NSNotification *)notification
 {   
-    NSLog(@"textViewDidChangeSelection");
     NSTextView * changedTextView = [notification object];
     
-    if(changedTextView = publishedTextView) {
-        NSTextStorage *textStorage = [publishedTextView textStorage];
-        NSRange selectedRange = [publishedTextView selectedRange];
-        
-        [textStorage removeAttribute:NSBackgroundColorAttributeName];
-        
+    // Updated to == from = AKK 2012
+    if(changedTextView == romanPublishedTextView || changedTextView == scriptPublishedTextView) {
+        NSLog(@"textViewDidChangeSelection %@", (changedTextView == romanPublishedTextView ? @"roman" : @"script"));
+        NSTextStorage *textStorage = [changedTextView textStorage];
+        NSRange selectedRange = [changedTextView selectedRange];
+                
         // Don't allow editing end of text field.
         if(selectedRange.location == [textStorage length]) {
-            [publishedTextView setAllowEditing:NO];
+            [changedTextView setAllowEditing:NO];
             return;
         }
         
@@ -1520,44 +1510,43 @@ constrainMinCoordinate:(float *)min
         
         // Don't allow editing if selection spans multiple verses or components.
         if((firstVerse != lastVerse) || ((firstComponent != lastComponent) && (firstComponent != nextToLastComponent)) ) {
-            [publishedTextView setAllowEditing:NO];
+            [changedTextView setAllowEditing:NO];
             return;
         }
         
+        if(firstVerse != currentVerse)
+            [self selectVerse:firstVerse];
+         
         // Allow editing if selection is within the text of a verse.
         if([firstComponent isEqualToString:@"Verse Text"]) {
-            [publishedTextView setAllowedEditingRange:firstComponentRange];
-            [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
+            [changedTextView setAllowedEditingRange:firstComponentRange];
+            //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
             NSRange dummyRange;
-            [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:firstComponentRange.location effectiveRange:&dummyRange]];
-             } else {
+            [changedTextView setTypingAttributes:[textStorage attributesAtIndex:firstComponentRange.location effectiveRange:&dummyRange]];
+        } else {
             if((selectedRange.location + selectedRange.length - 1) > 0) {
-                
                 // Allow editing if at the end of a "Verse Text" section.
                 if([nextToLastComponent isEqualToString:@"Verse Text"]) {
-                    [publishedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
+                    [changedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
                                                                            effectiveRange:NULL]];
-                    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:nextToLastComponentRange];
-                    [publishedTextView setAllowedEditingRange:nextToLastComponentRange];
-
+                    //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:nextToLastComponentRange];
+                    [changedTextView setAllowedEditingRange:nextToLastComponentRange];
                 } else {
-                    [publishedTextView setAllowEditing:NO];
+                    [changedTextView setAllowEditing:NO];
                 }
             }
         }
     }
+    [scriptPublishedTextView setAllowEditing:NO];
 }
 
-
-- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem
-{
-    [self updateUI];
-}
-
+/*
 - (void)reloadTableData:(id)dummy
 {
+    NSLog(@"- (void)reloadTableData:(id)dummy");
     [versesTableView reloadData];
 }
+*/
 
 #pragma mark -
 #pragma mark table delegate methods
@@ -1592,14 +1581,22 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
-    [self updateUI];
+    //[self updateUI];
+    NSMutableArray * verses = [book verses];
+    int selectedRowIndex = [(NSTableView *) [aNotification object] selectedRow];
+    if (selectedRowIndex < [verses count]) {
+        [self selectVerse:[verses objectAtIndex:selectedRowIndex]];
+    }
 }
 
+/*
 - (void)tableViewSelectionIsChanging:(NSNotification *)aNotification
 {
-    [self ensureOneBlankVerse];
-    [self updateUI];
+    //[self ensureOneBlankVerse];
+    //[self updateUI];
 }
+ */
+
 
 #pragma mark -
 #pragma mark tableSource methods
@@ -1693,10 +1690,17 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     if(aTableView == versesTableView) {
         if(aTableColumn == referenceTableColumn) {
             [verse setReference:anObject];
+            [self updateRomanPublishedTextView];
+            [self selectVerse:verse];
         } else if(aTableColumn == typeTableColumn) {
             [verse setType:anObject];
+            [self updateRomanPublishedTextView];
+            [self selectVerse:verse];
         } else if(aTableColumn == revisionTableColumn) {
             [verse setCurrentRevisionIndex:[(NSNumber *)anObject intValue]];
+            [self selectRevision:[currentVerse currentRevision]];
+            [self updateRomanPublishedTextView];
+            [self selectVerse:verse];
         } else if(aTableColumn == lockedTableColumn) {
             [verse setLocked:[(NSNumber *)anObject boolValue]];
         } else if(aTableColumn == scriptTableColumn) {
@@ -1772,7 +1776,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 {
 	if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
 		[self regenerateAllScript];
-	[self updateCommiteeMeetingText:YES];
 }
 
 - (void)transliterationOnChanged:(id)dummy
@@ -1794,7 +1797,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	}
 	[self readSplitViewRectsFromDefaults];
 	[self writeSplitViewRectsToDefaults];
-	[self updateCommiteeMeetingText:YES];
 }
 
 
@@ -1805,7 +1807,12 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         return;
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];
-	
+    
+    [[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
+    [self highlightVerse:[[book verses] objectAtIndex:[versesTableView selectedRow]] inTextView:scriptPublishedTextView];
+    
+    [scriptTextView setString:[[currentVerse currentRevision] script]];
+    
     [self updateUI];
 }
 
@@ -1853,12 +1860,8 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
             
             NSString * transcriptionType = [d valueForKey:@"RTKTranscriptionType"];
             fontOutputString = transcriptionType;
-            /*if([transcriptionType isEqualToString:@"No Transcription"]) {
-             fontOutputString = @"No Transcription -- You can turn this on in the Preferences.";
-             } else if([transcriptionType isEqualToString:@"External Transcription"]) {
-             fontOutputString = @"External Transcription -- This should eventually use TECkit, Perl, Python or any other command line tool.";
-             } else if([transcriptionType isEqualToString:@"RTK Transcription"]) */{
-                 NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
+            {
+            NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
                  NSDictionary * output = [RTKSharedConvertor convertString:[revision roman]
                                                                inputSystem:[definitionDir stringByAppendingString:
                                                                             [[d objectForKey:@"RTKInputSystem"] stringByAppendingString:@".rtkinput"]]
@@ -1877,6 +1880,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 			
             if(fontOutputString)
                 [revision setScript:fontOutputString];
+                
             
             [autoreleasePool release];
             

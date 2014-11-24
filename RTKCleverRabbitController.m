@@ -80,7 +80,6 @@
 
 - (void)changedCommitteeString:(NSNotification *)aNotification
 {
-	[committeeMeetingTextView setString:(NSString *) [aNotification object]];
 	
 	NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
     NSFont *font = [NSFont fontWithName:(NSString *)[d valueForKey:@"RTKCommitteeFontName"]
@@ -88,6 +87,10 @@
 	if(font) {
 		[committeeMeetingTextView setFont:font];
 	}
+    
+    //TODO Fix me
+	[committeeMeetingTextView setString:(NSString *) [[aNotification userInfo] objectForKey:@"string"]];
+    
 }
 
 - (void)fontsChanged:(NSNotification *)aNotification

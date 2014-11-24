@@ -25,6 +25,18 @@
 	}
 	return self;
 }
+ 
+/* // NSObjCObjectType is no longer supported, so have to use other technique. 
+  
+  Borrowed:
+  http://www.opensource.apple.com/source/WebKit/WebKit-7534.51.22/mac/Misc/WebNSObjectExtras.mm?txt
+static bool returnTypeIsObject(NSInvocation *invocation)
+{
+    // Could use either _C_ID or NSObjCObjectType, but it seems that neither is
+    // both available and non-deprecated on all versions of Mac OS X we support.
+    return strchr([[invocation methodSignature] methodReturnType], '@');
+}
+*/
 
 - (void)iterateWithInvocation:(NSInvocation *)invocation
 {
@@ -41,9 +53,12 @@
 	NSMutableArray *enumerators = [NSMutableArray array];
 	unsigned numberOfEnumerators = 0;
 	unsigned arg;
+    
 	for(arg = 2; arg < numOfArgs; arg++) // skip self and _cmd
 	{
-		if([signature getArgumentTypeAtIndex:arg][0] == NSObjCObjectType)
+        // NSObjCObjectType is no longer supported.
+        if(strchr([signature getArgumentTypeAtIndex:arg], '@'))
+		//if([signature getArgumentTypeAtIndex:arg][0] == NSObjCObjectType)
 		{
 			id obj;
 			[invocation getArgument:&obj atIndex:arg];
@@ -56,7 +71,9 @@
 		}
 	}
 	
-	BOOL canProcessReturnValue = [signature methodReturnType][0] == NSObjCObjectType;
+    // NSObjCObjectType is no longer supported.
+	BOOL canProcessReturnValue = strchr([signature methodReturnType], '@') != NULL; 
+    //[signature methodReturnType][0] == NSObjCObjectType;
 	
 	[self prepareWithInvocation:invocation];
 	

@@ -24,6 +24,11 @@
     // Permanent data object
     RTKBook * book;
     
+    // Currently active verse and revision
+    RTKVerse * currentVerse; 
+    RTKRevision * currentRevision;
+    
+    
     // Drag and Drop internal to this document
     NSArray * draggedVerseIndexArray;
     
@@ -46,14 +51,17 @@
     
     // Single Verse View
     IBOutlet NSWindow * documentWindow;
-    IBOutlet NSToolbar * toolbar;
+    /*
+     IBOutlet NSToolbar * toolbar;
     NSMutableDictionary * toolbarItems;
     NSMutableArray *toolbarKeys;
+     */
     
     IBOutlet NSButton * newVerseButton;
     IBOutlet NSButton * deleteVerseButton;
     IBOutlet NSButton * newRevisionButton;
     IBOutlet NSButton * deleteRevisionButton;
+    
     
     IBOutlet NSTableView * versesTableView;
     IBOutlet NSSearchField * searchField;
@@ -79,7 +87,7 @@
     IBOutlet RTKTigerTextView * checkingTextView;
 	
 	IBOutlet NSSplitView * horizontalSplitView;
-	IBOutlet NSSplitView * verticalSplitView;
+	IBOutlet NSSplitView * verticalSplitView; // Not connecting yet -- now have multiple nested split views
 	
 	IBOutlet NSView * rowView;
 	IBOutlet NSView * editView;
@@ -94,9 +102,8 @@
 	IBOutlet NSSplitView * splitViewOfTextViews;
     
     // Published View
-    IBOutlet RTKTigerTextView * publishedTextView;
-    NSRange previouslyHighlightedRangeInPublishedTextView;
-    
+    IBOutlet RTKTigerTextView * romanPublishedTextView;
+    IBOutlet RTKTigerTextView * scriptPublishedTextView;
 	
     // Definition files
     NSString * inputDefinitionPath;
@@ -129,6 +136,13 @@
 - (RTKBook *)book;
 - (void)setBook:(RTKBook *)theBook;
 
+- (RTKVerse *)currentVerse;
+- (void)setCurrentVerse:(RTKVerse *)verse;
+
+- (RTKRevision *)currentRevision;
+- (void)setCurrentRevision:(RTKRevision *)revision;
+
+
 - (void)setDictionary:(NSDictionary *)theDictionary;
 - (NSDictionary *)dictionary;
 
@@ -141,6 +155,7 @@
 - (IBAction)deleteVerse:(id)sender;
 - (IBAction)nextVerse:(id)sender;
 - (IBAction)previousVerse:(id)sender;
+- (BOOL)selectVerse:(RTKVerse *)verse;
 - (IBAction)setVerseType:(id)sender;
 
 - (IBAction)newRevision:(id)sender;
@@ -151,7 +166,7 @@
 - (IBAction)switchRevision:(id)sender;
 - (IBAction)lockRevision:(id)sender;
 
-- (void)updateCommiteeMeetingText:(BOOL)mirrorText;
+//- (void)updateCommiteeMeetingText:(BOOL)mirrorText;
 
 - (void)updateUI;
 - (void)readSplitViewRectsFromDefaults;
@@ -163,7 +178,7 @@
 - (void)setVisibleVerseIndexes:(NSArray *)indexes;
 - (void)setBindingsFromDictionary:(NSDictionary *)dict;
 
-- (void)setupToolbar;
+//- (void)setupToolbar;
 
 - (void)cut:(id)sender;
 - (void)copy:(id)sender;
@@ -173,7 +188,7 @@
 -(void)convertRevision:(RTKRevision *)revision
       withHighPriority:(BOOL)highPriority;
 
-- (void)publishedTextViewDidChange:(NSNotification *)notification;
+- (void)romanPublishedTextViewDidChange:(NSNotification *)notification;
 
 
 @end

@@ -33,7 +33,6 @@
 }
 
 - (id)initWithDictionary:(NSDictionary *)dict;
-- (void)addDictionaryRepresentationToMutableArray:(NSMutableArray *)array;
 - (id)initWithString:(NSString *)string;
 - (id)initWithSFMString:(NSString *)string
            andStateDict:(NSMutableDictionary *)dict;

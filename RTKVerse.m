@@ -340,7 +340,7 @@
     if([component isEqualToString:@"Verse Text"]) {
         [[self currentRevision] setRoman:[componentString string]];
         
-        NSLog([componentString string]);
+        NSLog(@"%@", [componentString string]);
         
         return YES; // Verse accepted change.
     }
@@ -396,7 +396,7 @@
     return type;
 }
 
-- (void)setLocked:(bool)state
+- (void)setLocked:(BOOL)state
 {
 	locked = state;
 }

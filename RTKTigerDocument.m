@@ -797,7 +797,7 @@ BOOL generateMetaStrings = NO;
 
 - (void) updateMenusAndButtons
 {
-    int selectedRow;
+    NSUInteger selectedRow;
     NSIndexSet * selectedRows = [versesTableView selectedRowIndexes];
     RTKCleverRabbitController * appController = [NSApp delegate];
     NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
@@ -1145,12 +1145,48 @@ inPublishedTextView:(NSTextView *)textView
         return;
     
     [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
-    
+    /*
     [textView scrollRangeToVisible:firstComponentRange];
     
      if([textView selectedRange].location < firstComponentRange.location || [textView selectedRange].location > firstComponentRange.location + firstComponentRange.length -1)
         [textView setSelectedRange:NSMakeRange(firstComponentRange.location + firstComponentRange.length -1, 0)];
+     */
 }
+
+
+- (void)scrollVerseToVisible:(RTKVerse *)verse inTextView:(NSTextView *)textView
+{
+    int verseIndex = [self indexOfVerse:verse inTextView:textView];
+    NSTextStorage *textStorage = [textView textStorage];
+    
+    //[textStorage removeAttribute:NSBackgroundColorAttributeName];
+    
+    if(verseIndex >= [textStorage length]) {
+        NSLog(@"verseIndex >= [textStorage length] in scrollVerseToVisible");
+        return;
+    }
+    
+    NSRange firstComponentRange;
+    NSString *firstComponent = [textStorage attribute:@"RTKVerse"
+                                              atIndex:verseIndex
+                                longestEffectiveRange:&firstComponentRange
+                                              inRange:NSMakeRange(0, [textStorage length])];
+    if(firstComponentRange.length == 0) {
+        NSLog(@"firstComponentRange.length == 0 in scrollVerseToVisible");
+        return;
+    }
+    
+    //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
+    
+     [textView scrollRangeToVisible:firstComponentRange];
+    
+    /*
+     if([textView selectedRange].location < firstComponentRange.location || [textView selectedRange].location > firstComponentRange.location + firstComponentRange.length -1)
+     [textView setSelectedRange:NSMakeRange(firstComponentRange.location + firstComponentRange.length -1, 0)];
+     */
+    
+}
+
 
 // Updates the UI to reflect the newly selected verse.
 // Returns YES on success, NO on failure.
@@ -1160,7 +1196,7 @@ inPublishedTextView:(NSTextView *)textView
     if(verse == currentVerse) return YES;
 
     // Index of verse, not of row in table, which can be different if using a filtering search.
-    int verseIndex = [[book verses] indexOfObject:verse];
+    NSUInteger verseIndex = [[book verses] indexOfObject:verse];
     
     // Can't find the verse, so nothing to do.
     if (verseIndex == NSNotFound) return NO;
@@ -1169,9 +1205,12 @@ inPublishedTextView:(NSTextView *)textView
     currentVerse = verse;
     
     // Select verse in table.
-    //[versesTableView selectRow:verseIndex byExtendingSelection:NO]; // 10.0 and later. Deprecated. 
+    //[versesTableView selectRow:verseIndex byExtendingSelection:NO]; // 10.0 and later. Deprecated.
+    //if([documentWindow firstResponder] != versesTableView) {
+    
     [versesTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:verseIndex] byExtendingSelection:NO]; // 10.3 and later.
     [versesTableView scrollRowToVisible:verseIndex];
+    //}
     
     // Load revision into single-verse text fields.
     [self selectRevision:[verse currentRevision]];
@@ -1179,6 +1218,13 @@ inPublishedTextView:(NSTextView *)textView
     // Highlight verse in published views and scroll to visible.
     [self highlightVerse:verse inTextView:romanPublishedTextView];
     [self highlightVerse:verse inTextView:scriptPublishedTextView];
+    
+    if([documentWindow firstResponder] != romanPublishedTextView)
+        [self scrollVerseToVisible:verse inTextView:romanPublishedTextView];
+    
+    if([documentWindow firstResponder] != scriptPublishedTextView)
+        [self scrollVerseToVisible:verse inTextView:scriptPublishedTextView];
+    
     
     // Update Menus, Buttons, and Fonts
     [self updateUI];
@@ -1463,6 +1509,9 @@ constrainMinCoordinate:(float *)min
 {   
     NSTextView * changedTextView = [notification object];
     
+    if([documentWindow firstResponder] != changedTextView)
+        return;
+    
     // Updated to == from = AKK 2012
     if(changedTextView == romanPublishedTextView || changedTextView == scriptPublishedTextView) {
         NSLog(@"textViewDidChangeSelection %@", (changedTextView == romanPublishedTextView ? @"roman" : @"script"));
@@ -1582,6 +1631,10 @@ shouldEditTableColumn:(NSTableColumn *)aTableColumn
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
 {
     //[self updateUI];
+    
+    // Attempting to learn why arrow key row selection in the tableview causes unpredictable scrolling in the published view textfields.
+    // NSLog(@"%lu",[[NSApp currentEvent] type]);
+    
     NSMutableArray * verses = [book verses];
     int selectedRowIndex = [(NSTableView *) [aNotification object] selectedRow];
     if (selectedRowIndex < [verses count]) {

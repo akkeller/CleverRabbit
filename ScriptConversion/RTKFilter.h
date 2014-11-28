@@ -33,7 +33,4 @@
 -(void)parse:(RTKLinkedListHeader *)list
      testing:(BOOL)testing;
 
--(id)initWithChildList:(RTKLinkedListHeader *)childList
-       usingIDDatabase:(RTKIDDatabase *)idDatabase;
-
 @end

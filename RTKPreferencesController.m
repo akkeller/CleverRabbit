@@ -12,6 +12,7 @@
 
 
 #import "RTKPreferencesController.h"
+#import "RTKConvertor.h"
 extern id RTKSharedConvertor;
 
 @implementation RTKPreferencesController
@@ -172,7 +173,7 @@ extern id RTKSharedConvertor;
     NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
     NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
     
-    id * object = [aNotification object];
+    NSTextField * object = [aNotification object];
     if(object == delimiterTextField) {
         [d setObject:[delimiterTextField stringValue] 
               forKey:@"RTKPlainTextDelimiter"];
@@ -216,10 +217,10 @@ extern id RTKSharedConvertor;
               forKey:@"RTKExternalConvertor"];
         [nc postNotification:
             [NSNotification notificationWithName:@"RTKExternalConvertorChanged" object:nil]]; 
-        NSLog([d objectForKey:@"RTKExternalConvertor"]);
+        NSLog(@"%@", [d objectForKey:@"RTKExternalConvertor"]);
         [externalConvertorTextField setStringValue:filename];
         
-        NSLog([[self parametersForExternalConvertor:filename] description]);
+        NSLog(@"%@", [[self parametersForExternalConvertor:filename] description]);
     }
 }
     

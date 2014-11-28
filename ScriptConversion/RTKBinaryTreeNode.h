@@ -22,7 +22,7 @@
     int order;
 }
 
-
+-(id)initWithOrder:(int)theOrder;
 -(id)instanceList;
 
 -(id)left;

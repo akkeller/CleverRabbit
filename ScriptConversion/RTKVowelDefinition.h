@@ -27,8 +27,6 @@
 
 
 -(id)initWithPhoneme:(int)thePhoneme;
--(id)initWithChildList:(RTKLinkedListHeader *)childList
-       usingIDDatabase:(RTKIDDatabase *)idDatabase;
 -(NSDictionary *)propertyListRepresentation;
 -(void)loadPropertyListRepresentation:(NSDictionary *)dict;
 -(void)display;

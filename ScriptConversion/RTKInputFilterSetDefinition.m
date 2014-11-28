@@ -118,7 +118,7 @@ NSString *RTKFilterSetKey = @"RTKFilterSetKey";
 -(NSDictionary *)filterSetDictionaryForList:(RTKLinkedListHeader *)list
 {
     NSMutableDictionary *doc = [NSMutableDictionary dictionary];
-    NSMutableArray *filterDicts = [list propertyListRepresentation];
+    NSArray *filterDicts = [list propertyListRepresentation];
 
     if(filterDicts != nil)
         [doc setObject:filterDicts forKey:RTKFilterSetKey];

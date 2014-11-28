@@ -39,16 +39,8 @@ enum // for cluster positions
     RTKBinaryTreeHeader *presyllableVowelTree;
 }
 
-
--(RTKLinkedListHeader *)consonantDefinitionListFromChildList:(RTKLinkedListHeader *)childList
-					  usingIDDatabase:(RTKIDDatabase *)idDatabase;
-
-
--(RTKLinkedListHeader *)vowelDefinitionListFromChildList:(RTKLinkedListHeader *)childList
-				      usingIDDatabase:(RTKIDDatabase *)idDatabase;
-				      
--(RTKLinkedListHeader *)filterListFromChildList:(RTKLinkedListHeader *)childList
-			     usingIDDatabase:(RTKIDDatabase *)idDatabase;
+-(id)initWithFilePath:(NSString *)filePath
+      usingIDDatabase:(RTKIDDatabase *)idDatabase;
 			     
 -(RTKLinkedListHeader *)scriptListFromWordList:(RTKLinkedListHeader *)wordList
 			    usingIDDatabase:(RTKIDDatabase *)idDatabase

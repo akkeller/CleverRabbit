@@ -343,7 +343,7 @@
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];
     
-    
+    /*
     if(punctuation == YES)
     {
         [dataDict setObject:([RTKConvertor findXMLTagOfType:[generalDatabase idForString:@"punctuation"]
@@ -353,6 +353,7 @@
                                                          to:nil] != nil) ? @"YES" : @"NO"
                      forKey:@"RTKContainsPunctuation"];
     }
+     */
     
     [autoreleasePool release];
     autoreleasePool = [[NSAutoreleasePool alloc] init];

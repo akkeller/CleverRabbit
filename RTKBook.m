@@ -13,6 +13,7 @@
 #import "RTKBook.h"
 
 #import "Chomp/Chomp.h"
+#import "RTKArrayCategory.h"
 
 
 @implementation RTKBook
@@ -85,7 +86,7 @@
         
         RTKVerse * currentVerse = nil;
         while(string = [e nextObject]) {
-            NSString * trimmedString = [string mutableCopy];
+            NSMutableString * trimmedString = [string mutableCopy];
             [trimmedString replaceOccurrencesOfString:@" "
                                     withString:@""
                                        options:NSLiteralSearch
@@ -133,7 +134,7 @@
 {
     NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dictionary];
     
-    NSArray * versesArray = [[verses collect] dictionaryRepresentation];
+    NSArray * versesArray = (NSArray *) [[verses collect] dictionaryRepresentation];
     
     [dict setObject:versesArray
              forKey:@"verses"];

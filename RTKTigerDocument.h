@@ -156,7 +156,7 @@
 - (IBAction)nextVerse:(id)sender;
 - (IBAction)previousVerse:(id)sender;
 - (BOOL)selectVerse:(RTKVerse *)verse;
-- (IBAction)setVerseType:(id)sender;
+- (IBAction)lockVerse:(id)sender;
 
 - (IBAction)newRevision:(id)sender;
 - (IBAction)deleteRevision:(id)sender;

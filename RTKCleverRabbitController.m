@@ -11,6 +11,7 @@
 //
 
 #import "RTKCleverRabbitController.h"
+#import "RTKTigerDocument.h"
 
 @implementation RTKCleverRabbitController
 
@@ -121,52 +122,62 @@
 
 - (IBAction)newVerse:(id)sender
 {
-    [[[NSApp keyWindow] delegate] newVerse:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document newVerse:sender];
 }
 
 - (IBAction)deleteVerse:(id)sender
 {
-    [[[NSApp keyWindow] delegate] deleteVerse:sender];    
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document deleteVerse:sender];
 }
 
 - (IBAction)nextVerse:(id)sender
 {
-    [[[NSApp keyWindow] delegate] nextVerse:sender]; 
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document nextVerse:sender];
 }
 
 - (IBAction)previousVerse:(id)sender
 {
-    [[[NSApp keyWindow] delegate] previousVerse:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document previousVerse:sender];
 }
 
 - (IBAction)lockVerse:(id)sender
 {
-    [[[NSApp keyWindow] delegate] lockVerse:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document lockVerse:sender];
 }
 
 - (IBAction)newRevision:(id)sender
 {
-    [[[NSApp keyWindow] delegate] newRevision:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document newRevision:sender];
 }
 
 - (IBAction)deleteRevision:(id)sender
 {
-    [[[NSApp keyWindow] delegate] deleteRevision:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document deleteRevision:sender];
 }
 
 - (IBAction)nextRevision:(id)sender
 {
-    [[[NSApp keyWindow] delegate] nextRevision:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document nextRevision:sender];
 }
 
 - (IBAction)previousRevision:(id)sender
 {
-    [[[NSApp keyWindow] delegate] previousRevision:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document previousRevision:sender];
 }
 
 - (IBAction)lockRevision:(id)sender
 {
-    [[[NSApp keyWindow] delegate] lockRevision:sender];
+    RTKTigerDocument * document = (RTKTigerDocument *) [[NSApp keyWindow] delegate];
+    [document lockRevision:sender];
 }
 
 - (IBAction)showCommitteeMeetingPanel:(id)sender

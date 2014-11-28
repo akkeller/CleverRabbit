@@ -55,7 +55,7 @@
                                           length:(unsigned) 1]];
         currentWrapperNode = [currentWrapperNode next];
     }
-    NSLog(testString);
+    NSLog(@"%@", testString);
     [testString release];
 }
 
@@ -139,7 +139,7 @@ NSString *RTKWrapperArray = @"RTKWrapperArray";
 -(NSDictionary *)propertyListRepresentation
 {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    NSMutableArray *wrapperArray = [wrapperList propertyListRepresentation];
+    NSArray *wrapperArray = [wrapperList propertyListRepresentation];
     
     [dict setObject:NSStringFromClass([self class])
              forKey:RTKClass];

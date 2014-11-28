@@ -37,9 +37,13 @@
 - (id)initWithSFMString:(NSString *)string
            andStateDict:(NSMutableDictionary *)dict;
 - (id)deepCopy;
++ (RTKVerse *)verseWithSFMString:string
+                    andStateDict:dict;
 - (void)updateTypeFieldToUSFM;
+- (void)appendLine:(NSString *)line;
 - (NSString *)string;
 - (NSString *)sfmString;
+- (NSMutableAttributedString *)mutableAttributedString:(BOOL)romanString;
 
 - (void)setLocked:(BOOL)state;
 - (BOOL)locked;

@@ -16,6 +16,7 @@
 #import "RTKMutableArrayCategory.h"
 #import "RTKStringCategory.h"
 #import "RTKMutableAttributedStringCategory.h"
+#import "RTKTigerTextView.h"
 
 #import "Chomp.h"
 
@@ -252,7 +253,9 @@ BOOL generateMetaStrings = NO;
     [pasteboard setString:contents forType:NSStringPboardType];
 	
 	
-    [[NSApp delegate] setCopiedVersesArray:[selectedVerses deepCopy]];     
+    RTKCleverRabbitController * appController = [NSApp delegate];
+    [appController setCopiedVersesArray:[selectedVerses deepCopy]];
+    
     [pasteboard setData:nil forType:@"RTKBook"];
 }
 
@@ -261,13 +264,14 @@ BOOL generateMetaStrings = NO;
     NSPasteboard *pasteboard = [NSPasteboard generalPasteboard];
     NSString *type = [pasteboard availableTypeFromArray:[NSArray arrayWithObject:@"RTKBook"]];
     if (type != nil) {
-        int lastIndex = [[versesTableView selectedRowIndexes] lastIndex];
+        NSUInteger lastIndex = [[versesTableView selectedRowIndexes] lastIndex];
         if(lastIndex == NSNotFound)
             lastIndex = [[book verses] count];
         else
             lastIndex++;
         
-        NSArray * pastedVerses = [[[NSApp delegate] copiedVersesArray] deepCopy];
+        RTKCleverRabbitController * appController = [NSApp delegate];
+        NSArray * pastedVerses = [[appController copiedVersesArray] deepCopy];
         
         [[book verses] replaceObjectsInRange:NSMakeRange(lastIndex,0)
                         withObjectsFromArray:pastedVerses];
@@ -321,8 +325,9 @@ BOOL generateMetaStrings = NO;
     [self setDraggedVerseIndexArray:rows];
     
     // For between documents...
-    [[NSApp delegate] setDraggedVersesArray:[[book verses] arrayWithObjectsAtIndexes:rows]];
-    [[NSApp delegate] setDraggedVersesOwner:self];
+    RTKCleverRabbitController * appController = [NSApp delegate];
+    [appController setDraggedVersesArray:[[book verses] arrayWithObjectsAtIndexes:rows]];
+    [appController setDraggedVersesOwner:self];
     
     return YES;
 }
@@ -356,9 +361,10 @@ BOOL generateMetaStrings = NO;
     dropOperation:(NSTableViewDropOperation)op
 {
     NSPasteboard *pboard = [item draggingPasteboard];
-	
+	RTKCleverRabbitController * appController = [NSApp delegate];
+    
     if ([pboard availableTypeFromArray:[NSArray arrayWithObject: @"RTKVersesInternalToBook"]]) {
-        if([[NSApp delegate] draggedVersesOwner] == self) {
+        if([appController draggedVersesOwner] == self) {
             NSMutableArray * verses = [book verses];
             NSMutableArray * draggedVerses = [verses arrayWithObjectsAtIndexes:draggedVerseIndexArray];
             
@@ -389,7 +395,7 @@ BOOL generateMetaStrings = NO;
                          byExtendingSelection:NO];
         } else {
             NSMutableArray * verses = [book verses];
-            NSArray * draggedVerses = [[NSApp delegate] draggedVersesArray];
+            NSArray * draggedVerses = [appController draggedVersesArray];
             
             int verseIndex = 0;
             if(row > 0)
@@ -845,9 +851,9 @@ BOOL generateMetaStrings = NO;
         BOOL revisionLocked = [[currentVerse currentRevision] locked];
         int revisionIndex = [currentVerse currentRevisionIndex];
         
-        [[[NSApp delegate] newVerseMenuItem] setEnabled:YES];
-        [[[NSApp delegate] deleteVerseMenuItem] setEnabled:!verseLocked];
-        [[[NSApp delegate] lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
+        [[appController newVerseMenuItem] setEnabled:YES];
+        [[appController deleteVerseMenuItem] setEnabled:!verseLocked];
+        [[appController lockVerseMenuItem] setState:(verseLocked ? NSOnState : NSOffState)];
         
         [deleteVerseButton setEnabled:(!verseLocked ? NSOnState : NSOffState)];
         
@@ -855,10 +861,10 @@ BOOL generateMetaStrings = NO;
         [typeTableColumn setEditable:!(verseLocked || revisionLocked)];
         [revisionTableColumn setEditable:!(verseLocked || revisionLocked)];
         
-        [[[NSApp delegate] lockRevisionMenuItem] setEnabled:!verseLocked];
-        [[[NSApp delegate] lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
-        [[[NSApp delegate] deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
-        [[[NSApp delegate] newRevisionMenuItem] setEnabled:!verseLocked];
+        [[appController lockRevisionMenuItem] setEnabled:!verseLocked];
+        [[appController lockRevisionMenuItem] setState:(revisionLocked ? NSOnState : NSOffState)];
+        [[appController deleteRevisionMenuItem] setEnabled:!(verseLocked || revisionLocked)];
+        [[appController newRevisionMenuItem] setEnabled:!verseLocked];
         
         [newRevisionButton setEnabled:!verseLocked];
         [deleteRevisionButton setEnabled:!(verseLocked || revisionLocked)];
@@ -1520,12 +1526,12 @@ constrainMinCoordinate:(float *)min
                 
         // Don't allow editing end of text field.
         if(selectedRange.location == [textStorage length]) {
-            [changedTextView setAllowEditing:NO];
+            [(RTKTigerTextView *) changedTextView setAllowEditing:NO];
             return;
         }
         
         // Temporary logging for testing.
-        NSLog([[textStorage attributesAtIndex:selectedRange.location effectiveRange:NULL] description]);
+        NSLog(@"%@", [[textStorage attributesAtIndex:selectedRange.location effectiveRange:NULL] description]);
         
         RTKVerse *firstVerse = [textStorage attribute:@"RTKVerse"
                                               atIndex:selectedRange.location
@@ -1559,7 +1565,7 @@ constrainMinCoordinate:(float *)min
         
         // Don't allow editing if selection spans multiple verses or components.
         if((firstVerse != lastVerse) || ((firstComponent != lastComponent) && (firstComponent != nextToLastComponent)) ) {
-            [changedTextView setAllowEditing:NO];
+            [(RTKTigerTextView *) changedTextView setAllowEditing:NO];
             return;
         }
         
@@ -1568,7 +1574,7 @@ constrainMinCoordinate:(float *)min
          
         // Allow editing if selection is within the text of a verse.
         if([firstComponent isEqualToString:@"Verse Text"]) {
-            [changedTextView setAllowedEditingRange:firstComponentRange];
+            [(RTKTigerTextView *) changedTextView setAllowedEditingRange:firstComponentRange];
             //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
             NSRange dummyRange;
             [changedTextView setTypingAttributes:[textStorage attributesAtIndex:firstComponentRange.location effectiveRange:&dummyRange]];
@@ -1579,9 +1585,9 @@ constrainMinCoordinate:(float *)min
                     [changedTextView setTypingAttributes:[textStorage attributesAtIndex:selectedRange.location + selectedRange.length - 1
                                                                            effectiveRange:NULL]];
                     //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:nextToLastComponentRange];
-                    [changedTextView setAllowedEditingRange:nextToLastComponentRange];
+                    [(RTKTigerTextView *) changedTextView setAllowedEditingRange:nextToLastComponentRange];
                 } else {
-                    [changedTextView setAllowEditing:NO];
+                    [(RTKTigerTextView *) changedTextView setAllowEditing:NO];
                 }
             }
         }
@@ -1603,7 +1609,7 @@ constrainMinCoordinate:(float *)min
 - (void)tableView:(NSTableView *)tableView 
 didClickTableColumn:(NSTableColumn *)tableColumn
 {
-    NSLog(@"click in column header %@, row %i", tableColumn, [versesTableView selectedRow]);
+    NSLog(@"click in column header %@, row %li", tableColumn, (long)[versesTableView selectedRow]);
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView 
@@ -1708,7 +1714,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
             NSLog(@"unhandled column %@ for tableView:objectValueForTableColumn:row:", aTableColumn);
         }
     } else {
-        NSLog(@"unhandled object %@ calling tableView:objectValueForTableColumn:row:");
+        NSLog(@"unhandled object %@ calling tableView:objectValueForTableColumn:row:", aTableView);
     }
     return value;
 }

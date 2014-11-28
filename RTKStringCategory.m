@@ -32,7 +32,7 @@
                             withString:@"."
                                options:NSLiteralSearch
                                  range:NSMakeRange(0,[string length])];
-    string = [string stringByDeletingPathExtension];
+    string = [[string stringByDeletingPathExtension] mutableCopy];
     return [[string componentsSeparatedByString:@" "] lastObject];
 }
 

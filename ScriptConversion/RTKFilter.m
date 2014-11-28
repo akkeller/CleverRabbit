@@ -260,7 +260,7 @@ NSString *RTKPatternArray = @"RTKPatternArray";
 -(NSDictionary *)propertyListRepresentation
 {
     NSMutableDictionary *filterDict = [NSMutableDictionary dictionary];
-    NSMutableArray *patternArray = [patternList propertyListRepresentation];
+    NSArray *patternArray = [patternList propertyListRepresentation];
     
     [filterDict setObject:NSStringFromClass([self class])
                    forKey:RTKClass];

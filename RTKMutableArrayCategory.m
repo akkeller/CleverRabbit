@@ -11,6 +11,7 @@
 //
 
 #import "RTKMutableArrayCategory.h"
+#import "RTKArrayCategory.h"
 
 @implementation NSMutableArray (RTKMutableArrayCategory)
 

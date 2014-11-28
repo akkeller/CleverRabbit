@@ -31,6 +31,8 @@
     RTKBinaryTreeHeader *fontCharacterDefinitionTree;
 }
 
+-(id)initWithFilePath:(NSString *)filePath
+      usingIDDatabase:(RTKIDDatabase *)idDatabase;
 
 -(RTKLinkedListHeader *)fontCharacterListFromScriptList:(RTKLinkedListHeader *)scriptList
                                                                     usingIDDatabase:(RTKIDDatabase *)idDatabase;

@@ -37,11 +37,6 @@
 
 -(id)initWithWrapperList:(RTKLinkedListHeader *)theWrapperList;
 
--(void)initWithString:(NSString *)string
-	         type:(int)type
-	     position:(int)position
-       insertAtBackOf:(RTKLinkedListHeader *)list;
-
 -(RTKLinkedListNode *)applyTo:(RTKLinkedListNode *)startingNode
 		    inList:(RTKLinkedListHeader *)list;
 

@@ -63,10 +63,6 @@
     NSFileHandle * standardOutputFile;
 }
 
-
-- (IBAction)plainTextDelimiterChanged:(id)sender;
-- (IBAction)plainTextReturnChanged:(id)sender;
-
 - (IBAction)substituteZVXChanged:(id)sender;
 
 - (IBAction)inputSystemChanged:(id)sender;

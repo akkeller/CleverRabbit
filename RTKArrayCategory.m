@@ -12,6 +12,7 @@
 
 
 #import "RTKArrayCategory.h"
+#import "Chomp/Chomp.h"
 
 @implementation NSArray (RTKArrayCategory)
 
@@ -21,7 +22,7 @@ NSArray * indexSetToArray(NSIndexSet * indexSet)
     int indexCount = [(NSIndexSet *)indexSet count];
     indexes = [NSMutableArray arrayWithCapacity:indexCount];
     
-    int index = -1;
+    NSUInteger index = -1;
     while((index = [indexSet indexGreaterThanOrEqualToIndex:index + 1]) != NSNotFound) {
         [indexes addObject:[NSNumber numberWithInt:index]];
     }

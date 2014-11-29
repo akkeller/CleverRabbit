@@ -625,6 +625,7 @@
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="383"/>
+                                                                        <outlet property="window" destination="1" id="qNH-tj-oPT"/>
                                                                     </connections>
                                                                 </textView>
                                                             </subviews>
@@ -663,6 +664,7 @@
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="392"/>
+                                                                        <outlet property="window" destination="1" id="fFb-t9-Gob"/>
                                                                     </connections>
                                                                 </textView>
                                                             </subviews>
@@ -698,7 +700,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="ZLX-0Y-MgC"/>
             </connections>
-            <point key="canvasLocation" x="364" y="287.5"/>
+            <point key="canvasLocation" x="385" y="112.5"/>
         </window>
         <buttonCell type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="353">
             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

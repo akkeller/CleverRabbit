@@ -1137,7 +1137,7 @@ inPublishedTextView:(NSTextView *)textView
     int verseIndex = [self indexOfVerse:verse inTextView:textView];
     NSTextStorage *textStorage = [textView textStorage];
     
-    [textStorage removeAttribute:NSBackgroundColorAttributeName];
+    
     
     if(verseIndex >= [textStorage length])
         return;
@@ -1150,13 +1150,8 @@ inPublishedTextView:(NSTextView *)textView
     if(firstComponentRange.length == 0)
         return;
     
+    [textStorage removeAttribute:NSBackgroundColorAttributeName];
     [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
-    /*
-    [textView scrollRangeToVisible:firstComponentRange];
-    
-     if([textView selectedRange].location < firstComponentRange.location || [textView selectedRange].location > firstComponentRange.location + firstComponentRange.length -1)
-        [textView setSelectedRange:NSMakeRange(firstComponentRange.location + firstComponentRange.length -1, 0)];
-     */
 }
 
 
@@ -1164,8 +1159,6 @@ inPublishedTextView:(NSTextView *)textView
 {
     int verseIndex = [self indexOfVerse:verse inTextView:textView];
     NSTextStorage *textStorage = [textView textStorage];
-    
-    //[textStorage removeAttribute:NSBackgroundColorAttributeName];
     
     if(verseIndex >= [textStorage length]) {
         NSLog(@"verseIndex >= [textStorage length] in scrollVerseToVisible");
@@ -1177,20 +1170,7 @@ inPublishedTextView:(NSTextView *)textView
                                               atIndex:verseIndex
                                 longestEffectiveRange:&firstComponentRange
                                               inRange:NSMakeRange(0, [textStorage length])];
-    if(firstComponentRange.length == 0) {
-        NSLog(@"firstComponentRange.length == 0 in scrollVerseToVisible");
-        return;
-    }
-    
-    //[textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
-    
-     [textView scrollRangeToVisible:firstComponentRange];
-    
-    /*
-     if([textView selectedRange].location < firstComponentRange.location || [textView selectedRange].location > firstComponentRange.location + firstComponentRange.length -1)
-     [textView setSelectedRange:NSMakeRange(firstComponentRange.location + firstComponentRange.length -1, 0)];
-     */
-    
+    [textView scrollRangeToVisible:firstComponentRange];
 }
 
 
@@ -1211,26 +1191,27 @@ inPublishedTextView:(NSTextView *)textView
     currentVerse = verse;
     
     // Select verse in table.
-    //[versesTableView selectRow:verseIndex byExtendingSelection:NO]; // 10.0 and later. Deprecated.
-    //if([documentWindow firstResponder] != versesTableView) {
-    
     [versesTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:verseIndex] byExtendingSelection:NO]; // 10.3 and later.
     [versesTableView scrollRowToVisible:verseIndex];
-    //}
     
     // Load revision into single-verse text fields.
     [self selectRevision:[verse currentRevision]];
     
-    // Highlight verse in published views and scroll to visible.
-    [self highlightVerse:verse inTextView:romanPublishedTextView];
-    [self highlightVerse:verse inTextView:scriptPublishedTextView];
+    // There is an interaction between scrollVerseToVisible and addAttribute that causes unpredictable scrolling of the published NSTextViews when using arrow keys to navigate up and down the verse NSTableView.
+    // Separating them by a time delay helps.
+    
     
     if([documentWindow firstResponder] != romanPublishedTextView)
-        [self scrollVerseToVisible:verse inTextView:romanPublishedTextView];
+        [[self performAfterDelay:0.3] scrollVerseToVisible:verse inTextView:romanPublishedTextView];
     
     if([documentWindow firstResponder] != scriptPublishedTextView)
-        [self scrollVerseToVisible:verse inTextView:scriptPublishedTextView];
+        [[self performAfterDelay:0.3] scrollVerseToVisible:verse inTextView:scriptPublishedTextView];
+     
     
+    // Highlight verse in published views and scroll to visible.
+    [[self performAfterDelay:0.1] highlightVerse:verse inTextView:romanPublishedTextView];
+    [[self performAfterDelay:0.1] highlightVerse:verse inTextView:scriptPublishedTextView];
+
     
     // Update Menus, Buttons, and Fonts
     [self updateUI];

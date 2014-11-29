@@ -97,6 +97,9 @@
 	IBOutlet NSView * backTranslationView;
 	IBOutlet NSView * notesView;
 	IBOutlet NSView * checkingView;
+    
+    IBOutlet NSScrollView * romanPublishedScrollView;
+    IBOutlet NSScrollView * scriptPublishedScrollView;
 
 	
 	IBOutlet NSSplitView * splitViewOfTextViews;

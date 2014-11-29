@@ -1084,26 +1084,19 @@ BOOL generateMetaStrings = NO;
 }
 
 
+// Return index of the first character of verse as represented in textView.
+// Used to determine verse text location in the NSTextView for yellow highlighting and scrolling purposes.
 - (int)indexOfVerse:(RTKVerse *)verse inTextView:(NSTextView *)textView
 {
     NSEnumerator * e = [[book verses] objectEnumerator];
     RTKVerse * v;
     int i = 0;
-    while(v = [e nextObject]){
+    while(v = [e nextObject]) {
         
-        
-        i += [[v mutableAttributedString:(textView == romanPublishedTextView)] length];
-        
-        if(v == verse)
-            return i-1;
-        
-        /*
         if(v == verse)
             return i;
         
         i += [[v mutableAttributedString:(textView == romanPublishedTextView)] length];
-        */
-        
     }
     return 0;
 }
@@ -1153,7 +1146,7 @@ inPublishedTextView:(NSTextView *)textView
         return;
     
     [textStorage removeAttribute:NSBackgroundColorAttributeName];
-    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:firstComponentRange];
+    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange(firstComponentRange.location, firstComponentRange.length - 1)];
 }
 
 
@@ -1172,7 +1165,27 @@ inPublishedTextView:(NSTextView *)textView
                                               atIndex:verseIndex
                                 longestEffectiveRange:&firstComponentRange
                                               inRange:NSMakeRange(0, [textStorage length])];
-    [textView scrollRangeToVisible:firstComponentRange];
+    //NSLog(@"firstComponent %lu, %lu", (unsigned long) firstComponentRange.location, (unsigned long) firstComponentRange.length);
+    
+    NSScrollView * scrollView = nil;
+    if (textView == romanPublishedTextView)
+        scrollView = romanPublishedScrollView;
+    else if(textView == scriptPublishedTextView)
+        scrollView = scriptPublishedScrollView;
+    
+    NSRange glyphRange = [textView.layoutManager glyphRangeForBoundingRect:scrollView.documentVisibleRect
+                                                                inTextContainer:textView.textContainer];
+    NSRange editedRange = [textView.layoutManager characterRangeForGlyphRange:glyphRange actualGlyphRange:NULL];
+
+    
+    //NSLog(@"editedRange %lu, %lu", (unsigned long) editedRange.location, (unsigned long) editedRange.length);
+    
+    // Only scroll if verse isn't completely in view.
+    // This works almost right, but won't scroll when an edge line is partially obscured.
+    if( firstComponentRange.location < editedRange.location || firstComponentRange.location + firstComponentRange.length > editedRange.location + editedRange.length) {
+        NSLog(@"Scrolling");
+        [textView scrollRangeToVisible:NSMakeRange(firstComponentRange.location, firstComponentRange.length - 1)];
+    }
 }
 
 
@@ -1203,10 +1216,10 @@ inPublishedTextView:(NSTextView *)textView
     // Separating them by a time delay helps.
     
     
-    if([documentWindow firstResponder] != romanPublishedTextView)
+    //if([documentWindow firstResponder] != romanPublishedTextView)
         [[self performAfterDelay:0.3] scrollVerseToVisible:verse inTextView:romanPublishedTextView];
     
-    if([documentWindow firstResponder] != scriptPublishedTextView)
+    //if([documentWindow firstResponder] != scriptPublishedTextView)
         [[self performAfterDelay:0.3] scrollVerseToVisible:verse inTextView:scriptPublishedTextView];
      
     // Highlight verse in published views and scroll to visible.
@@ -1501,7 +1514,7 @@ constrainMinCoordinate:(float *)min
     
     // Updated to == from = AKK 2012
     if(changedTextView == romanPublishedTextView || changedTextView == scriptPublishedTextView) {
-        NSLog(@"textViewDidChangeSelection %@", (changedTextView == romanPublishedTextView ? @"roman" : @"script"));
+        //NSLog(@"textViewDidChangeSelection %@", (changedTextView == romanPublishedTextView ? @"roman" : @"script"));
         NSTextStorage *textStorage = [changedTextView textStorage];
         NSRange selectedRange = [changedTextView selectedRange];
                 
@@ -1512,7 +1525,7 @@ constrainMinCoordinate:(float *)min
         }
         
         // Temporary logging for testing.
-        NSLog(@"%@", [[textStorage attributesAtIndex:selectedRange.location effectiveRange:NULL] description]);
+        //NSLog(@"%@", [[textStorage attributesAtIndex:selectedRange.location effectiveRange:NULL] description]);
         
         RTKVerse *firstVerse = [textStorage attribute:@"RTKVerse"
                                               atIndex:selectedRange.location

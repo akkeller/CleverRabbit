@@ -21,9 +21,11 @@
                 <outlet property="notesTextView" destination="209" id="252"/>
                 <outlet property="referenceTableColumn" destination="220" id="267"/>
                 <outlet property="revisionTableColumn" destination="226" id="270"/>
+                <outlet property="romanPublishedScrollView" destination="379" id="TcS-FU-mwr"/>
                 <outlet property="romanPublishedTextView" destination="382" id="393"/>
                 <outlet property="romanTableColumn" destination="236" id="272"/>
                 <outlet property="romanTextView" destination="178" id="250"/>
+                <outlet property="scriptPublishedScrollView" destination="388" id="ZhY-3u-smo"/>
                 <outlet property="scriptPublishedTextView" destination="391" id="394"/>
                 <outlet property="scriptTableColumn" destination="232" id="271"/>
                 <outlet property="scriptTextView" destination="141" id="249"/>

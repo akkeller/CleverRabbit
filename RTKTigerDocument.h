@@ -119,16 +119,20 @@
     BOOL dirtyUI;
 	
 	// Document Bindings
-	int RTKDocumentWidth;
-    int RTKDocumentHeight;
+	NSNumber * RTKDocumentWidth;
+    NSNumber * RTKDocumentHeight;
     
-    int RTKReferenceColumnWidth;
-    int RTKRevisionColumnWidth;
-    int RTKScriptColumnWidth;
-    int RTKRomanColumnWidth;
-    int RTKBackTranslationColumnWidth;
-    int RTKNotesColumnWidth;
-    int RTKCheckingColumnWidth;
+    NSNumber * RTKReferenceColumnWidth;
+    NSNumber * RTKLockColumnWidth;
+    NSNumber * RTKTypeColumnWidth;
+    NSNumber * RTKRevisionColumnWidth;
+    NSNumber * RTKScriptColumnWidth;
+    NSNumber * RTKRomanColumnWidth;
+    NSNumber * RTKBackTranslationColumnWidth;
+    NSNumber * RTKNotesColumnWidth;
+    NSNumber * RTKCheckingColumnWidth;
+    
+    
     
     NSDate * creationDate;
     

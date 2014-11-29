@@ -36,7 +36,9 @@
 		[d setObject:[NSNumber numberWithInt:700] forKey:@"RTKDocumentWidth"];  
 		[d setObject:[NSNumber numberWithInt:500] forKey:@"RTKDocumentHeight"];  
 		
-		[d setObject:[NSNumber numberWithInt:100] forKey:@"RTKReferenceColumnWidth"];  
+		[d setObject:[NSNumber numberWithInt:100] forKey:@"RTKReferenceColumnWidth"];
+        [d setObject:[NSNumber numberWithInt:100] forKey:@"RTKLockColumnWidth"];
+        [d setObject:[NSNumber numberWithInt:100] forKey:@"RTKTypeColumnWidth"];
 		[d setObject:[NSNumber numberWithInt:100] forKey:@"RTKRevisionColumnWidth"];  
 		[d setObject:[NSNumber numberWithInt:100] forKey:@"RTKScriptColumnWidth"];  
 		[d setObject:[NSNumber numberWithInt:100] forKey:@"RTKRomanColumnWidth"];  

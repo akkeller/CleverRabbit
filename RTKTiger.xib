@@ -142,6 +142,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKReferenceColumnWidth" id="kjr-jQ-gru"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="40" minWidth="40" maxWidth="1000" id="222">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Lock">
@@ -154,6 +157,9 @@
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKLockColumnWidth" id="xKF-AM-gdj"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="58.44140625" minWidth="40" maxWidth="1000" id="224">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Type">
@@ -167,6 +173,9 @@
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </comboBoxCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKTypeColumnWidth" id="wO1-Er-k5R"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="67.52734375" minWidth="40" maxWidth="1000" id="226">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Revision">
@@ -184,6 +193,9 @@
                                                                                 </menu>
                                                                             </popUpButtonCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKRevisionColumnWidth" id="H2B-1M-48r"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="86.984375" minWidth="40" maxWidth="1000" id="232">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Transliteration">
@@ -197,6 +209,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKScriptColumnWidth" id="6BF-7P-ROn"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="86.984375" minWidth="40" maxWidth="1000" id="236">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Text">
@@ -210,6 +225,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKRomanColumnWidth" id="P5Q-qK-UTV"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="97" minWidth="40" maxWidth="1000" id="234">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Back Translation">
@@ -223,6 +241,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKBackTranslationColumnWidth" id="Hu3-hX-xAE"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="55.875" minWidth="40" maxWidth="1000" id="124">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Notes">
@@ -236,6 +257,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKNotesColumnWidth" id="6l0-sG-0gM"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                         <tableColumn width="101" minWidth="40" maxWidth="1000" id="125">
                                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Checking">
@@ -249,6 +273,9 @@
                                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                            <connections>
+                                                                                <binding destination="-2" name="width" keyPath="RTKCheckingColumnWidth" id="7ez-pZ-WcH"/>
+                                                                            </connections>
                                                                         </tableColumn>
                                                                     </tableColumns>
                                                                     <connections>
@@ -620,10 +647,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="563"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="83" height="563"/>
+                                                                    <size key="minSize" width="67" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                    <size key="minSize" width="83" height="563"/>
+                                                                    <size key="minSize" width="67" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="383"/>
@@ -659,10 +686,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="563"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="82" height="563"/>
+                                                                    <size key="minSize" width="66" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                    <size key="minSize" width="82" height="563"/>
+                                                                    <size key="minSize" width="66" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="392"/>
@@ -700,13 +727,16 @@
                 </subviews>
             </view>
             <connections>
+                <binding destination="-2" name="contentHeight" keyPath="RTKDocumentHeight" id="GQ5-1h-UJE"/>
+                <binding destination="-2" name="contentWidth" keyPath="RTKDocumentWidth" previousBinding="GQ5-1h-UJE" id="fDR-Ts-9ZU"/>
                 <outlet property="delegate" destination="-2" id="ZLX-0Y-MgC"/>
             </connections>
-            <point key="canvasLocation" x="385" y="112.5"/>
+            <point key="canvasLocation" x="392" y="140.5"/>
         </window>
         <buttonCell type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" inset="2" id="353">
             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
             <font key="font" metaFont="smallSystem"/>
         </buttonCell>
+        <userDefaultsController representsSharedInstance="YES" id="JUe-rI-Pfh"/>
     </objects>
 </document>

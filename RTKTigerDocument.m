@@ -502,29 +502,29 @@ BOOL generateMetaStrings = NO;
          [dict setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
                   forKey:@"RTKBuildVersion"];
          
-         [dict setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
+         [dict setObject:RTKDocumentWidth forKey:@"RTKDocumentWidth"];
+         [dict setObject:RTKDocumentHeight forKey:@"RTKDocumentHeight"];
          
-         [dict setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
-         [dict setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
+         [dict setObject:RTKReferenceColumnWidth forKey:@"RTKReferenceColumnWidth"];
+         [dict setObject:RTKRevisionColumnWidth forKey:@"RTKRevisionColumnWidth"];
+         [dict setObject:RTKScriptColumnWidth forKey:@"RTKScriptColumnWidth"];
+         [dict setObject:RTKRomanColumnWidth forKey:@"RTKRomanColumnWidth"];
+         [dict setObject:RTKBackTranslationColumnWidth forKey:@"RTKBackTranslationColumnWidth"];
+         [dict setObject:RTKNotesColumnWidth forKey:@"RTKNotesColumnWidth"];
+         [dict setObject:RTKCheckingColumnWidth forKey:@"RTKCheckingColumnWidth"];
          
          NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
          
-         [d setObject:[NSNumber numberWithInt:RTKDocumentWidth] forKey:@"RTKDocumentWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKDocumentHeight] forKey:@"RTKDocumentHeight"];
+         [d setObject:RTKDocumentWidth forKey:@"RTKDocumentWidth"];
+         [d setObject:RTKDocumentHeight forKey:@"RTKDocumentHeight"];
          
-         [d setObject:[NSNumber numberWithInt:RTKReferenceColumnWidth] forKey:@"RTKReferenceColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKRevisionColumnWidth] forKey:@"RTKRevisionColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKScriptColumnWidth] forKey:@"RTKScriptColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKRomanColumnWidth] forKey:@"RTKRomanColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKBackTranslationColumnWidth] forKey:@"RTKBackTranslationColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKNotesColumnWidth] forKey:@"RTKNotesColumnWidth"];
-         [d setObject:[NSNumber numberWithInt:RTKCheckingColumnWidth] forKey:@"RTKCheckingColumnWidth"];
+         [d setObject:RTKReferenceColumnWidth forKey:@"RTKReferenceColumnWidth"];
+         [d setObject:RTKRevisionColumnWidth forKey:@"RTKRevisionColumnWidth"];
+         [d setObject:RTKScriptColumnWidth forKey:@"RTKScriptColumnWidth"];
+         [d setObject:RTKRomanColumnWidth forKey:@"RTKRomanColumnWidth"];
+         [d setObject:RTKBackTranslationColumnWidth forKey:@"RTKBackTranslationColumnWidth"];
+         [d setObject:RTKNotesColumnWidth forKey:@"RTKNotesColumnWidth"];
+         [d setObject:RTKCheckingColumnWidth forKey:@"RTKCheckingColumnWidth"];
          
          
          

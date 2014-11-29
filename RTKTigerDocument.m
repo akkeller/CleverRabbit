@@ -461,6 +461,7 @@ BOOL generateMetaStrings = NO;
 - (void)windowControllerDidLoadNib:(NSWindowController *) aController
 {
     [super windowControllerDidLoadNib:aController];
+    [aController setShouldCloseDocument:YES];
     [self setFieldEditor:NO];
     [self updateUI];
     [self substituteZVXChanged:nil];
@@ -478,13 +479,14 @@ BOOL generateMetaStrings = NO;
 #pragma mark -
 #pragma mark save and open
 
-- (NSData *)dataRepresentationOfType:(NSString *)aType
+- (NSData *)dataOfType:(NSString *)typeName
+                 error:(NSError **)outError
 {
     NSData * data = nil;
 	
     [self writeSplitViewRectsToDefaults];
 	
-    if([aType isEqualToString:@"rtktiger"])
+    if([typeName isEqualToString:@"rtktiger"])
 	 {
          NSMutableDictionary * dict = [NSMutableDictionary dictionaryWithDictionary:dictionary];
          
@@ -527,7 +529,7 @@ BOOL generateMetaStrings = NO;
          
          
          data = [[dict description] dataUsingEncoding:NSUTF8StringEncoding];
-	 } else if([aType isEqualToString:@"txt"]) {        
+	 } else if([typeName isEqualToString:@"txt"]) {
 		 
 		 NSString * string = [book string];
 		 
@@ -540,7 +542,7 @@ BOOL generateMetaStrings = NO;
 		 
 		 if(!data)
 			 NSLog(@"nil data from outputData");
-	 } else if([aType isEqualToString:@"ptx"]) {        
+	 } else if([typeName isEqualToString:@"ptx"]) {
 		 
 		 NSString * string = [book sfmString];
 		 

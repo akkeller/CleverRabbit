@@ -30,6 +30,7 @@
                 <outlet property="searchField" destination="117" id="238"/>
                 <outlet property="typeTableColumn" destination="224" id="269"/>
                 <outlet property="versesTableView" destination="123" id="241"/>
+                <outlet property="window" destination="1" id="t9O-OF-fdA"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -695,7 +696,7 @@
                 </subviews>
             </view>
             <connections>
-                <outlet property="delegate" destination="-2" id="395"/>
+                <outlet property="delegate" destination="-2" id="ZLX-0Y-MgC"/>
             </connections>
             <point key="canvasLocation" x="364" y="287.5"/>
         </window>

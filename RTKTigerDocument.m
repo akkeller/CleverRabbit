@@ -1209,11 +1209,9 @@ inPublishedTextView:(NSTextView *)textView
     if([documentWindow firstResponder] != scriptPublishedTextView)
         [[self performAfterDelay:0.3] scrollVerseToVisible:verse inTextView:scriptPublishedTextView];
      
-    
     // Highlight verse in published views and scroll to visible.
-    [[self performAfterDelay:0.1] highlightVerse:verse inTextView:romanPublishedTextView];
-    [[self performAfterDelay:0.1] highlightVerse:verse inTextView:scriptPublishedTextView];
-
+    [self highlightVerse:verse inTextView:romanPublishedTextView];
+    [self highlightVerse:verse inTextView:scriptPublishedTextView];
     
     // Update Menus, Buttons, and Fonts
     [self updateUI];

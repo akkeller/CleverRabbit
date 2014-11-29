@@ -716,6 +716,38 @@
                     RTKWrapperArray = (
                         {
                             RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2c; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = comma; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = space; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
                             RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
                             RTKDeleteFlag = YES; 
                             RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = space; }); 
@@ -746,6 +778,22 @@
                             RTKData = {RTKCharacter = 2e; RTKClass = RTKFontCharacter; }; 
                             RTKDeleteFlag = YES; 
                             RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = romanPeriod; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 2e; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 20; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = punctuation; RTKidNumber = period; }); 
                         }
                     ); 
                 }, 
@@ -1969,6 +2017,22 @@
                             RTKData = {RTKCharacter = 79; RTKClass = RTKFontCharacter; }; 
                             RTKDeleteFlag = YES; 
                             RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_ey"; }); 
+                        }
+                    ); 
+                }, 
+                {
+                    RTKClass = RTKParsePattern; 
+                    RTKWrapperArray = (
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 76; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                        }, 
+                        {
+                            RTKClass = RTKWrapper; 
+                            RTKData = {RTKCharacter = 79; RTKClass = RTKFontCharacter; }; 
+                            RTKDeleteFlag = YES; 
+                            RTKRightInsertList = ({RTKClass = RTKIDMarker; RTKType = vowel; RTKidNumber = "phoneme_vy"; }); 
                         }
                     ); 
                 }, 

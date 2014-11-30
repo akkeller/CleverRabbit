@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */; };
-		8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */; };
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
@@ -137,6 +136,7 @@
 		CBCE04A307D19E59008F8303 /* RTKGlobals.h in Resources */ = {isa = PBXBuildFile; fileRef = CBCE04A207D19E59008F8303 /* RTKGlobals.h */; };
 		CBD3C76B07D7F04F00B15535 /* active_definitions in Resources */ = {isa = PBXBuildFile; fileRef = CBD3C76407D7F04E00B15535 /* active_definitions */; };
 		CBD3C77207D7F06100B15535 /* downloaded_definitions in Resources */ = {isa = PBXBuildFile; fileRef = CBD3C76F07D7F06100B15535 /* downloaded_definitions */; };
+		CBD6331F1A2BB24A00A03B08 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD6331D1A2BB24A00A03B08 /* MainMenu.xib */; };
 		CBDD5D310AA142CA0081D3F1 /* RTKGroup.nib in Resources */ = {isa = PBXBuildFile; fileRef = CBDD5D2F0AA142C90081D3F1 /* RTKGroup.nib */; };
 		CBDD5D3E0AA145DD0081D3F1 /* RTKGroupDocument.py in Resources */ = {isa = PBXBuildFile; fileRef = CBDD5D3D0AA145DD0081D3F1 /* RTKGroupDocument.py */; };
 		CBE5FA5707DD5C1C00CA8A01 /* CleverRabbit_Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 32DBCF750370BD2300C91783 /* CleverRabbit_Prefix.pch */; };
@@ -146,7 +146,6 @@
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2A37F4B0FDCFA73011CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2A37F4B7FDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		2A37F4BAFDCFA73011CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		2A37F4C4FDCFA73011CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		2A37F4C5FDCFA73011CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -220,7 +219,6 @@
 		CB2DCD2F07D17A0C00A5339A /* RTKWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RTKWrapper.m; path = ScriptConversion/RTKWrapper.m; sourceTree = "<group>"; };
 		CB3CB7B607C8FDD7003AB0B3 /* RTKTigerTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKTigerTextView.h; sourceTree = "<group>"; };
 		CB3CB7B707C8FDD7003AB0B3 /* RTKTigerTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKTigerTextView.m; sourceTree = "<group>"; };
-		CB483C5307B187B700D628EF /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/RTKTiger.nib; sourceTree = "<group>"; };
 		CB483C7D07B189A500D628EF /* RTKTigerDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTKTigerDocument.h; sourceTree = "<group>"; };
 		CB483C7E07B189A500D628EF /* RTKTigerDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTKTigerDocument.m; sourceTree = "<group>"; };
 		CB54132108AEE9AF00CAB00C /* Chomp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chomp.h; path = Chomp/Chomp.h; sourceTree = "<group>"; };
@@ -264,6 +262,7 @@
 		CBD3C6ED07D6CA3F00B15535 /* get_definitions.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; path = get_definitions.command; sourceTree = "<group>"; };
 		CBD3C76407D7F04E00B15535 /* active_definitions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = active_definitions; sourceTree = "<group>"; };
 		CBD3C76F07D7F06100B15535 /* downloaded_definitions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = downloaded_definitions; sourceTree = "<group>"; };
+		CBD6331E1A2BB24A00A03B08 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CBDD5D300AA142CA0081D3F1 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/RTKGroup.nib; sourceTree = "<group>"; };
 		CBDD5D3D0AA145DD0081D3F1 /* RTKGroupDocument.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = RTKGroupDocument.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -366,11 +365,10 @@
 				CB044DA607BF0035008E657C /* bugsAndFeatures.txt */,
 				CBD3C6ED07D6CA3F00B15535 /* get_definitions.command */,
 				CB06450709B414870057078F /* tiger.icns */,
-				CB483C5207B187B700D628EF /* RTKTiger.nib */,
 				CB5AC85014BF874900C90F21 /* RTKTiger.xib */,
 				CB8F620B07BDCC1600698E17 /* cr_icon.icns */,
+				CBD6331D1A2BB24A00A03B08 /* MainMenu.xib */,
 				2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */,
-				2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */,
 				8D15AC360486D014006FF6A4 /* Info.plist */,
 				089C165FFE840EACC02AAC07 /* InfoPlist.strings */,
 				CBDD5D2F0AA142C90081D3F1 /* RTKGroup.nib */,
@@ -576,7 +574,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC2C0486D014006FF6A4 /* Credits.rtf in Resources */,
-				8D15AC2D0486D014006FF6A4 /* MainMenu.nib in Resources */,
 				8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */,
 				CB483C7F07B189A500D628EF /* RTKTigerDocument.h in Resources */,
 				CB25DB4E07B43C0B006DADA3 /* RTKVerse.h in Resources */,
@@ -597,6 +594,7 @@
 				CB2DCD4B07D17A0C00A5339A /* RTKFontEncodingDefinition.h in Resources */,
 				CB2DCD4D07D17A0C00A5339A /* RTKFontGlyphDefinition.h in Resources */,
 				CB2DCD5007D17A0C00A5339A /* RTKGlyphAlias.h in Resources */,
+				CBD6331F1A2BB24A00A03B08 /* MainMenu.xib in Resources */,
 				CB2DCD5207D17A0C00A5339A /* RTKIDDatabase.h in Resources */,
 				CB2DCD5407D17A0C00A5339A /* RTKIDMarker.h in Resources */,
 				CB2DCD5807D17A0C00A5339A /* RTKInputFilterSetDefinition.h in Resources */,
@@ -738,14 +736,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2A37F4B6FDCFA73011CA2CEA /* MainMenu.nib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A37F4B7FDCFA73011CA2CEA /* English */,
-			);
-			name = MainMenu.nib;
-			sourceTree = "<group>";
-		};
 		2A37F4B9FDCFA73011CA2CEA /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -754,12 +744,12 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		CB483C5207B187B700D628EF /* RTKTiger.nib */ = {
+		CBD6331D1A2BB24A00A03B08 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CB483C5307B187B700D628EF /* English */,
+				CBD6331E1A2BB24A00A03B08 /* English */,
 			);
-			name = RTKTiger.nib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		CBDD5D2F0AA142C90081D3F1 /* RTKGroup.nib */ = {
@@ -891,21 +881,21 @@
 		CBBC7E720864666100E3D3DC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Development;
 		};
 		CBBC7E730864666100E3D3DC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Deployment;
 		};
 		CBBC7E740864666100E3D3DC /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Default;
 		};

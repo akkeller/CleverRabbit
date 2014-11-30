@@ -12,7 +12,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface RTKCleverRabbitController : NSObject
+@interface RTKCleverRabbitController : NSObject <NSApplicationDelegate>
 {
     IBOutlet NSMenuItem * newVerseMenuItem;
     IBOutlet NSMenuItem * deleteVerseMenuItem;
@@ -37,21 +37,7 @@
 - (IBAction)openBugsAndFeatures:(id)sender;
 
 - (void)changedCommitteeString:(NSNotification *)aNotification;
-
-- (IBAction)newVerse:(id)sender;
-- (IBAction)deleteVerse:(id)sender;
-- (IBAction)nextVerse:(id)sender;
-- (IBAction)previousVerse:(id)sender;
-- (IBAction)lockVerse:(id)sender;
-
-- (IBAction)newRevision:(id)sender;
-- (IBAction)deleteRevision:(id)sender;
-- (IBAction)nextRevision:(id)sender;
-- (IBAction)previousRevision:(id)sender;
-- (IBAction)lockRevision:(id)sender;
-
-- (IBAction)showCommitteeMeetingPanel:(id)sender;
-
+ 
 - (NSMenuItem *)newVerseMenuItem;
 - (NSMenuItem *)deleteVerseMenuItem;
 - (NSMenuItem *)nextVerseMenuItem;

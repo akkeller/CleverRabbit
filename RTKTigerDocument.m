@@ -1058,13 +1058,15 @@ BOOL generateMetaStrings = NO;
     
     [book setVerses:(NSMutableArray *) [[book verses] arrayByRemovingObjectsAtIndexes:selectedVerseArray]];
     
-    [searchField setStringValue:@""];
-    [self search:searchField];
+    [self selectVerse:[[book verses] objectAtIndex:MIN(currentVerseIndex, [[book verses] count] -1)]];
+    
+    // Breaks when deleting last verse.
+    //[searchField setStringValue:@""];
+    //[self search:searchField];
     
     [versesTableView noteNumberOfRowsChanged];
     [self ensureOneBlankVerse];
     
-    [self selectVerse:[[book verses] objectAtIndex:MIN(currentVerseIndex, [[book verses] count] -1)]];    
     
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
@@ -1131,7 +1133,7 @@ inPublishedTextView:(NSTextView *)textView
     
     NSRange range;
     
-    if([textStorage length] < index) {
+    if([textStorage length] <= index || [textStorage length] == 0) {
         [textStorage insertAttributedString:[verse mutableAttributedString:(textView == romanPublishedTextView)] atIndex:[textStorage length]];
         
     } else {

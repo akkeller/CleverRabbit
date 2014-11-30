@@ -88,7 +88,13 @@
 	
 	IBOutlet NSSplitView * horizontalSplitView;
 	IBOutlet NSSplitView * verticalSplitView; // Not connecting yet -- now have multiple nested split views
-	
+    
+    IBOutlet NSSplitView * publishedSplitView;
+    IBOutlet NSView * romanPublishedView;
+    IBOutlet NSView * scriptPublishedView;
+    
+    
+    
 	IBOutlet NSView * rowView;
 	IBOutlet NSView * editView;
 	
@@ -192,8 +198,7 @@
 - (void)paste:(id)sender;
 
 -(void)regenerateAllScript;
--(void)convertRevision:(RTKRevision *)revision
-      withHighPriority:(BOOL)highPriority;
+-(void)convertRevision:(RTKRevision *)revision;
 
 - (void)romanPublishedTextViewDidChange:(NSNotification *)notification;
 

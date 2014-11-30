@@ -8,8 +8,10 @@
             <connections>
                 <outlet property="backTranslationTableColumn" destination="234" id="273"/>
                 <outlet property="backTranslationTextView" destination="187" id="251"/>
+                <outlet property="backTranslationView" destination="182" id="rxj-ej-bMf"/>
                 <outlet property="checkingTableColumn" destination="125" id="274"/>
                 <outlet property="checkingTextView" destination="213" id="253"/>
+                <outlet property="checkingView" destination="210" id="oCf-dh-Ba5"/>
                 <outlet property="deleteRevisionButton" destination="106" id="114"/>
                 <outlet property="deleteVerseButton" destination="110" id="116"/>
                 <outlet property="documentWindow" destination="1" id="101"/>
@@ -19,17 +21,24 @@
                 <outlet property="newVerseButton" destination="108" id="115"/>
                 <outlet property="notesTableColumn" destination="124" id="266"/>
                 <outlet property="notesTextView" destination="209" id="252"/>
+                <outlet property="notesView" destination="204" id="GFK-3P-Ywl"/>
+                <outlet property="publishedSplitView" destination="385" id="nmg-Ue-vtA"/>
                 <outlet property="referenceTableColumn" destination="220" id="267"/>
                 <outlet property="revisionTableColumn" destination="226" id="270"/>
                 <outlet property="romanPublishedScrollView" destination="379" id="TcS-FU-mwr"/>
                 <outlet property="romanPublishedTextView" destination="382" id="393"/>
+                <outlet property="romanPublishedView" destination="386" id="mRF-9G-ly4"/>
                 <outlet property="romanTableColumn" destination="236" id="272"/>
                 <outlet property="romanTextView" destination="178" id="250"/>
+                <outlet property="romanView" destination="175" id="s82-rX-yUB"/>
                 <outlet property="scriptPublishedScrollView" destination="388" id="ZhY-3u-smo"/>
                 <outlet property="scriptPublishedTextView" destination="391" id="394"/>
+                <outlet property="scriptPublishedView" destination="387" id="Ian-EH-B8h"/>
                 <outlet property="scriptTableColumn" destination="232" id="271"/>
                 <outlet property="scriptTextView" destination="141" id="249"/>
+                <outlet property="scriptView" destination="132" id="EHD-QN-rSS"/>
                 <outlet property="searchField" destination="117" id="238"/>
+                <outlet property="splitViewOfTextViews" destination="131" id="Mci-xg-xWY"/>
                 <outlet property="typeTableColumn" destination="224" id="269"/>
                 <outlet property="versesTableView" destination="123" id="241"/>
                 <outlet property="window" destination="1" id="t9O-OF-fdA"/>
@@ -122,7 +131,7 @@
                                                             <rect key="frame" x="0.0" y="17" width="683" height="247"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" autosaveColumns="NO" autosaveName="RTKVerseTableColumnInfo" headerView="121" id="123" userLabel="Table View">
+                                                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" autosaveColumns="NO" autosaveName="RTKVerseTableColumnInfo" headerView="121" id="123" userLabel="Table View">
                                                                     <rect key="frame" x="0.0" y="0.0" width="683" height="19"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -361,255 +370,219 @@
                                                                     </box>
                                                                 </subviews>
                                                             </customView>
-                                                            <splitView dividerStyle="paneSplitter" vertical="YES" id="174">
-                                                                <rect key="frame" x="110" y="0.0" width="573" height="291"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <customView id="175">
+                                                                <rect key="frame" x="110" y="0.0" width="126" height="291"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <customView id="175">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="291"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                        <subviews>
-                                                                            <box autoresizesSubviews="NO" title="Text" borderType="none" id="176">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="291"/>
-                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                <view key="contentView">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="276"/>
-                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                    <subviews>
-                                                                                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="177">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="276"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                            <clipView key="contentView" id="3bS-nl-UdK">
-                                                                                                <rect key="frame" x="1" y="1" width="123" height="274"/>
-                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                <subviews>
-                                                                                                    <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="178" customClass="RTKTigerTextView">
-                                                                                                        <rect key="frame" x="0.0" y="16" width="123" height="274"/>
-                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                        <size key="minSize" width="123" height="274"/>
-                                                                                                        <size key="maxSize" width="704" height="10000000"/>
-                                                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                                        <size key="minSize" width="123" height="274"/>
-                                                                                                        <size key="maxSize" width="704" height="10000000"/>
-                                                                                                        <connections>
-                                                                                                            <outlet property="delegate" destination="-2" id="362"/>
-                                                                                                            <outlet property="nextTextView" destination="187" id="372"/>
-                                                                                                            <outlet property="window" destination="1" id="367"/>
-                                                                                                        </connections>
-                                                                                                    </textView>
-                                                                                                </subviews>
-                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                            </clipView>
-                                                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="179">
-                                                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                            </scroller>
-                                                                                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="180">
-                                                                                                <rect key="frame" x="108" y="1" width="16" height="274"/>
-                                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                            </scroller>
-                                                                                        </scrollView>
-                                                                                    </subviews>
-                                                                                </view>
-                                                                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                            </box>
-                                                                        </subviews>
-                                                                    </customView>
-                                                                    <splitView dividerStyle="paneSplitter" vertical="YES" id="181">
-                                                                        <rect key="frame" x="135" y="0.0" width="438" height="291"/>
+                                                                    <box autoresizesSubviews="NO" title="Text" borderType="none" id="176">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="291"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                        <subviews>
-                                                                            <customView id="182">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="125" height="291"/>
-                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                <subviews>
-                                                                                    <box autoresizesSubviews="NO" title="Back Translation" borderType="none" id="183">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="291"/>
+                                                                        <view key="contentView">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="126" height="276"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="177">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="276"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                    <clipView key="contentView" id="3bS-nl-UdK">
+                                                                                        <rect key="frame" x="1" y="1" width="123" height="274"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                        <view key="contentView">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="125" height="276"/>
-                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                            <subviews>
-                                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="184">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="276"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                    <clipView key="contentView" id="tVM-5S-TlJ">
-                                                                                                        <rect key="frame" x="1" y="1" width="123" height="274"/>
-                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                        <subviews>
-                                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="187" customClass="RTKTigerTextView">
-                                                                                                                <rect key="frame" x="0.0" y="16" width="123" height="274"/>
-                                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                                <size key="minSize" width="123" height="274"/>
-                                                                                                                <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                                                <size key="minSize" width="123" height="274"/>
-                                                                                                                <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                <connections>
-                                                                                                                    <outlet property="delegate" destination="-2" id="363"/>
-                                                                                                                    <outlet property="nextTextView" destination="209" id="373"/>
-                                                                                                                    <outlet property="window" destination="1" id="368"/>
-                                                                                                                </connections>
-                                                                                                            </textView>
-                                                                                                        </subviews>
-                                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                    </clipView>
-                                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="186">
-                                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                                                    </scroller>
-                                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="185">
-                                                                                                        <rect key="frame" x="108" y="1" width="16" height="274"/>
-                                                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                                                    </scroller>
-                                                                                                </scrollView>
-                                                                                            </subviews>
-                                                                                        </view>
-                                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                    </box>
-                                                                                </subviews>
-                                                                            </customView>
-                                                                            <splitView dividerStyle="paneSplitter" vertical="YES" id="202">
-                                                                                <rect key="frame" x="135" y="0.0" width="303" height="291"/>
-                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                <subviews>
-                                                                                    <customView id="204">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="135" height="291"/>
-                                                                                        <autoresizingMask key="autoresizingMask"/>
                                                                                         <subviews>
-                                                                                            <box autoresizesSubviews="NO" title="Notes" borderType="none" id="205">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="135" height="291"/>
+                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="178" customClass="RTKTigerTextView">
+                                                                                                <rect key="frame" x="0.0" y="16" width="123" height="274"/>
                                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                <view key="contentView">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="276"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                    <subviews>
-                                                                                                        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="206">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="276"/>
-                                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                            <clipView key="contentView" id="5DW-HR-JUg">
-                                                                                                                <rect key="frame" x="1" y="1" width="133" height="274"/>
-                                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                <subviews>
-                                                                                                                    <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="209" customClass="RTKTigerTextView">
-                                                                                                                        <rect key="frame" x="0.0" y="16" width="133" height="274"/>
-                                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                                        <size key="minSize" width="133" height="274"/>
-                                                                                                                        <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                                                        <size key="minSize" width="133" height="274"/>
-                                                                                                                        <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                        <connections>
-                                                                                                                            <outlet property="delegate" destination="-2" id="364"/>
-                                                                                                                            <outlet property="nextTextView" destination="213" id="374"/>
-                                                                                                                            <outlet property="window" destination="1" id="369"/>
-                                                                                                                        </connections>
-                                                                                                                    </textView>
-                                                                                                                </subviews>
-                                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                            </clipView>
-                                                                                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="208">
-                                                                                                                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                                            </scroller>
-                                                                                                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="207">
-                                                                                                                <rect key="frame" x="118" y="1" width="16" height="274"/>
-                                                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                                            </scroller>
-                                                                                                        </scrollView>
-                                                                                                    </subviews>
-                                                                                                </view>
-                                                                                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                            </box>
+                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                <size key="minSize" width="124" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <size key="minSize" width="124" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <connections>
+                                                                                                    <outlet property="delegate" destination="-2" id="362"/>
+                                                                                                    <outlet property="nextTextView" destination="187" id="372"/>
+                                                                                                    <outlet property="window" destination="1" id="367"/>
+                                                                                                </connections>
+                                                                                            </textView>
                                                                                         </subviews>
-                                                                                    </customView>
-                                                                                    <splitView dividerStyle="paneSplitter" vertical="YES" id="203">
-                                                                                        <rect key="frame" x="145" y="0.0" width="158" height="291"/>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    </clipView>
+                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="179">
+                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="180">
+                                                                                        <rect key="frame" x="108" y="1" width="16" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                </scrollView>
+                                                                            </subviews>
+                                                                        </view>
+                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    </box>
+                                                                </subviews>
+                                                            </customView>
+                                                            <customView id="182">
+                                                                <rect key="frame" x="246" y="0.0" width="126" height="291"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <box autoresizesSubviews="NO" title="Back Translation" borderType="none" id="183">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="291"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <view key="contentView">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="126" height="276"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="184">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="276"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                    <clipView key="contentView" id="tVM-5S-TlJ">
+                                                                                        <rect key="frame" x="1" y="1" width="123" height="274"/>
                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                         <subviews>
-                                                                                            <customView id="210">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="158" height="291"/>
-                                                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                                                <subviews>
-                                                                                                    <box autoresizesSubviews="NO" title="Checking" borderType="none" id="211">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="291"/>
-                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                        <view key="contentView">
-                                                                                                            <rect key="frame" x="0.0" y="0.0" width="158" height="276"/>
-                                                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                            <subviews>
-                                                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="212">
-                                                                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="276"/>
-                                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                    <clipView key="contentView" id="9Yr-Bt-x9b">
-                                                                                                                        <rect key="frame" x="1" y="1" width="156" height="274"/>
-                                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                        <subviews>
-                                                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="213" customClass="RTKTigerTextView">
-                                                                                                                                <rect key="frame" x="0.0" y="16" width="156" height="274"/>
-                                                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                                                <size key="minSize" width="156" height="274"/>
-                                                                                                                                <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                                                                <size key="minSize" width="156" height="274"/>
-                                                                                                                                <size key="maxSize" width="704" height="10000000"/>
-                                                                                                                                <connections>
-                                                                                                                                    <outlet property="delegate" destination="-2" id="365"/>
-                                                                                                                                    <outlet property="nextTextView" destination="178" id="375"/>
-                                                                                                                                    <outlet property="window" destination="1" id="370"/>
-                                                                                                                                </connections>
-                                                                                                                            </textView>
-                                                                                                                        </subviews>
-                                                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                                    </clipView>
-                                                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="214">
-                                                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                                                                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                                                                    </scroller>
-                                                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="215">
-                                                                                                                        <rect key="frame" x="141" y="1" width="16" height="274"/>
-                                                                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                                                                    </scroller>
-                                                                                                                </scrollView>
-                                                                                                            </subviews>
-                                                                                                        </view>
-                                                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                                    </box>
-                                                                                                </subviews>
-                                                                                            </customView>
+                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="187" customClass="RTKTigerTextView">
+                                                                                                <rect key="frame" x="0.0" y="16" width="123" height="274"/>
+                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                <size key="minSize" width="124" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <size key="minSize" width="124" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <connections>
+                                                                                                    <outlet property="delegate" destination="-2" id="363"/>
+                                                                                                    <outlet property="nextTextView" destination="209" id="373"/>
+                                                                                                    <outlet property="window" destination="1" id="368"/>
+                                                                                                </connections>
+                                                                                            </textView>
                                                                                         </subviews>
-                                                                                        <holdingPriorities>
-                                                                                            <real value="250"/>
-                                                                                        </holdingPriorities>
-                                                                                    </splitView>
-                                                                                </subviews>
-                                                                                <holdingPriorities>
-                                                                                    <real value="250"/>
-                                                                                    <real value="250"/>
-                                                                                </holdingPriorities>
-                                                                            </splitView>
-                                                                        </subviews>
-                                                                        <holdingPriorities>
-                                                                            <real value="250"/>
-                                                                            <real value="250"/>
-                                                                        </holdingPriorities>
-                                                                    </splitView>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    </clipView>
+                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="186">
+                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="185">
+                                                                                        <rect key="frame" x="108" y="1" width="16" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                </scrollView>
+                                                                            </subviews>
+                                                                        </view>
+                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    </box>
                                                                 </subviews>
-                                                                <holdingPriorities>
-                                                                    <real value="250"/>
-                                                                    <real value="250"/>
-                                                                </holdingPriorities>
-                                                            </splitView>
+                                                            </customView>
+                                                            <customView id="210">
+                                                                <rect key="frame" x="382" y="0.0" width="157" height="291"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <box autoresizesSubviews="NO" title="Checking" borderType="none" id="211">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="291"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <view key="contentView">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="157" height="276"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="212">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="157" height="276"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                    <clipView key="contentView" id="9Yr-Bt-x9b">
+                                                                                        <rect key="frame" x="1" y="1" width="156" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <subviews>
+                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="213" customClass="RTKTigerTextView">
+                                                                                                <rect key="frame" x="0.0" y="16" width="156" height="274"/>
+                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                <size key="minSize" width="155" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <size key="minSize" width="155" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <connections>
+                                                                                                    <outlet property="delegate" destination="-2" id="365"/>
+                                                                                                    <outlet property="nextTextView" destination="178" id="375"/>
+                                                                                                    <outlet property="window" destination="1" id="370"/>
+                                                                                                </connections>
+                                                                                            </textView>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    </clipView>
+                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="214">
+                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="215">
+                                                                                        <rect key="frame" x="141" y="1" width="16" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                </scrollView>
+                                                                            </subviews>
+                                                                        </view>
+                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    </box>
+                                                                </subviews>
+                                                            </customView>
+                                                            <customView id="204">
+                                                                <rect key="frame" x="549" y="0.0" width="134" height="291"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <box autoresizesSubviews="NO" title="Notes" borderType="none" id="205">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="134" height="291"/>
+                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        <view key="contentView">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="134" height="276"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="206">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="134" height="276"/>
+                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                    <clipView key="contentView" id="5DW-HR-JUg">
+                                                                                        <rect key="frame" x="1" y="1" width="133" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <subviews>
+                                                                                            <textView importsGraphics="NO" findStyle="panel" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" smartInsertDelete="YES" id="209" customClass="RTKTigerTextView">
+                                                                                                <rect key="frame" x="0.0" y="16" width="133" height="274"/>
+                                                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                                <size key="minSize" width="132" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                                <size key="minSize" width="132" height="274"/>
+                                                                                                <size key="maxSize" width="704" height="10000000"/>
+                                                                                                <connections>
+                                                                                                    <outlet property="delegate" destination="-2" id="364"/>
+                                                                                                    <outlet property="nextTextView" destination="213" id="374"/>
+                                                                                                    <outlet property="window" destination="1" id="369"/>
+                                                                                                </connections>
+                                                                                            </textView>
+                                                                                        </subviews>
+                                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    </clipView>
+                                                                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="208">
+                                                                                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="207">
+                                                                                        <rect key="frame" x="118" y="1" width="16" height="274"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                    </scroller>
+                                                                                </scrollView>
+                                                                            </subviews>
+                                                                        </view>
+                                                                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                                                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    </box>
+                                                                </subviews>
+                                                            </customView>
                                                         </subviews>
                                                         <holdingPriorities>
+                                                            <real value="250"/>
+                                                            <real value="250"/>
+                                                            <real value="250"/>
                                                             <real value="250"/>
                                                             <real value="250"/>
                                                         </holdingPriorities>
@@ -647,10 +620,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="83" height="563"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="67" height="563"/>
+                                                                    <size key="minSize" width="83" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                    <size key="minSize" width="67" height="563"/>
+                                                                    <size key="minSize" width="83" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="383"/>
@@ -686,10 +659,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="563"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="66" height="563"/>
+                                                                    <size key="minSize" width="82" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                    <size key="minSize" width="66" height="563"/>
+                                                                    <size key="minSize" width="82" height="563"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <outlet property="delegate" destination="-2" id="392"/>

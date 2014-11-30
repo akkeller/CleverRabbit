@@ -74,6 +74,8 @@ BOOL generateMetaStrings = NO;
         
         revisionsToConvert = [[NSMutableArray alloc] init];
         
+        revisionsToConvertLock = [[NSLock alloc] init];
+        
         convertingLock = [[NSLock alloc] init];
         [convertingLock lock];
         
@@ -91,11 +93,6 @@ BOOL generateMetaStrings = NO;
         [self setVerseTypes:[NSMutableArray arrayWithObjects:
                              @"\\v", @"\\p", @"\\c", @"\\s1", @"\\s2", @"\\r", @"\\mt1", @"\\mt2", @"\\mt3", @"\\is", @"\\ip", @"\\h", nil]];
         [self setDictionary:[NSDictionary dictionary]];
-		
-        // Keep a transcription thread running at all times.
-        [NSThread detachNewThreadSelector:@selector(doConversionThread:)
-                                 toTarget:self
-                               withObject:nil];
 		
 		alreadyAwokeFromNib = NO;
     }
@@ -134,11 +131,15 @@ BOOL generateMetaStrings = NO;
 		
 		[versesTableView setVerticalMotionCanBeginDrag:NO];
 		
-		[scriptTableColumn retain]; // Prevent dealloc of tablecolumn when hiding column. 
-		[scriptView retain];
 		if(![[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"]) {
-			[versesTableView removeTableColumn:scriptTableColumn];
+            
+            [scriptTableColumn setHidden:YES];
+             
+            [scriptView retain];
 			[scriptView removeFromSuperview];
+            
+            [scriptPublishedView retain];
+            [scriptPublishedView removeFromSuperview];
 		}
 		
 		NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
@@ -907,6 +908,9 @@ BOOL generateMetaStrings = NO;
 			[backTranslationView setFrame:NSRectFromString([d objectForKey:@"RTKBackTranslationViewRectWithTransliteration"])];
 			[notesView setFrame:NSRectFromString([d objectForKey:@"RTKNotesViewRectWithTransliteration"])];
 			[checkingView setFrame:NSRectFromString([d objectForKey:@"RTKCheckingViewRectWithTransliteration"])];
+            
+            [scriptPublishedView setFrame:NSRectFromString([d objectForKey:@"RTKScriptPublishedViewRectWithTransliteration"])];
+            [romanPublishedView setFrame:NSRectFromString([d objectForKey:@"RTKRomanPublishedViewRectWithTransliteration"])];
 		}
 	} else {
 		if([d boolForKey:@"RTKSplitViewRectsWithoutTransliterationSaved"]) {
@@ -914,6 +918,8 @@ BOOL generateMetaStrings = NO;
 			[backTranslationView setFrame:NSRectFromString([d objectForKey:@"RTKBackTranslationViewRect"])];
 			[notesView setFrame:NSRectFromString([d objectForKey:@"RTKNotesViewRect"])];
 			[checkingView setFrame:NSRectFromString([d objectForKey:@"RTKCheckingViewRect"])];
+            
+            [romanPublishedView setFrame:NSRectFromString([d objectForKey:@"RTKRomanPublishedViewRect"])];
 		}
 	}
 }
@@ -931,13 +937,18 @@ BOOL generateMetaStrings = NO;
 		[d setObject:NSStringFromRect([romanView frame]) forKey:@"RTKRomanViewRectWithTransliteration"];
 		[d setObject:NSStringFromRect([backTranslationView frame]) forKey:@"RTKBackTranslationViewRectWithTransliteration"];
 		[d setObject:NSStringFromRect([notesView frame]) forKey:@"RTKNotesViewRectWithTransliteration"];
-		[d setObject:NSStringFromRect([checkingView frame]) forKey:@"RTKCheckingViewRectWithTransliteration"];	
+		[d setObject:NSStringFromRect([checkingView frame]) forKey:@"RTKCheckingViewRectWithTransliteration"];
+        
+        [d setObject:NSStringFromRect([scriptPublishedView frame]) forKey:@"RTKScriptPublishedViewRectWithTransliteration"];
+        [d setObject:NSStringFromRect([romanPublishedView frame]) forKey:@"RTKRomanPublishedViewRectWithTransliteration"];
 	} else {
 		[d setObject:[NSNumber numberWithBool:YES] forKey:@"RTKSplitViewRectsWithoutTransliterationSaved"];
 		[d setObject:NSStringFromRect([romanView frame]) forKey:@"RTKRomanViewRect"];
 		[d setObject:NSStringFromRect([backTranslationView frame]) forKey:@"RTKBackTranslationViewRect"];
 		[d setObject:NSStringFromRect([notesView frame]) forKey:@"RTKNotesViewRect"];
-		[d setObject:NSStringFromRect([checkingView frame]) forKey:@"RTKCheckingViewRect"];	
+		[d setObject:NSStringFromRect([checkingView frame]) forKey:@"RTKCheckingViewRect"];
+        
+        [d setObject:NSStringFromRect([romanPublishedView frame]) forKey:@"RTKRomanPublishedViewRect"];
 	}
 }
 
@@ -1441,8 +1452,7 @@ constrainMinCoordinate:(float *)min
         [self highlightVerse:verse inTextView:romanPublishedTextView];
         
 		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
-			[self convertRevision:revision
-				 withHighPriority:YES];
+			[self convertRevision:revision];
 
     } else if(changedTextView == scriptTextView) {
         [revision setScript:[[changedTextView string] copy]];
@@ -1495,14 +1505,15 @@ constrainMinCoordinate:(float *)min
     if(!changeAccepted) {
         NSLog(@"RTKVerse rejected change.");
         [self updateRomanPublishedTextView];
-        [romanPublishedTextView setSelectedRange:selectedRange];
+        //[romanPublishedTextView setSelectedRange:selectedRange];
     } else {
         [romanTextView setString:[[verse currentRevision] roman]];
         
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
-			[self convertRevision:[currentVerse currentRevision]
-				 withHighPriority:YES];
+			[self convertRevision:[currentVerse currentRevision]];
     }
+    
+    [self selectVerse:currentVerse];
 }
 
 - (void)textViewDidChangeSelection:(NSNotification *)notification
@@ -1834,19 +1845,32 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 - (void)transliterationOnChanged:(id)dummy
 {
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"]) {
-		[versesTableView addTableColumn:scriptTableColumn];
-		[versesTableView moveColumn:([versesTableView numberOfColumns] - 1) toColumn:4];
-		
+        
+        [scriptTableColumn setHidden:NO];
+        
 		[splitViewOfTextViews addSubview:scriptView
 							  positioned:NSWindowBelow
 							  relativeTo:romanView];
+        [scriptView release];
+        
+        [publishedSplitView addSubview:scriptPublishedView
+                              positioned:NSWindowAbove
+                              relativeTo:romanPublishedView];
+        [scriptPublishedView release];
+        [scriptPublishedView setHidden:NO];
 		
 		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
 			[self regenerateAllScript];
 	} else {
-		[versesTableView removeTableColumn:scriptTableColumn];
+        [scriptTableColumn setHidden:YES];
+        
+        [scriptView retain];
 		[scriptView removeFromSuperview];
         
+        
+        [scriptPublishedView retain];
+        [scriptPublishedView removeFromSuperview];
+        [scriptPublishedView setHidden:YES];
 	}
 	[self readSplitViewRectsFromDefaults];
 	[self writeSplitViewRectsToDefaults];
@@ -1861,9 +1885,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     NSRect rowRect = [versesTableView rectOfRow:[versesTableView selectedRow]];    
     [versesTableView setNeedsDisplayInRect:rowRect];
     
-    [[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
-    [self highlightVerse:[[book verses] objectAtIndex:[versesTableView selectedRow]] inTextView:scriptPublishedTextView];
-    
     [scriptTextView setString:[[currentVerse currentRevision] script]];
     
     [self updateUI];
@@ -1875,73 +1896,47 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     RTKVerse * verse;
 	
     while(verse = [verseEnumerator nextObject]) {
-        [[self doSelf] convertRevision:[[verse revisions] each]
-                      withHighPriority:NO];
+        [[self doSelf] convertRevision:[[verse revisions] each]];
     }
 }
+
 
 - (void)convertRevision:(RTKRevision *)revision
-	   withHighPriority:(BOOL)highPriority
 {
     [revisionsToConvertLock lock];
-    if(highPriority)
-        [revisionsToConvert insertObject:revision atIndex:0];
-    else
-        [revisionsToConvert addObject:revision];
-    [revisionsToConvertLock unlock];
-    [convertingLock unlock];
-}
-
-- (void)doConversionThread:(id)dummy
-{
-    while(1) {
-		
-        while(![revisionsToConvert count]) {
-            [convertingLock lock];
-        }
-        if([revisionsToConvert count]) {
-            NSAutoreleasePool * autoreleasePool = [[NSAutoreleasePool alloc] init];
-			
-            [revisionsToConvertLock lock];
-            //NSLog(@"%@ removing 1 of %i revisions from queue", self, [revisionsToConvert count]);
-            RTKRevision * revision = [revisionsToConvert objectAtIndex:0];
-            [revisionsToConvert removeObjectAtIndex:0];
-            [revisionsToConvertLock unlock];
-			
-            NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
-            NSString * fontOutputString = nil;
-            
-            NSString * transcriptionType = [d valueForKey:@"RTKTranscriptionType"];
-            fontOutputString = transcriptionType;
-            {
-            NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
-                 NSDictionary * output = [RTKSharedConvertor convertString:[revision roman]
-                                                               inputSystem:[definitionDir stringByAppendingString:
-                                                                            [[d objectForKey:@"RTKInputSystem"] stringByAppendingString:@".rtkinput"]]
-                                                              scriptSystem:[definitionDir stringByAppendingString:
-                                                                            [[d objectForKey:@"RTKScriptSystem"] stringByAppendingString:@".rtkscript"]]
-                                                                fontSystem:[definitionDir stringByAppendingString:
-                                                                            [[d objectForKey:@"RTKEncodingSystem"] stringByAppendingString:@".rtkfont"]]
-                                                           withMetaStrings:generateMetaStrings
-                                                       checkForPunctuation:NO];
-                 
-                 if(generateMetaStrings)
-                     NSLog(@"%@", [output description]);
-                 
-                 fontOutputString = [output objectForKey:@"RTKFont"];            
-             }
-			
-            if(fontOutputString)
-                [revision setScript:fontOutputString];
-                
-            
-            [autoreleasePool release];
-            
-        }
-        [self performSelectorOnMainThread: @selector(mainThreadUpdateUI:)
-                               withObject: nil
-                            waitUntilDone: NO];
+    
+    
+    NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+    NSString * fontOutputString = nil;
+    
+    NSString * transcriptionType = [d valueForKey:@"RTKTranscriptionType"];
+    fontOutputString = transcriptionType;
+    {
+        NSString * definitionDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/active_definitions/"];
+        NSDictionary * output = [RTKSharedConvertor convertString:[revision roman]
+                                                      inputSystem:[definitionDir stringByAppendingString:
+                                                                   [[d objectForKey:@"RTKInputSystem"] stringByAppendingString:@".rtkinput"]]
+                                                     scriptSystem:[definitionDir stringByAppendingString:
+                                                                   [[d objectForKey:@"RTKScriptSystem"] stringByAppendingString:@".rtkscript"]]
+                                                       fontSystem:[definitionDir stringByAppendingString:
+                                                                   [[d objectForKey:@"RTKEncodingSystem"] stringByAppendingString:@".rtkfont"]]
+                                                  withMetaStrings:generateMetaStrings
+                                              checkForPunctuation:NO];
+        
+        if(generateMetaStrings)
+            NSLog(@"%@", [output description]);
+        
+        fontOutputString = [output objectForKey:@"RTKFont"];
     }
+    
+    if(fontOutputString)
+        [revision setScript:fontOutputString];
+
+    [[self performAfterDelay:0.1] updateRomanPublishedTextView];
+    
+    [[self performAfterDelay:0.2] selectVerse:currentVerse];
+    
+    [revisionsToConvertLock unlock];
 }
 
 

@@ -269,6 +269,8 @@
     [string retain];
     [roman release];
     roman = string;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetRoman" object:self userInfo:nil];
 }
 
 - (void)setScript:(NSString *)string
@@ -276,6 +278,8 @@
     [string retain];
     [script release];
     script = string;
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetScript" object:self userInfo:nil];
 }
 
 - (void)setBackTranslation:(NSString *)string
@@ -283,6 +287,8 @@
     [string retain];
     [backTranslation release];
     backTranslation = string;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetBackTranslation" object:self userInfo:nil];
 }
 
 - (void)setNotes:(NSString *)string
@@ -290,6 +296,8 @@
     [string retain];
     [notes release];
     notes = string;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetNotes" object:self userInfo:nil];
 }
 
 - (void)setChecking:(NSString *)string
@@ -297,11 +305,15 @@
     [string retain];
     [checking release];
     checking = string;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetChecking" object:self userInfo:nil];
 }
 
 - (void)setLocked:(bool)state
 {
 	locked = state;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKRevisionSetLocked" object:self userInfo:nil];
 }
 
 

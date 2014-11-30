@@ -30,7 +30,8 @@
 		[self setType:@"\\v"];
 		locked = NO;
         [revisions addObject:[[RTKRevision alloc] init]];
-		
+        currentRevisionIndex = 0;
+        
         [self setDictionary:[NSDictionary dictionary]];
     }
     return self;
@@ -219,7 +220,7 @@
 
 - (void)appendLine:(NSString *)line
 {
-    [(RTKRevision *)[revisions objectAtIndex:0] appendLine:line];
+    [(RTKRevision *)[self currentRevision] appendLine:line];
 }
 
 - (NSString *)string
@@ -365,6 +366,8 @@
     [theReference retain];
     [reference release];
     reference = theReference;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetReference" object:self userInfo:nil];
 }
 
 - (NSString *)reference
@@ -377,6 +380,8 @@
     [theType retain];
     [preUSFMType release];
     preUSFMType = theType;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetPreUSFMType" object:self userInfo:nil];
 }
 
 - (NSString *)preUSFMType
@@ -389,6 +394,8 @@
     [theType retain];
     [type release];
     type = theType;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetType" object:self userInfo:nil];
 }
 
 - (NSString *)type
@@ -398,7 +405,9 @@
 
 - (void)setLocked:(BOOL)state
 {
-	locked = state;
+    locked = state;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetLocked" object:self userInfo:nil];
 }
 
 - (BOOL)locked
@@ -413,6 +422,8 @@
     [theRevisions retain];
     [revisions release];
     revisions = theRevisions;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetRevisions" object:self userInfo:nil];
 }
 
 - (NSMutableArray *)revisions
@@ -428,6 +439,8 @@
 - (void)setCurrentRevisionIndex:(int)index
 {
     currentRevisionIndex = index;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RTKVerseSetCurrentRevisionIndex" object:self userInfo:nil];
 }
 
 - (int)currentRevisionIndex

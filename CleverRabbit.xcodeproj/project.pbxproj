@@ -844,7 +844,7 @@
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = CleverRabbit;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = YES;
@@ -864,7 +864,7 @@
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = CleverRabbit;
 				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 				WRAPPER_EXTENSION = app;
@@ -882,7 +882,7 @@
 				GCC_PREFIX_HEADER = CleverRabbit_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = CleverRabbit;
 				WRAPPER_EXTENSION = app;
 			};

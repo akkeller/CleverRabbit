@@ -87,7 +87,13 @@
     IBOutlet RTKTigerTextView * checkingTextView;
 	
 	IBOutlet NSSplitView * horizontalSplitView;
-	IBOutlet NSSplitView * verticalSplitView; // Not connecting yet -- now have multiple nested split views
+    
+    
+	IBOutlet NSSplitView * verticalSplitView;
+    
+    IBOutlet NSView * verseView;
+    IBOutlet NSView * publishedView;
+    
     
     IBOutlet NSSplitView * publishedSplitView;
     IBOutlet NSView * romanPublishedView;

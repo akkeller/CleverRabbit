@@ -900,7 +900,12 @@ BOOL generateMetaStrings = NO;
 		[rowView setFrame:NSRectFromString([d objectForKey:@"RTKRowViewRect"])];
 		[editView setFrame:NSRectFromString([d objectForKey:@"RTKEditViewRect"])];
 	}
-	
+    
+    if([d boolForKey:@"RTKVerticalSplitViewRectSaved"]) {
+        [verseView setFrame:NSRectFromString([d objectForKey:@"RTKVerseViewRect"])];
+        [publishedView setFrame:NSRectFromString([d objectForKey:@"RTKPublishedViewRect"])];
+    }
+    
 	if([d boolForKey:@"RTKTransliterationOn"]) {
 		if([d boolForKey:@"RTKSplitViewRectsWithTransliterationSaved"]) {
 			[scriptView setFrame:NSRectFromString([d objectForKey:@"RTKScriptViewRectWithTransliteration"])];
@@ -930,6 +935,11 @@ BOOL generateMetaStrings = NO;
 	[d setObject:[NSNumber numberWithBool:YES] forKey:@"RTKHorizonatalSplitViewRectSaved"];
 	[d setObject:NSStringFromRect([rowView frame]) forKey:@"RTKRowViewRect"];
 	[d setObject:NSStringFromRect([editView frame]) forKey:@"RTKEditViewRect"];
+    
+    [d setObject:[NSNumber numberWithBool:YES] forKey:@"RTKVerticalSplitViewRectSaved"];
+    [d setObject:NSStringFromRect([verseView frame]) forKey:@"RTKVerseViewRect"];
+    [d setObject:NSStringFromRect([publishedView frame]) forKey:@"RTKPublishedViewRect"];
+
 	
 	if([d boolForKey:@"RTKTransliterationOn"]) {
 		[d setObject:[NSNumber numberWithBool:YES] forKey:@"RTKSplitViewRectsWithTransliterationSaved"];

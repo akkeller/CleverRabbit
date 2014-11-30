@@ -16,6 +16,7 @@
                 <outlet property="deleteRevisionButton" destination="106" id="114"/>
                 <outlet property="deleteVerseButton" destination="110" id="116"/>
                 <outlet property="documentWindow" destination="1" id="101"/>
+                <outlet property="editView" destination="130" id="SQm-NE-cJY"/>
                 <outlet property="horizontalSplitView" destination="128" id="239"/>
                 <outlet property="lockedTableColumn" destination="222" id="268"/>
                 <outlet property="newRevisionButton" destination="104" id="113"/>
@@ -24,6 +25,7 @@
                 <outlet property="notesTextView" destination="209" id="252"/>
                 <outlet property="notesView" destination="204" id="GFK-3P-Ywl"/>
                 <outlet property="publishedSplitView" destination="385" id="nmg-Ue-vtA"/>
+                <outlet property="publishedView" destination="378" id="evG-tQ-3Pj"/>
                 <outlet property="referenceTableColumn" destination="220" id="267"/>
                 <outlet property="revisionTableColumn" destination="226" id="270"/>
                 <outlet property="romanPublishedScrollView" destination="379" id="TcS-FU-mwr"/>
@@ -32,6 +34,7 @@
                 <outlet property="romanTableColumn" destination="236" id="272"/>
                 <outlet property="romanTextView" destination="178" id="250"/>
                 <outlet property="romanView" destination="175" id="s82-rX-yUB"/>
+                <outlet property="rowView" destination="129" id="DfC-Rk-Mrp"/>
                 <outlet property="scriptPublishedScrollView" destination="388" id="ZhY-3u-smo"/>
                 <outlet property="scriptPublishedTextView" destination="391" id="394"/>
                 <outlet property="scriptPublishedView" destination="387" id="Ian-EH-B8h"/>
@@ -41,7 +44,9 @@
                 <outlet property="searchField" destination="117" id="238"/>
                 <outlet property="splitViewOfTextViews" destination="131" id="Mci-xg-xWY"/>
                 <outlet property="typeTableColumn" destination="224" id="269"/>
+                <outlet property="verseView" destination="377" id="Egb-iE-rxx"/>
                 <outlet property="versesTableView" destination="123" id="241"/>
+                <outlet property="verticalSplitView" destination="376" id="x5B-De-Kto"/>
                 <outlet property="window" destination="1" id="t9O-OF-fdA"/>
             </connections>
         </customObject>

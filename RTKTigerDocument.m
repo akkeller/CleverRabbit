@@ -1186,27 +1186,8 @@ inPublishedTextView:(NSTextView *)textView
                                               atIndex:verseIndex
                                 longestEffectiveRange:&firstComponentRange
                                               inRange:NSMakeRange(0, [textStorage length])];
-    //NSLog(@"firstComponent %lu, %lu", (unsigned long) firstComponentRange.location, (unsigned long) firstComponentRange.length);
     
-    NSScrollView * scrollView = nil;
-    if (textView == romanPublishedTextView)
-        scrollView = romanPublishedScrollView;
-    else if(textView == scriptPublishedTextView)
-        scrollView = scriptPublishedScrollView;
-    
-    NSRange glyphRange = [textView.layoutManager glyphRangeForBoundingRect:scrollView.documentVisibleRect
-                                                                inTextContainer:textView.textContainer];
-    NSRange editedRange = [textView.layoutManager characterRangeForGlyphRange:glyphRange actualGlyphRange:NULL];
-
-    
-    //NSLog(@"editedRange %lu, %lu", (unsigned long) editedRange.location, (unsigned long) editedRange.length);
-    
-    // Only scroll if verse isn't completely in view.
-    // This works almost right, but won't scroll when an edge line is partially obscured.
-    if( firstComponentRange.location < editedRange.location || firstComponentRange.location + firstComponentRange.length > editedRange.location + editedRange.length) {
-        NSLog(@"Scrolling");
-        [textView scrollRangeToVisible:NSMakeRange(firstComponentRange.location, firstComponentRange.length - 1)];
-    }
+    [textView scrollRangeToVisible:NSMakeRange(firstComponentRange.location, firstComponentRange.length - 1)];
 }
 
 

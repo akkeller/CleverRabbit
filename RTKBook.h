@@ -17,6 +17,7 @@
 @interface RTKBook : NSObject
 {
     NSMutableArray *verses;
+    RTKVerse *currentVerse;
     
     // Lossless forwards/backwards compatibility
     NSDictionary * dictionary;
@@ -36,6 +37,8 @@
 - (NSDictionary *)dictionary;
 
 - (void)setVerses:(NSMutableArray *)theVerses;
+- (void)setCurrentVerse:(RTKVerse *)verse;
+- (RTKVerse *)currentVerse;
 
 + (id)bookWithVerses:(NSMutableArray *)verses;
 

@@ -14,6 +14,7 @@
 
 #import "Chomp/Chomp.h"
 #import "RTKArrayCategory.h"
+#import "RTKMutableAttributedStringCategory.h"
 
 
 @implementation RTKBook
@@ -160,7 +161,10 @@
 {
     NSMutableArray * strings = [[[verses collect] mutableAttributedString:romanString] mutableCopy];
     [strings removeLastObject];
-    return [strings mutableAttributedStringFromComponents];
+    
+    NSMutableAttributedString * outputString = [strings mutableAttributedStringFromComponents];
+    [outputString addAttribute:@"RTKBook" value:self];
+    return outputString;
 }
 
 - (void)setDictionary:(NSDictionary *)theDictionary
@@ -186,5 +190,19 @@
     [verses release];
     verses = theVerses;
 }
+
+- (void)setCurrentVerse:(RTKVerse *)verse
+{
+    [verse retain];
+    [currentVerse release];
+    currentVerse = verse;
+}
+
+- (RTKVerse *)currentVerse
+{
+    return verses;
+}
+
+
 
 @end

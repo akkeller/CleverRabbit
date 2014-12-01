@@ -156,7 +156,10 @@ BOOL generateMetaStrings = NO;
         
 		[self updateUI];
         
-        [self updateRomanPublishedTextView];
+        [[romanPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:YES]];  // YES = roman, NO = script
+        
+        [[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
+
 		
         [self selectVerse:[[book verses] objectAtIndex:0]];
 		
@@ -699,6 +702,8 @@ BOOL generateMetaStrings = NO;
     [verse retain];
     [currentVerse release];
     currentVerse = verse;
+    
+    [book setCurrentVerse: currentVerse];
 }
 
 - (RTKRevision *)currentRevision
@@ -711,6 +716,8 @@ BOOL generateMetaStrings = NO;
     [revision retain];
     [currentRevision release];
     currentRevision = revision;
+    
+    [currentVerse setCurrentRevision:revision];
 }
 
 - (NSMutableArray *)verseTypes
@@ -742,15 +749,6 @@ BOOL generateMetaStrings = NO;
 }
 
 #pragma mark - UI
-
-- (void)updateRomanPublishedTextView
-{
-    // update roman view
-    [[romanPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:YES]];  // YES = roman, NO = script
-    
-    // update script view
-    [[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
-}
 
 - (void)updateUI
 {
@@ -1061,8 +1059,8 @@ BOOL generateMetaStrings = NO;
     [self selectVerse:[[book verses] objectAtIndex:MIN(currentVerseIndex, [[book verses] count] -1)]];
     
     // Breaks when deleting last verse.
-    //[searchField setStringValue:@""];
-    //[self search:searchField];
+    [searchField setStringValue:@""];
+    [self search:searchField];
     
     [versesTableView noteNumberOfRowsChanged];
     [self ensureOneBlankVerse];
@@ -1160,16 +1158,16 @@ inPublishedTextView:(NSTextView *)textView
     if(verseIndex >= [textStorage length])
         return;
     
-    NSRange firstComponentRange;
-    NSString *firstComponent = [textStorage attribute:@"RTKVerse" 
+    NSRange componentRange;
+    NSString *component = [textStorage attribute:@"RTKVerse" 
                                               atIndex:verseIndex
-                                longestEffectiveRange:&firstComponentRange
+                                longestEffectiveRange:&componentRange
                                               inRange:NSMakeRange(0, [textStorage length])];
-    if(firstComponentRange.length == 0)
+    if(componentRange.length == 0)
         return;
     
     [textStorage removeAttribute:NSBackgroundColorAttributeName];
-    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange(firstComponentRange.location, firstComponentRange.length - 1)];
+    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange(componentRange.location, componentRange.length - 1)];
 }
 
 
@@ -1437,6 +1435,16 @@ constrainMinCoordinate:(float *)min
 	}
 }
 
+
+#pragma mark -
+#pragma mark RTKVerse delegate methods
+
+#pragma mark -
+#pragma mark Revision delegate methods
+
+// - (void)revisionDidChange:(
+
+
 #pragma mark -
 #pragma mark text view delegate methods
 
@@ -1449,40 +1457,34 @@ constrainMinCoordinate:(float *)min
     NSLog(@"textDidChange");
     NSTextView * changedTextView = [notification object];
     
-    NSMutableArray * verses = [book verses];
-    RTKVerse * verse = [verses objectAtIndex:[[visibleVerseIndexes objectAtIndex:[versesTableView selectedRow]] intValue]];
-    
-    RTKRevision * revision = [verse currentRevision];
-    
     if(changedTextView == romanTextView) {
         
-        int oldVerseIndexInPublishedTextView = [self indexOfVerse:verse inTextView:romanPublishedTextView];
+        [currentRevision setRoman:[[changedTextView string] copy]];
         
-        [revision setRoman:[[changedTextView string] copy]];
-        
-        [self updateVerse:verse withOldIndex:oldVerseIndexInPublishedTextView inPublishedTextView:romanPublishedTextView];
-        [self highlightVerse:verse inTextView:romanPublishedTextView];
+        int oldVerseIndexInPublishedTextView = [self indexOfVerse:currentVerse inTextView:romanPublishedTextView];
+        [self updateVerse:currentVerse withOldIndex:oldVerseIndexInPublishedTextView inPublishedTextView:romanPublishedTextView];
+        [[self performAfterDelay:0.5] scrollVerseToVisible:currentVerse inTextView:romanPublishedTextView];
+        [self highlightVerse:currentVerse inTextView:romanPublishedTextView];
         
 		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
-			[self convertRevision:revision];
+			[self convertRevision:currentRevision];
+        
 
     } else if(changedTextView == scriptTextView) {
-        [revision setScript:[[changedTextView string] copy]];
-        //[self updateRomanPublishedTextView];
+        
+        [currentRevision setScript:[[changedTextView string] copy]];
     } else if(changedTextView == backTranslationTextView) {
-        [revision setBackTranslation:[[changedTextView string] copy]];
-        //[self updateRomanPublishedTextView];
+        [currentRevision setBackTranslation:[[changedTextView string] copy]];
     } else if(changedTextView == notesTextView) {
-        [revision setNotes:[[changedTextView string] copy]];
-        //[self updateRomanPublishedTextView];
+        [currentRevision setNotes:[[changedTextView string] copy]];
     } else if(changedTextView == checkingTextView) {
-        [revision setChecking:[[changedTextView string] copy]];
-        //[self updateRomanPublishedTextView];
+        [currentRevision setChecking:[[changedTextView string] copy]];
     } else if(changedTextView == romanPublishedTextView) {
-        [self romanPublishedTextViewDidChange:notification];
+        //[self romanPublishedTextViewDidChange:notification];
+        
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);
-        NSLog(@"romanPublishedTextView: %@", romanPublishedTextView);
+        //NSLog(@"romanPublishedTextView: %@", romanPublishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
@@ -1516,16 +1518,12 @@ constrainMinCoordinate:(float *)min
 
     if(!changeAccepted) {
         NSLog(@"RTKVerse rejected change.");
-        [self updateRomanPublishedTextView];
-        //[romanPublishedTextView setSelectedRange:selectedRange];
     } else {
         [romanTextView setString:[[verse currentRevision] roman]];
         
         if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
 			[self convertRevision:[currentVerse currentRevision]];
     }
-    
-    [self selectVerse:currentVerse];
 }
 
 - (void)textViewDidChangeSelection:(NSNotification *)notification
@@ -1766,16 +1764,13 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     if(aTableView == versesTableView) {
         if(aTableColumn == referenceTableColumn) {
             [verse setReference:anObject];
-            [self updateRomanPublishedTextView];
             [self selectVerse:verse];
         } else if(aTableColumn == typeTableColumn) {
             [verse setType:anObject];
-            [self updateRomanPublishedTextView];
             [self selectVerse:verse];
         } else if(aTableColumn == revisionTableColumn) {
             [verse setCurrentRevisionIndex:[(NSNumber *)anObject intValue]];
             [self selectRevision:[currentVerse currentRevision]];
-            [self updateRomanPublishedTextView];
             [self selectVerse:verse];
         } else if(aTableColumn == lockedTableColumn) {
             [verse setLocked:[(NSNumber *)anObject boolValue]];
@@ -1943,10 +1938,22 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
     
     if(fontOutputString)
         [revision setScript:fontOutputString];
-
-    [[self performAfterDelay:0.1] updateRomanPublishedTextView];
     
-    [[self performAfterDelay:0.2] selectVerse:currentVerse];
+    if(revision == currentRevision) {
+        [scriptTextView setString:[revision script]];
+        
+        int oldVerseIndexInPublishedTextView = [self indexOfVerse:currentVerse inTextView:scriptPublishedTextView];
+        [self updateVerse:currentVerse withOldIndex:oldVerseIndexInPublishedTextView inPublishedTextView:scriptPublishedTextView];
+        [[self performAfterDelay:0.5] scrollVerseToVisible:currentVerse inTextView:scriptPublishedTextView];
+        [self highlightVerse:currentVerse inTextView:scriptPublishedTextView];
+
+    }
+    
+    
+    // update script published view
+    //[[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
+    
+    //[[self performAfterDelay:0.2] selectVerse:currentVerse];
     
     [revisionsToConvertLock unlock];
 }

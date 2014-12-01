@@ -705,9 +705,15 @@ CA
                         <items>
                             <menuItem title="Transcribe Text" id="YNZ-6A-BEb">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <binding destination="rkg-EH-dKW" name="value" keyPath="values.RTKTransliterationOn" id="CaI-oV-9ls"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Substitute àùè for zvx" id="tMV-fc-r7d">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <binding destination="rkg-EH-dKW" name="value" keyPath="values.RTKZVXSubstitution" id="Tg9-1g-5K0"/>
+                                </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="99b-Nq-fKB"/>
                             <menuItem title="Input Orthography" id="y71-UA-A45">
@@ -801,5 +807,6 @@ CA
                 </menuItem>
             </items>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="rkg-EH-dKW"/>
     </objects>
 </document>

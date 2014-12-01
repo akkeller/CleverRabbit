@@ -40,11 +40,6 @@ BOOL generateMetaStrings = NO;
         NSNotificationCenter * nc = [NSNotificationCenter defaultCenter];
         
         [nc addObserver:self
-               selector:@selector(substituteZVXChanged:)
-                   name:@"RTKZVXSubstitutionChanged"
-                 object:nil];
-        
-        [nc addObserver:self
                selector:@selector(plainTextDelimiterChanged:)
                    name:@"RTKPlainTextDelimiterChanged"
                  object:nil];
@@ -63,12 +58,6 @@ BOOL generateMetaStrings = NO;
                selector:@selector(transcriptionTypeChanged:)
                    name:@"RTKTranscriptionTypeChanged"
                  object:nil];
-		
-		[nc addObserver:self
-               selector:@selector(transliterationOnChanged:)
-                   name:@"RTKTransliterationOnChanged"
-                 object:nil];
-
 		
         book = [[RTKBook alloc] init];
         
@@ -131,7 +120,9 @@ BOOL generateMetaStrings = NO;
 		
 		[versesTableView setVerticalMotionCanBeginDrag:NO];
 		
-		if(![[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"]) {
+        NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+        
+		if(![d boolForKey:@"RTKTransliterationOn"]) {
             
             [scriptTableColumn setHidden:YES];
              
@@ -141,8 +132,17 @@ BOOL generateMetaStrings = NO;
             [scriptPublishedView retain];
             [scriptPublishedView removeFromSuperview];
 		}
-		
-		NSUserDefaults * d = [NSUserDefaults standardUserDefaults];
+        
+        [d addObserver:self
+            forKeyPath:@"RTKTransliterationOn"
+               options:NSKeyValueObservingOptionNew
+               context:NULL];
+        
+        [d addObserver:self
+            forKeyPath:@"RTKZVXSubstitution"
+               options:NSKeyValueObservingOptionNew
+               context:NULL];
+        
 		
 		[self readSplitViewRectsFromDefaults];
 		
@@ -430,7 +430,7 @@ BOOL generateMetaStrings = NO;
 #pragma mark -
 
 // Notification Handlers
-- (void)substituteZVXChanged:(NSNotification *)notification
+- (void)substituteZVXChanged
 {
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKZVXSubstitution"]) {
         NSMutableDictionary * characterSwapDictionary = [NSMutableDictionary dictionary];
@@ -468,7 +468,7 @@ BOOL generateMetaStrings = NO;
     [aController setShouldCloseDocument:YES];
     [self setFieldEditor:NO];
     [self updateUI];
-    [self substituteZVXChanged:nil];
+    [self substituteZVXChanged];
 }
 
 - (void)setFieldEditor:(BOOL)editor
@@ -1849,9 +1849,27 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 		[self regenerateAllScript];
 }
 
-- (void)transliterationOnChanged:(id)dummy
+-(void)observeValueForKeyPath:(NSString *)keyPath
+                     ofObject:(id)object
+                       change:(NSDictionary *)change
+                      context:(void *)context
+{
+    NSLog(@"KVO: %@ changed property %@ to value %@", object, keyPath, change);
+    
+    if ([keyPath compare:@"RTKTransliterationOn"] == NSOrderedSame) {
+        [self transliterationOnChanged];
+        
+    } else if ([keyPath compare:@"RTKZVXSubstitution"] == NSOrderedSame) {
+        [self substituteZVXChanged];
+    }
+        
+    
+}
+
+- (void)transliterationOnChanged
 {
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"]) {
+    //if ([sender state] == NSOffState) {
         
         [scriptTableColumn setHidden:NO];
         
@@ -1866,8 +1884,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         [scriptPublishedView release];
         [scriptPublishedView setHidden:NO];
 		
-		if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"])
-			[self regenerateAllScript];
+        [self regenerateAllScript];
 	} else {
         [scriptTableColumn setHidden:YES];
         
@@ -1881,6 +1898,9 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 	}
 	[self readSplitViewRectsFromDefaults];
 	[self writeSplitViewRectsToDefaults];
+    
+    [self scrollVerseToVisible:currentVerse inTextView:romanPublishedTextView];
+    [self scrollVerseToVisible:currentVerse inTextView:scriptPublishedTextView];
 }
 
 

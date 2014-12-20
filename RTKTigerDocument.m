@@ -1146,8 +1146,6 @@ inPublishedTextView:(NSTextView *)textView
 }
 
 
-
-
 - (void)highlightVerse:(RTKVerse *)verse inTextView:(NSTextView *)textView
 {
     int verseIndex = [self indexOfVerse:verse inTextView:textView];
@@ -1416,16 +1414,6 @@ constrainMinCoordinate:(float *)min
 	}
 }
 
-
-#pragma mark -
-#pragma mark RTKVerse delegate methods
-
-#pragma mark -
-#pragma mark Revision delegate methods
-
-// - (void)revisionDidChange:(
-
-
 #pragma mark -
 #pragma mark text view delegate methods
 
@@ -1465,7 +1453,6 @@ constrainMinCoordinate:(float *)min
         
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);
-        //NSLog(@"romanPublishedTextView: %@", romanPublishedTextView);
     }
     // TODO: Change this when undo/redo is supported
     [self updateChangeCount:NSChangeDone];
@@ -1474,8 +1461,6 @@ constrainMinCoordinate:(float *)min
     [versesTableView setNeedsDisplayInRect:rowRect];
 	[self updateUI];
     [self ensureOneBlankVerse];
-    
-    //[self selectVerse:verse];
 }
 
 // Informs the appropriate RTKVerse object of its changes.
@@ -1491,8 +1476,6 @@ constrainMinCoordinate:(float *)min
                        longestEffectiveRange:&verseRange
                                      inRange:NSMakeRange(0, [textStorage length])];
     NSAttributedString *verseString = [textStorage attributedSubstringFromRange:verseRange];
-    
-    //BOOL changeAccepted = [verse updateWithAttributedString:verseString atIndex:(selectedRange.location - verseRange.location)];
     
     BOOL changeAccepted = [verse updateWithAttributedString:[textStorage attributedSubstringFromRange:NSMakeRange(0, [textStorage length])] 
                                                     atIndex:selectedRange.location];
@@ -1850,7 +1833,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
 - (void)transliterationOnChanged
 {
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"RTKTransliterationOn"]) {
-    //if ([sender state] == NSOffState) {
         
         [scriptTableColumn setHidden:NO];
         
@@ -1866,7 +1848,9 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         [scriptPublishedView setHidden:NO];
 		
         [self regenerateAllScript];
+        
 	} else {
+        
         [scriptTableColumn setHidden:YES];
         
         [scriptView retain];
@@ -1876,6 +1860,7 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         [scriptPublishedView retain];
         [scriptPublishedView removeFromSuperview];
         [scriptPublishedView setHidden:YES];
+        
 	}
 	[self readSplitViewRectsFromDefaults];
 	[self writeSplitViewRectsToDefaults];
@@ -1949,13 +1934,6 @@ objectValueForTableColumn:(NSTableColumn *)aTableColumn
         [self highlightVerse:currentVerse inTextView:scriptPublishedTextView];
 
     }
-    
-    
-    // update script published view
-    //[[scriptPublishedTextView textStorage] setAttributedString:[book mutableAttributedString:NO]];  // YES = roman, NO = script
-    
-    //[[self performAfterDelay:0.2] selectVerse:currentVerse];
-    
     [revisionsToConvertLock unlock];
 }
 

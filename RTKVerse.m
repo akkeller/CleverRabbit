@@ -325,17 +325,21 @@
 - (BOOL)updateWithAttributedString:(NSAttributedString *)string 
                            atIndex:(NSUInteger)index
 {
-    NSRange componentRange;
+    NSRange componentRange = NSMakeRange(0, 0);
+    
     NSString *component = [string attribute:@"RTKVerseComponent" 
                                     atIndex:index 
                       longestEffectiveRange:&componentRange
                                     inRange:NSMakeRange(0, [string length])];
     
-    if(!component) // If it didn't find the component, check one character back.
-        component = [string attribute:@"RTKVerseComponent" 
-                              atIndex:(index-1) 
-                longestEffectiveRange:&componentRange
-                              inRange:NSMakeRange(0, [string length])];
+    if(index > 0)
+        if(!component) // If it didn't find the component, check one character back.
+            component = [string attribute:@"RTKVerseComponent" 
+                                  atIndex:(index-1)
+                    longestEffectiveRange:&componentRange
+                                  inRange:NSMakeRange(0, [string length])];
+    
+    
     NSAttributedString *componentString = [string attributedSubstringFromRange:componentRange];
     
     if([component isEqualToString:@"Verse Text"]) {

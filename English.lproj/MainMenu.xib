@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -715,37 +715,6 @@ CA
                                     <binding destination="rkg-EH-dKW" name="value" keyPath="values.RTKZVXSubstitution" id="Tg9-1g-5K0"/>
                                 </connections>
                             </menuItem>
-                            <menuItem isSeparatorItem="YES" id="99b-Nq-fKB"/>
-                            <menuItem title="Input Orthography" id="y71-UA-A45">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Input Orthography" id="aHg-gj-X3o">
-                                    <items>
-                                        <menuItem title="Item" id="TIH-aA-7Kh">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem title="Output Orthography" id="Iqe-A4-Lz3">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Output Orthography" id="Fxt-IM-629">
-                                    <items>
-                                        <menuItem title="Item" id="G17-Qg-sXf">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
-                            <menuItem title="Output Font Encoding" id="wmK-de-twg">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Output Font Encoding" id="ot9-Ke-lPT">
-                                    <items>
-                                        <menuItem title="Item" id="afx-2A-dEG">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                         </items>
                     </menu>
                 </menuItem>
@@ -785,13 +754,6 @@ CA
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
-                            <menuItem title="Committee" id="cFM-Ss-KWN">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <binding destination="rkg-EH-dKW" name="value" keyPath="values.RTKCommitteePanelDisplayed" id="9J1-vj-H8a"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem isSeparatorItem="YES" id="VDN-NN-0c1"/>
                             <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>

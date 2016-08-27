@@ -1151,21 +1151,28 @@ inPublishedTextView:(NSTextView *)textView
     int verseIndex = [self indexOfVerse:verse inTextView:textView];
     NSTextStorage *textStorage = [textView textStorage];
     
-    
-    
     if(verseIndex >= [textStorage length])
         return;
     
     NSRange componentRange;
-    NSString *component = [textStorage attribute:@"RTKVerse" 
-                                              atIndex:verseIndex
-                                longestEffectiveRange:&componentRange
-                                              inRange:NSMakeRange(0, [textStorage length])];
+
+    NSString *component;
+    
+    do {
+        component = [textStorage attribute:@"RTKVerseComponent"
+                                   atIndex:verseIndex
+                     longestEffectiveRange:&componentRange
+                                   inRange:NSMakeRange(0, [textStorage length])];
+        verseIndex++;
+    } while (![component isEqualToString:@"Verse Text"]);
+    
+    
     if(componentRange.length == 0)
         return;
     
     [textStorage removeAttribute:NSBackgroundColorAttributeName];
-    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange(componentRange.location, componentRange.length - 1)];
+    
+    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange(componentRange.location, componentRange.length)];
 }
 
 
@@ -1450,7 +1457,7 @@ constrainMinCoordinate:(float *)min
     } else if(changedTextView == checkingTextView) {
         [currentRevision setChecking:[[changedTextView string] copy]];
     } else if(changedTextView == romanPublishedTextView) {
-        //[self romanPublishedTextViewDidChange:notification];
+        [self romanPublishedTextViewDidChange:notification];
         
     } else {
         NSLog(@"unhandled textview %@ sent to textDidChange", changedTextView);

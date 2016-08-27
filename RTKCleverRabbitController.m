@@ -23,7 +23,7 @@
 		
 		[d setObject:@"KSCII" forKey:@"RTKEncodingSystem"];
 		[d setObject:@"Phonemic" forKey:@"RTKInputSystem"];
-		[d setObject:@"NewKrung" forKey:@"RTKScriptSystem"];
+		[d setObject:@"EvenNewerKrung" forKey:@"RTKScriptSystem"];
 		[d setObject:@"^" forKey:@"RTKPlainTextDelimiter"];
 		[d setObject:@"<return>" forKey:@"RTKPlainTextReturnCharacter"];
 		[d setObject:[NSNumber numberWithBool:NO] forKey:@"RTKZVXSubstitution"];  

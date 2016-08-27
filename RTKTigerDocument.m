@@ -1379,6 +1379,7 @@ inPublishedTextView:(NSTextView *)textView
 
 - (void)windowWillClose:(NSNotification *)aNotification
 {
+    [self writeSplitViewRectsToDefaults];
     windowIsOpen = NO;
     [convertingLock unlock];
 }
@@ -1390,7 +1391,7 @@ inPublishedTextView:(NSTextView *)textView
 
 - (void)windowDidResignKey:(NSNotification *)aNotification
 {
-	[self writeSplitViewRectsToDefaults];
+	
 }
 
 #pragma mark -
